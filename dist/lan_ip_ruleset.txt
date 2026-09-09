@@ -1,0 +1,11 @@
+# RULE-SET: Local infrastructure only; explicit Tailscale routes take precedence.
+# Rules omit the policy field; DNS mappings only use domain entries.
+DOMAIN-SUFFIX,local
+IP-CIDR,10.0.0.0/8,no-resolve
+IP-CIDR,172.16.0.0/12,no-resolve
+IP-CIDR,192.168.0.0/16,no-resolve
+IP-CIDR,127.0.0.0/8,no-resolve
+IP-CIDR,169.254.0.0/16,no-resolve
+IP-CIDR,100.100.100.100/32,no-resolve
+IP-CIDR6,::1/128,no-resolve
+IP-CIDR6,fe80::/10,no-resolve

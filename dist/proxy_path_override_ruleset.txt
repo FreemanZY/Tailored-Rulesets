@@ -1,0 +1,3 @@
+# RULE-SET: Explicit non-default proxy path. Profile currently selects 12VPX Los Angeles.
+# Rules omit the policy field; DNS mappings only use domain entries.
+# Intentionally empty. Add reviewed entries only.

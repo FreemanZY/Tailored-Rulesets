@@ -1,0 +1,4 @@
+# DOMAIN-SET: China domain direct allowlist, separate from highest-priority force_direct.
+# One hostname per line; a leading dot matches the domain and subdomains.
+.cn
+.xn--fiqs8s

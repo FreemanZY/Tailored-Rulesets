@@ -1,0 +1,3 @@
+# RULE-SET: Authorized tailnet peers and private names. REJECT until configured.
+# Rules omit the policy field; DNS mappings only use domain entries.
+# Intentionally empty. Add reviewed entries only.

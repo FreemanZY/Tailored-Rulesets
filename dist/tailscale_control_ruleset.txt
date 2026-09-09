@@ -1,0 +1,3 @@
+# RULE-SET: Control/login bootstrap, not tailnet destination routes.
+# Rules omit the policy field; DNS mappings only use domain entries.
+DOMAIN-SUFFIX,tailscale.com

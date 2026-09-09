@@ -1,0 +1,3 @@
+# DOMAIN-SET: High-volume domains. Profile selects 12VPX Los Angeles, ahead of general Google rules.
+# One hostname per line; a leading dot matches the domain and subdomains.
+.googlevideo.com
