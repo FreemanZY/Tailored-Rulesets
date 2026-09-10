@@ -11,7 +11,8 @@ Surge rule data only. Credentials, subscription URLs, controller keys and browsi
 5. `proxy_targets_domainset.txt`, `proxy_targets_ruleset.txt`, `ai_domainset.txt`, and the generated/manual Apple, Google and Microsoft lists: Gate.
 6. `china_domainset.txt`: lower-priority China DIRECT domains.
 7. `lan_domainset.txt` and `lan_ip_ruleset.txt`: local DIRECT; remote Tailscale routes precede them.
-8. `default_proxy_ruleset.txt`: Gate. The profile must still end with FINAL,Gate,dns-failed.
+
+The profile ends with `FINAL,Gate,dns-failed`; no separate default-proxy file is needed.
 
 `local_dns_domainset.txt` assigns system DNS for local names; it is not an additional direct allowlist.
 The profile reuses the routing files for Host DNS mappings: direct exceptions first, proxy exceptions next, China last.
