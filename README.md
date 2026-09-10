@@ -8,11 +8,10 @@ Surge rule data only. Credentials, subscription URLs, controller keys and browsi
 2. External anti-ad subscription (kept outside this repository), then `reject_domainset.txt`: ordinary REJECT, without pre-matching.
 3. `tailscale_private_ruleset.txt` and `tailscale_subnet_ruleset.txt`: dedicated Tailscale; REJECT until configured, never public fallback.
 4. `high_traffic_domainset.txt` and `high_traffic_ruleset.txt`: high-volume traffic through 12VPX Los Angeles.
-5. `media_domainset.txt`: combined Japan Smart.
-6. `proxy_targets_domainset.txt`, `proxy_targets_ruleset.txt`, `microsoft_domainset.txt`, `ai_domainset.txt`, existing Google/Apple lists: Gate.
-7. `china_domainset.txt`: lower-priority China DIRECT domains.
-8. `lan_domainset.txt` and `lan_ip_ruleset.txt`: local DIRECT; remote Tailscale routes precede them.
-9. `default_proxy_ruleset.txt`: Gate. The profile must still end with FINAL,Gate,dns-failed.
+5. `proxy_targets_domainset.txt`, `proxy_targets_ruleset.txt`, `microsoft_domainset.txt`, `ai_domainset.txt`, existing Google/Apple lists: Gate.
+6. `china_domainset.txt`: lower-priority China DIRECT domains.
+7. `lan_domainset.txt` and `lan_ip_ruleset.txt`: local DIRECT; remote Tailscale routes precede them.
+8. `default_proxy_ruleset.txt`: Gate. The profile must still end with FINAL,Gate,dns-failed.
 
 `local_dns_domainset.txt` assigns system DNS for local names; it is not an additional direct allowlist.
 The profile reuses the routing files for Host DNS mappings: direct exceptions first, proxy exceptions next, China last.
