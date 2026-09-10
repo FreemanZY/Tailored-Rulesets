@@ -22,8 +22,8 @@ IP rules cannot select a DNS resolver before resolution. Keep explicit no-resolv
 
 Every external data filename ends in `_domainset.txt` or `_ruleset.txt`, matching how the profile loads it.
 DOMAIN-SET files contain hostnames only; a leading dot matches the name and its subdomains. Domain-only data uses this format.
-RULE-SET files contain typed non-domain rules, without a policy field or FINAL. A mixed source is split into paired files, following the Apple domain/IP pattern.
-Comment-only files intentionally have zero active entries. Microsoft and AI seed entries came from user-supplied lists; their completeness is not inferred from the service names.
+RULE-SET files contain typed rules, without a policy field or FINAL. Mixed sources use RULE-SET for IP data and domain patterns that DOMAIN-SET cannot express precisely.
+Comment-only files intentionally have zero active entries. AI seed entries came from a user-supplied list; its completeness is not inferred from the service name.
 High-volume routing, default proxy targets, and LAN targets are split by data type. Their domain files contain names; corresponding ruleset files contain IP or process rules.
 The former force_proxy/subscription_exit, proxy_path_override and YouTube/heavy_load lists are consolidated into the two high_traffic files.
 
@@ -37,16 +37,19 @@ High traffic describes intended usage, not measured usage or an automatic bandwi
 
 ## Generated and manual ownership
 
-Each Apple, Google and Microsoft family has two generated outputs: `*_generated_domainset.txt` and `*_generated_ip_ruleset.txt`. These paths are reserved for a future GitHub Actions workflow and should not be edited manually after that workflow is enabled.
+Apple and Google retain paired `*_generated_domainset.txt` and `*_generated_ip_ruleset.txt` outputs. Microsoft uses `microsoft_generated_domainset.txt` plus the mixed `microsoft_generated_ruleset.txt`, because its official source includes partial-label and middle-label wildcards that require `DOMAIN-WILDCARD` alongside IP rules.
 
-The repository does not yet contain a generator or workflow. Existing generated files are seed snapshots; Google and Microsoft generated IP files are empty placeholders. A filename alone does not mean scheduled updates are currently running.
+Microsoft generated files are owned by `scripts/update_microsoft_rules.py` and `.github/workflows/update-microsoft-rules.yml`; do not edit them manually. The workflow checks the official version daily and fetches all four endpoint instances only when a version changes. Google generated IP remains an empty placeholder until its own authoritative source and workflow are implemented.
+
+The Microsoft source is the official Microsoft 365 endpoint web service. The generated union includes Worldwide, China (21Vianet), USGovDoD and USGovGCCHigh; all service areas, categories, required/optional records, IPv4 and IPv6 are retained. `sources/microsoft_endpoints.json` preserves version, region, ports, category, requirement, ExpressRoute and notes for audit. Routing policy and port restrictions are intentionally not encoded in generated data.
+
+For Microsoft URL conversion, exact source names stay exact and a source `*.example.com` becomes `.example.com` by project convention. Partial-label or middle-label wildcards remain `DOMAIN-WILDCARD` rules, so they are not broadened into unrelated suffixes. Run `python scripts/update_microsoft_rules.py --check` for an offline consistency check.
 
 `*_manual_domainset.txt` is maintained through reviewed observations for domains missing from the generated source, including CDN hosts. Add a CNAME target only when it is also observed as a request hostname, TLS SNI or HTTP Host; a DNS-only CNAME target is not necessarily visible to Surge domain rules.
 
 ## Maintenance
 
-Until the GitHub Actions workflow is implemented, generated seed files are also maintained through reviewed commits.
-New domains should be reviewed before committing. Future client observations and China/Bwgyus DNS probes produce candidates, not automatic direct rules.
+New manual domains should be reviewed before committing. Future client observations and China/Bwgyus DNS probes produce candidates, not automatic direct rules.
 Do not infer a permanent domain-to-IP mapping or grant direct access just because DNS returned a China IP.
 Validate syntax and ordering, publish to main, verify raw URLs, then reload external resources on Surge.
 
