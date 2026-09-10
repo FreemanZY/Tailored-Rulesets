@@ -1,0 +1,18 @@
+# DOMAIN-SET: AI service targets through Gate.
+# Plain entries match exact names; leading dots include subdomains.
+.auth0.com
+.challenges.cloudflare.com
+.client-api.arkoselabs.com
+.events.statsigapi.net
+.featuregates.org
+.oaiusercontent.com
+.oaistatic.com
+.identrust.com
+.launchdarkly.com
+.segment.io
+.intercom.io
+.intercomcdn.com
+.poe.com
+.sentry.io
+.openai.com
+.chatgpt.com

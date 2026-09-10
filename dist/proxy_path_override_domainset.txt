@@ -1,0 +1,27 @@
+# DOMAIN-SET: Domains forced through the non-default proxy path.
+# Plain entries match exact names; leading dots include subdomains.
+
+## Apple
+updates.cdn-apple.com
+swcdn.apple.com
+swdist.apple.com
+swscan.apple.com
+
+## Dropbox
+.dropboxstatic.com
+
+## Microsoft
+.storage.live.com
+dl.delivery.mp.microsoft.com
+graph.microsoft.com
+my.microsoftpersonalcontent.com
+tlu.dl.delivery.mp.microsoft.com
+
+## Google
+.googlevideo.com
+.googleusercontent.com
+
+## Other explicit paths
+.twimg.com
+enterprise.proxmox.com
+public.shrekmedia.org

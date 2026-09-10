@@ -1,0 +1,28 @@
+# DOMAIN-SET: Microsoft service targets through Gate.
+# Plain entries match exact names; leading dots include subdomains.
+mam.manage.microsoftonline.cn
+mooncake.config.teams.microsoft.com
+chnno3-b-t.trouter.teams.microsoftonline.cn
+api.presence.teams.microsoftonline.cn
+login.partner.microsoftonline.cn
+apac01.azure-devices.net
+client.wns.windows.com
+ecs.office.com
+r.bing.com
+officeclient.microsoft.com
+login.live.com
+odc.officeapps.live.com
+wdcp.microsoft.com
+skyapi.live.net
+kbmvdg.dm.files.1drv.com
+skydrive.wns.windows.com
+dsm01pap009.storage.live.com
+api.onedrive.com
+icmgzq.by.files.1drv.com
+sjc04pap002.storage.live.com
+dsm04pap002.storage.live.com
+snz04pap001.storage.live.com
+licensing.mp.microsoft.com
+kv601.prod.do.dsp.mp.microsoft.com
+.storage.live.com
+my.microsoftpersonalcontent.com

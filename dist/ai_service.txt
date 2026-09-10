@@ -1,3 +1,0 @@
-# RULE-SET: AI service targets through Gate. Original local list was unavailable.
-# Rules omit the policy field; DNS mappings only use domain entries.
-# Intentionally empty. Add reviewed entries only.

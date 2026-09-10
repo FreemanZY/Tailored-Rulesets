@@ -1,3 +1,12 @@
-# RULE-SET: Explicit non-default proxy path. Profile currently selects 12VPX Los Angeles.
-# Rules omit the policy field; DNS mappings only use domain entries.
-# Intentionally empty. Add reviewed entries only.
+# RULE-SET: Non-domain rules forced through the non-default proxy path.
+# Domain entries are maintained separately in proxy_path_override_domainset.txt.
+
+## Telegram IP
+IP-CIDR,91.108.56.139/32
+
+## Twitter/X IP
+IP-CIDR,192.229.210.163/32
+IP-CIDR,72.21.91.70/32
+
+## macOS process
+PROCESS-NAME,/usr/bin/curl
