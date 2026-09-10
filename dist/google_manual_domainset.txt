@@ -1,0 +1,3 @@
+# MANUAL DOMAIN-SET: Reviewed Google CDN, CNAME target and observed service domains.
+# Intentionally empty. Do not copy transient CNAME targets without review.
+

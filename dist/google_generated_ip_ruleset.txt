@@ -1,0 +1,3 @@
+# GENERATED RULE-SET: Google IP/ASN data owned by the future GitHub Actions workflow.
+# Intentionally empty until an authoritative source and generator are configured.
+
