@@ -1,3 +1,28 @@
-# DOMAIN-SET: High-volume domains. Profile selects 12VPX Los Angeles, ahead of general Google rules.
-# One hostname per line; a leading dot matches the domain and subdomains.
+# DOMAIN-SET: High-volume domains through 12VPX Los Angeles.
+# Plain entries match exact names; leading dots include subdomains.
+
+## Apple
+updates.cdn-apple.com
+swcdn.apple.com
+swdist.apple.com
+swscan.apple.com
+
+## Dropbox
+.dropboxstatic.com
+
+## Microsoft
+.storage.live.com
+dl.delivery.mp.microsoft.com
+graph.microsoft.com
+my.microsoftpersonalcontent.com
+tlu.dl.delivery.mp.microsoft.com
+
+## Google
 .googlevideo.com
+.googleusercontent.com
+
+## Other high-volume targets
+.twimg.com
+enterprise.proxmox.com
+public.shrekmedia.org
+
