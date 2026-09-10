@@ -1,4 +1,0 @@
-# RULE-SET: Local-name DNS exception only; this file does not grant direct routing.
-# Rules omit the policy field; DNS mappings only use domain entries.
-DOMAIN,wpad.localdomain
-DOMAIN-SUFFIX,local

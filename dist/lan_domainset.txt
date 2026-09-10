@@ -1,0 +1,3 @@
+# DOMAIN-SET: Local names; explicit Tailscale destinations take precedence.
+.local
+

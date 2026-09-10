@@ -1,0 +1,9 @@
+# DOMAIN-SET: Explicit direct overrides; highest priority.
+# Plain entries match exact names; leading dots include subdomains.
+app.koofr.net
+.v2.argotunnel.com
+.chromeq.com
+wpad.localdomain
+.derps.link
+dns.alidns.com
+

@@ -1,0 +1,3 @@
+# DOMAIN-SET: Tailscale control/login bootstrap, not tailnet destinations.
+.tailscale.com
+

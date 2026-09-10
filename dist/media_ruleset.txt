@@ -1,3 +1,0 @@
-# RULE-SET: Specific media destinations through the combined Japan Smart group.
-# Rules omit the policy field; DNS mappings only use domain entries.
-DOMAIN,public.shrekmedia.org

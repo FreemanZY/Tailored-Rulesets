@@ -1,8 +1,0 @@
-# RULE-SET: Explicit direct overrides; highest priority.
-# Rules omit the policy field; DNS mappings only use domain entries.
-DOMAIN,app.koofr.net
-DOMAIN-SUFFIX,v2.argotunnel.com
-DOMAIN-SUFFIX,chromeq.com
-DOMAIN,wpad.localdomain
-DOMAIN-SUFFIX,derps.link
-DOMAIN,dns.alidns.com

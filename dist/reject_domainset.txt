@@ -1,0 +1,3 @@
+# DOMAIN-SET: Custom rejections; evaluated after explicit direct overrides.
+.firebaselogging-pa.googleapis.com
+
