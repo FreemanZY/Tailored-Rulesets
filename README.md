@@ -1,59 +1,97 @@
 # Tailored-Rulesets
 
-Surge rule data only. Credentials, subscription URLs, controller keys and browsing logs do not belong here.
+Curated and generated rule data for Surge. This repository contains public rule files, reproducible generators, tests, and source snapshots. It does not contain complete Surge profiles, credentials, proxy subscriptions, controller keys, or traffic logs.
 
-## Profile order and purpose
+## Published data
 
-1. `force_direct_domainset.txt` and `tailscale_control_domainset.txt`: explicit DIRECT exceptions.
-2. External anti-ad subscription (kept outside this repository), then `reject_domainset.txt`: ordinary REJECT, without pre-matching.
-3. `tailscale_private_ruleset.txt` and `tailscale_subnet_ruleset.txt`: dedicated Tailscale; REJECT until configured, never public fallback.
-4. `high_traffic_domainset.txt` and `high_traffic_ruleset.txt`: high-volume traffic through 12VPX Los Angeles.
-5. `proxy_targets_domainset.txt`, `proxy_targets_ruleset.txt`, `ai_domainset.txt`, and the generated/manual Apple, Google and Microsoft lists: Gate.
-6. `china_domainset.txt`: lower-priority China DIRECT domains.
-7. `lan_domainset.txt` and `lan_ip_ruleset.txt`: local DIRECT; remote Tailscale routes precede them.
+All loadable files are published under `dist/` and declare their format in the filename:
 
-The profile ends with `FINAL,Gate,dns-failed`; no separate default-proxy file is needed.
+- `*_domainset.txt` contains hostnames only. An entry with a leading dot matches both the named domain and its subdomains.
+- `*_ruleset.txt` contains typed Surge rules such as `DOMAIN-WILDCARD`, `IP-CIDR`, `IP-CIDR6`, `IP-ASN`, or `PROCESS-NAME`.
+- `*_generated_*` is produced from a documented upstream source or retained as a legacy generated snapshot.
+- `*_manual_*` contains reviewed additions that are intentionally kept outside an automated source.
 
-`local_dns_domainset.txt` assigns system DNS for local names; it is not an additional direct allowlist.
-The profile reuses the routing files for Host DNS mappings: direct exceptions first, proxy exceptions next, China last.
-IP rules cannot select a DNS resolver before resolution. Keep explicit no-resolve flags on IP rules.
+The main file families are:
 
-## Formats
+| Family | Purpose |
+| --- | --- |
+| Apple and Microsoft | Generated service domains and network ranges, with separate manual domain additions |
+| Google | Legacy generated domain snapshot, manual additions, and an IP placeholder awaiting an authoritative automated source |
+| `ai_*` and `proxy_targets_*` | Curated service and target classifications |
+| `high_traffic_*` | Domains and typed targets classified as bandwidth-intensive |
+| `force_direct_*`, `reject_*`, `china_*`, and `lan_*` | Curated routing categories for a consuming profile to map to its own policies |
+| `tailscale_*` | Optional control, node, and subnet targets for an overlay-network policy |
+| `local_dns_*` | Names intended for resolver selection rather than route selection |
 
-Every external data filename ends in `_domainset.txt` or `_ruleset.txt`, matching how the profile loads it.
-DOMAIN-SET files contain hostnames only; a leading dot matches the name and its subdomains. Domain-only data uses this format.
-RULE-SET files contain typed rules, without a policy field or FINAL. Mixed sources use RULE-SET for IP data and domain patterns that DOMAIN-SET cannot express precisely.
-Comment-only files intentionally have zero active entries. AI seed entries came from a user-supplied list; its completeness is not inferred from the service name.
-High-volume routing, default proxy targets, and LAN targets are split by data type. Their domain files contain names; corresponding ruleset files contain IP or process rules.
-The former force_proxy/subscription_exit, proxy_path_override and YouTube/heavy_load lists are consolidated into the two high_traffic files.
+Policy names, policy-group topology, rule precedence, and fallback behavior belong in the consuming Surge profile. Published rule files do not embed those choices. Comment-only files are valid placeholders with no active entries.
 
 Raw base URL:
+
+```text
 https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/
+```
 
-Google's original domain contents remain under its generated filename. Apple generated files now come from Apple's enterprise network article; unmatched legacy Apple entries are preserved in the manual file.
-All policy choices belong in the consuming profile, not in these files.
-An explicit direct entry overrides ads; a high-traffic entry overrides general service and China routing.
-High traffic describes intended usage, not measured usage or an automatic bandwidth threshold.
+A consuming profile can append a filename to that base URL and select its own policy, for example:
 
-## Generated and manual ownership
+```ini
+DOMAIN-SET,<raw-domainset-url>,<policy>
+RULE-SET,<raw-ruleset-url>,<policy>,no-resolve
+```
 
-Apple and Google retain paired `*_generated_domainset.txt` and `*_generated_ip_ruleset.txt` outputs. Microsoft uses `microsoft_generated_domainset.txt` plus the mixed `microsoft_generated_ruleset.txt`, because its official source includes partial-label and middle-label wildcards that require `DOMAIN-WILDCARD` alongside IP rules.
+## Automated sources
 
-Apple generated files are owned by `scripts/update_apple_rules.py` and `.github/workflows/update-apple-rules.yml`; Microsoft generated files are owned by the corresponding Microsoft script and workflow. Do not edit generated outputs manually. Google generated IP remains an empty placeholder until its own authoritative source and workflow are implemented.
+### Apple
 
-The Apple source is the official static article at <https://support.apple.com/en-us/101555>. The updater parses every endpoint table plus the firewall hostname and IPv4/IPv6 ranges each day at 11:37 Asia/Singapore. `sources/apple_enterprise_networks.json` retains every table row with its section, ports, protocols, OS, description, proxy support, links, published date and recent changes. A semantic hash prevents HTML-only changes from causing output churn. Run `python scripts/update_apple_rules.py --check` for an offline consistency check.
+`scripts/update_apple_rules.py` reads Apple's official [enterprise network article](https://support.apple.com/en-us/101555). The daily workflow parses every endpoint table, the firewall hostname pattern, and the published IPv4 and IPv6 ranges.
 
-Apple exact source names stay exact, standard `*.example.com` entries become `.example.com`, and the article's firewall guidance contributes `.apple.com`. The initial 70 manual Apple entries were migrated from the old generated list because the new official suffixes do not preserve their previous matching scope. Their original provenance was not recorded, so they remain review candidates rather than official Apple declarations. The Apple workflow never changes the manual file.
+The structured snapshot in `sources/apple_enterprise_networks.json` retains each source row with its section, ports, protocols, operating systems, description, proxy-support field, links, publication date, and recent-change notes. A semantic hash prevents presentation-only HTML changes from rewriting the generated files.
 
-The Microsoft source is the official Microsoft 365 endpoint web service. The generated union includes Worldwide, China (21Vianet), USGovDoD and USGovGCCHigh; all service areas, categories, required/optional records, IPv4 and IPv6 are retained. `sources/microsoft_endpoints.json` preserves version, region, ports, category, requirement, ExpressRoute and notes for audit. Routing policy and port restrictions are intentionally not encoded in generated data.
+Exact source hostnames remain exact. A standard source wildcard such as `*.example.com` becomes `.example.com`; wildcard forms that cannot be represented precisely by DOMAIN-SET cause the update to fail for review. The Apple workflow owns:
 
-For Microsoft URL conversion, exact source names stay exact and a source `*.example.com` becomes `.example.com` by project convention. Partial-label or middle-label wildcards remain `DOMAIN-WILDCARD` rules, so they are not broadened into unrelated suffixes. Run `python scripts/update_microsoft_rules.py --check` for an offline consistency check.
+- `dist/apple_generated_domainset.txt`
+- `dist/apple_generated_ip_ruleset.txt`
+- `sources/apple_enterprise_networks.json`
 
-`*_manual_domainset.txt` is maintained through reviewed observations for domains missing from the generated source, including CDN hosts. Add a CNAME target only when it is also observed as a request hostname, TLS SNI or HTTP Host; a DNS-only CNAME target is not necessarily visible to Surge domain rules.
+The initial entries in `apple_manual_domainset.txt` were migrated from the earlier generated snapshot when the official source did not preserve their previous matching scope. Their original provenance was not recorded, so they remain review candidates rather than official Apple declarations. The workflow never modifies the manual file.
 
-## Maintenance
+Run the offline consistency check with:
 
-New manual domains should be reviewed before committing. Future client observations and China/Bwgyus DNS probes produce candidates, not automatic direct rules.
-Do not infer a permanent domain-to-IP mapping or grant direct access just because DNS returned a China IP.
-Validate syntax and ordering, publish to main, verify raw URLs, then reload external resources on Surge.
+```shell
+python scripts/update_apple_rules.py --check
+```
 
+### Microsoft 365
+
+`scripts/update_microsoft_rules.py` uses the official Microsoft 365 endpoint web service and combines Worldwide, China (21Vianet), USGovDoD, and USGovGCCHigh. All service areas, categories, required and optional records, IPv4, and IPv6 are retained.
+
+`sources/microsoft_endpoints.json` preserves the source versions, instances, ports, categories, requirement flags, ExpressRoute flags, and notes. Standard `*.` patterns become DOMAIN-SET suffixes. Partial-label and middle-label wildcards remain `DOMAIN-WILDCARD` entries in the mixed ruleset.
+
+The Microsoft workflow owns:
+
+- `dist/microsoft_generated_domainset.txt`
+- `dist/microsoft_generated_ruleset.txt`
+- `sources/microsoft_endpoints.json`
+
+Run the offline consistency check with:
+
+```shell
+python scripts/update_microsoft_rules.py --check
+```
+
+Generated outputs should not be edited manually. Both workflows update only their declared generated files after parsing and repository tests succeed.
+
+## Manual data and DNS observations
+
+Manual domains should be backed by an observed request hostname, TLS SNI, HTTP Host, or another reviewable source. A DNS-only CNAME target is not necessarily visible to Surge's domain rules and should not be copied automatically.
+
+Resolver results, network ownership, or the location of an IP address are evidence for analysis rather than an automatic routing decision. Observations from different resolvers or egress paths should remain distinguishable when preparing candidates.
+
+## Validation
+
+Run all deterministic generator and published-file checks with:
+
+```shell
+python -m unittest discover -s tests -v
+```
+
+Before consuming a changed file, review the generated diff, verify its raw URL, and validate the final profile with the Surge version that will load it.
