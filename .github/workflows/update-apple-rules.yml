@@ -2,7 +2,8 @@ name: Update Apple enterprise rules
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "37 11 * * *"
+      timezone: "Asia/Singapore"
   workflow_dispatch:
 
 permissions:

@@ -2,7 +2,8 @@ name: Update Google service rules
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "57 11 * * *"
+      timezone: "Asia/Singapore"
   workflow_dispatch:
 
 permissions:
