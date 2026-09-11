@@ -30,7 +30,7 @@ The former force_proxy/subscription_exit, proxy_path_override and YouTube/heavy_
 Raw base URL:
 https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/
 
-The original Apple domain/IP and Google domain contents are preserved under generated filenames.
+Google's original domain contents remain under its generated filename. Apple generated files now come from Apple's enterprise network article; unmatched legacy Apple entries are preserved in the manual file.
 All policy choices belong in the consuming profile, not in these files.
 An explicit direct entry overrides ads; a high-traffic entry overrides general service and China routing.
 High traffic describes intended usage, not measured usage or an automatic bandwidth threshold.
@@ -39,7 +39,11 @@ High traffic describes intended usage, not measured usage or an automatic bandwi
 
 Apple and Google retain paired `*_generated_domainset.txt` and `*_generated_ip_ruleset.txt` outputs. Microsoft uses `microsoft_generated_domainset.txt` plus the mixed `microsoft_generated_ruleset.txt`, because its official source includes partial-label and middle-label wildcards that require `DOMAIN-WILDCARD` alongside IP rules.
 
-Microsoft generated files are owned by `scripts/update_microsoft_rules.py` and `.github/workflows/update-microsoft-rules.yml`; do not edit them manually. The workflow checks the official version daily and fetches all four endpoint instances only when a version changes. Google generated IP remains an empty placeholder until its own authoritative source and workflow are implemented.
+Apple generated files are owned by `scripts/update_apple_rules.py` and `.github/workflows/update-apple-rules.yml`; Microsoft generated files are owned by the corresponding Microsoft script and workflow. Do not edit generated outputs manually. Google generated IP remains an empty placeholder until its own authoritative source and workflow are implemented.
+
+The Apple source is the official static article at <https://support.apple.com/en-us/101555>. The updater parses every endpoint table plus the firewall hostname and IPv4/IPv6 ranges each day at 11:37 Asia/Singapore. `sources/apple_enterprise_networks.json` retains every table row with its section, ports, protocols, OS, description, proxy support, links, published date and recent changes. A semantic hash prevents HTML-only changes from causing output churn. Run `python scripts/update_apple_rules.py --check` for an offline consistency check.
+
+Apple exact source names stay exact, standard `*.example.com` entries become `.example.com`, and the article's firewall guidance contributes `.apple.com`. The initial 70 manual Apple entries were migrated from the old generated list because the new official suffixes do not preserve their previous matching scope. Their original provenance was not recorded, so they remain review candidates rather than official Apple declarations. The Apple workflow never changes the manual file.
 
 The Microsoft source is the official Microsoft 365 endpoint web service. The generated union includes Worldwide, China (21Vianet), USGovDoD and USGovGCCHigh; all service areas, categories, required/optional records, IPv4 and IPv6 are retained. `sources/microsoft_endpoints.json` preserves version, region, ports, category, requirement, ExpressRoute and notes for audit. Routing policy and port restrictions are intentionally not encoded in generated data.
 

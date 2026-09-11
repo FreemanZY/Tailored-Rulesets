@@ -1,0 +1,51 @@
+name: Update Apple enterprise rules
+
+on:
+  schedule:
+    - cron: "37 11 * * *"
+      timezone: "Asia/Singapore"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-apple-enterprise-rules
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Refresh Apple enterprise endpoint data
+        run: python scripts/update_apple_rules.py
+
+      - name: Run deterministic and repository checks
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/update_apple_rules.py --check
+
+      - name: Commit changed generated files
+        shell: bash
+        run: |
+          git add -- \
+            dist/apple_generated_domainset.txt \
+            dist/apple_generated_ip_ruleset.txt \
+            sources/apple_enterprise_networks.json
+          if git diff --cached --quiet; then
+            echo "Apple generated files are unchanged."
+            exit 0
+          fi
+          metadata="$(python -c 'import json; d=json.load(open("sources/apple_enterprise_networks.json", encoding="utf-8")); print("published={}, semantic_sha256={}".format(d["published_date"], d["semantic_sha256"]))')"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(rules): update Apple enterprise endpoints" -m "$metadata"
+          git push

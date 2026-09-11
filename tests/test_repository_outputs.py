@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import update_microsoft_rules as updater  # noqa: E402
+import update_apple_rules as apple_updater  # noqa: E402
 
 
 def active_lines(path: Path):
@@ -22,6 +23,9 @@ def active_lines(path: Path):
 
 
 class RepositoryOutputTests(unittest.TestCase):
+    def test_generated_apple_outputs_match_source(self):
+        apple_updater.check()
+
     def test_generated_microsoft_outputs_match_source(self):
         updater.check()
 
@@ -51,7 +55,10 @@ class RepositoryOutputTests(unittest.TestCase):
                         if fields[0] in {"IP-CIDR", "IP-CIDR6"}:
                             network = ipaddress.ip_network(fields[1], strict=True)
                             self.assertEqual(fields[0], "IP-CIDR6" if network.version == 6 else "IP-CIDR")
-                            if path.name == "microsoft_generated_ruleset.txt":
+                            if path.name in {
+                                "microsoft_generated_ruleset.txt",
+                                "apple_generated_ip_ruleset.txt",
+                            }:
                                 self.assertIn("no-resolve", fields[2:])
                 else:
                     self.fail(f"published filename does not declare its type: {path.name}")

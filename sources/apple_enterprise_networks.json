@@ -1,0 +1,2737 @@
+{
+  "canonical_url": "https://support.apple.com/en-us/101555",
+  "endpoint_rows": [
+    {
+      "description": "Device activation",
+      "host": "albert.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "Internet connectivity validation for networks that use captive portals",
+      "host": "captive.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "",
+      "host": "gs.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "",
+      "host": "humb.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "",
+      "host": "static.ips.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "eSIM activation",
+      "host": "sq-device.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 1
+    },
+    {
+      "description": "",
+      "host": "tbsc.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 1
+    },
+    {
+      "description": "Used by devices to set their date and time",
+      "host": "time-ios.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and visionOS",
+      "ports": [
+        123
+      ],
+      "protocols": [
+        "UDP"
+      ],
+      "row_index": 8,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 1
+    },
+    {
+      "description": "Used by devices to set their date and time",
+      "host": "time.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        123
+      ],
+      "protocols": [
+        "UDP"
+      ],
+      "row_index": 9,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 1
+    },
+    {
+      "description": "Used by devices to set their date and time",
+      "host": "time-macos.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        123
+      ],
+      "protocols": [
+        "UDP"
+      ],
+      "row_index": 10,
+      "section": "Device setup",
+      "section_id": "devicesetup",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 1
+    },
+    {
+      "description": "Push notifications",
+      "host": "*.push.apple.com",
+      "links": [
+        {
+          "field": "Supports proxies",
+          "href": "#apns",
+          "text": "Learn more about APNs and proxies."
+        }
+      ],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80,
+        5223,
+        2197
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Learn more about APNs and proxies.",
+      "table_index": 2
+    },
+    {
+      "description": "DEP provisional enrollment",
+      "host": "deviceenrollment.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 2
+    },
+    {
+      "description": "Used by an device management service to disable Activation Lock on managed devices",
+      "host": "deviceservices-external.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 2
+    },
+    {
+      "description": "Used by an device management service to identify which software updates are available to devices that use managed software updates",
+      "host": "gdmf.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 2
+    },
+    {
+      "description": "APNs certificate request portal",
+      "host": "identity.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 2
+    },
+    {
+      "description": "Hosts enrollment profiles used when devices enroll in Apple School Manager or Apple Business through Device Enrollment",
+      "host": "iprofiles.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 2
+    },
+    {
+      "description": "Device management services to upload enrollment profiles used by clients enrolling through Device Enrollment in Apple School Manager or Apple Business, and to look up devices and accounts",
+      "host": "mdmenrollment.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 2
+    },
+    {
+      "description": "Required to log in to a Managed Apple Account on Shared iPad",
+      "host": "setup.icloud.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 2
+    },
+    {
+      "description": "Device management services to perform operations related to Apps and Books, like assigning or revoking licenses on a device",
+      "host": "vpp.itunes.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 9,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 2
+    },
+    {
+      "description": "Managed device attestation",
+      "host": "*.appattest.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 10,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 2
+    },
+    {
+      "description": "Service discovery for account-driven enrollments",
+      "host": "axm-servicediscovery.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 11,
+      "section": "Device management",
+      "section_id": "devicemanagement",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 2
+    },
+    {
+      "description": "Apple Business",
+      "host": "*.business.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Apple School Manager",
+      "host": "*.school.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Login authentication",
+      "host": "appleid.cdn-apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "Yes",
+      "table_index": 3
+    },
+    {
+      "description": "Login authentication",
+      "host": "idmsa.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "Yes",
+      "table_index": 3
+    },
+    {
+      "description": "Apps and Books",
+      "host": "*.itunes.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "Yes",
+      "table_index": 3
+    },
+    {
+      "description": "Apps and Books",
+      "host": "*.mzstatic.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Apps and Books (ABM)",
+      "host": "api.ent.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Apps and Books (ASM)",
+      "host": "api.edu.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Device icons",
+      "host": "statici.icloud.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 9,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Validating tax-exempt status",
+      "host": "*.vertexsmb.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 10,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Fonts for certain languages",
+      "host": "www.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 11,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "SFTP uploads",
+      "host": "upload.appleschoolcontent.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        22
+      ],
+      "protocols": [
+        "SSH"
+      ],
+      "row_index": 12,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "Yes",
+      "table_index": 3
+    },
+    {
+      "description": "Apple Business API",
+      "host": "api-business.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 13,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "Apple School Manager API",
+      "host": "api-school.apple.com",
+      "links": [],
+      "os": "-",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 14,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Administrators and managers",
+      "supports_proxies": "—",
+      "table_index": 3
+    },
+    {
+      "description": "User lookup service",
+      "host": "ws-ee-maidsvc.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple School Manager and Apple Business",
+      "section_id": "asmab",
+      "subsection": "Employees and students",
+      "supports_proxies": "—",
+      "table_index": 4
+    },
+    {
+      "description": "DEP enrollment server",
+      "host": "axm-adm-enroll.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "Device management service",
+      "host": "axm-adm-mdm.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "SCEP server",
+      "host": "axm-adm-scep.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "View and manage apps and devices",
+      "host": "axm-app.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "View the location of devices in Managed Lost Mode",
+      "host": "*.apple-mapkit.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "Custom Package icons",
+      "host": "icons.axm-usercontent-apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Apple Business device management",
+      "section_id": "abdm",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 5
+    },
+    {
+      "description": "Classroom and Schoolwork device verification",
+      "host": "s.mzstatic.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Classroom and Schoolwork device verification",
+      "host": "play.itunes.apple.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Classroom and Schoolwork class roster service",
+      "host": "ws-ee-maidsvc.icloud.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Classroom and Schoolwork class roster service",
+      "host": "ws.school.apple.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Schoolwork handout service",
+      "host": "pg-bootstrap.itunes.apple.com",
+      "links": [],
+      "os": "iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Schoolwork handout service",
+      "host": "cls-iosclient.itunes.apple.com",
+      "links": [],
+      "os": "iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "Schoolwork handout service",
+      "host": "cls-ingest.itunes.apple.com",
+      "links": [],
+      "os": "iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Classroom and Schoolwork",
+      "section_id": "classschool",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 6
+    },
+    {
+      "description": "iOS, iPadOS, and watchOS updates",
+      "host": "appldnld.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, watchOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "Rosetta 2 updates",
+      "host": "configuration.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "Software update catalog",
+      "host": "gdmf.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, watchOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "iOS, iPadOS, tvOS, watchOS, and macOS updates",
+      "host": "gg.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, watchOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "iOS, iPadOS, tvOS, watchOS, and macOS updates",
+      "host": "gs.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, watchOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "ig.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "Hosts software update catalogs",
+      "host": "mesu.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, watchOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS Recovery",
+      "host": "oscdn.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS Recovery",
+      "host": "osrecovery.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 9,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "skl.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 10,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "swcdn.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 11,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "swdist.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 12,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "swdownload.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 13,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "macOS updates",
+      "host": "swscan.apple.com",
+      "links": [],
+      "os": "macOS only",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 14,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "Software update downloads",
+      "host": "updates-http.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 15,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "Software update downloads",
+      "host": "updates.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 16,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 7
+    },
+    {
+      "description": "",
+      "host": "xp.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 17,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "Software update catalog for additional components",
+      "host": "gdmf-ados.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 18,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "OS updates for additional components",
+      "host": "gsra.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 19,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "Installing iOS, iPadOS, or macOS on an attached device",
+      "host": "wkms-public.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 20,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "Installing iOS, iPadOS, or macOS on an attached device",
+      "host": "fcs-keys-pub-prod.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 21,
+      "section": "Software updates",
+      "section_id": "software",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 7
+    },
+    {
+      "description": "Store content such as apps, books, and music",
+      "host": "*.itunes.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 8
+    },
+    {
+      "description": "Store content such as apps, books, and music",
+      "host": "*.apps.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 8
+    },
+    {
+      "description": "Store content such as apps, books, and music, and apps from websites and alternative marketplaces",
+      "host": "*.mzstatic.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "",
+      "host": "itunes.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443,
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 8
+    },
+    {
+      "description": "Enterprise App validation",
+      "host": "ppq.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "App notarization",
+      "host": "api.apple-cloudkit.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "App validation, Touch ID and Face ID authentication for websites",
+      "host": "*.appattest.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Installing apps from websites and alternative marketplaces",
+      "host": "*.apps-marketplace.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 8
+    },
+    {
+      "description": "Safari fraudulent website warnings",
+      "host": "token.safebrowsing.apple",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 9,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "__",
+      "table_index": 8
+    },
+    {
+      "description": "GarageBand downloadable content",
+      "host": "audiocontentdownload.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        80,
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 10,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Xcode downloadable components",
+      "host": "devimages-cdn.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        80,
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 11,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Xcode downloadable components",
+      "host": "download.developer.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        80,
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 12,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Swift Playground",
+      "host": "playground-assets-cdn.apple.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 13,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Swift Playground",
+      "host": "playground-cdn.apple.com",
+      "links": [],
+      "os": "iPadOS and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 14,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Aerial screen savers and wallpaper",
+      "host": "sylvan.apple.com",
+      "links": [],
+      "os": "tvOS and macOS",
+      "ports": [
+        80,
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 15,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "CloudKit content including XProtect updates and Voice Control assets",
+      "host": "gateway.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 16,
+      "section": "Apps and additional content",
+      "section_id": "appscontent",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 8
+    },
+    {
+      "description": "Cellular carrier bundle updates",
+      "host": "appldnld.apple.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Cellular carrier bundle updates",
+      "host": "appldnld.apple.com.edgesuite.net",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Carrier bundle update discovery",
+      "host": "itunes.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Carrier bundle update discovery",
+      "host": "itunes.apple.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Cellular carrier bundle updates",
+      "host": "updates-http.cdn-apple.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Cellular carrier bundle updates",
+      "host": "updates.cdn-apple.com",
+      "links": [],
+      "os": "iOS and iPadOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Carrier updates",
+      "section_id": "carrier",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 9
+    },
+    {
+      "description": "Server registration",
+      "host": "lcdn-registration.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Content caching",
+      "section_id": "caching",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 10
+    },
+    {
+      "description": "Configuration",
+      "host": "suconfig.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Content caching",
+      "section_id": "caching",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 10
+    },
+    {
+      "description": "Reporting",
+      "host": "xp-cdn.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Content caching",
+      "section_id": "caching",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 10
+    },
+    {
+      "description": "Content caching locator service",
+      "host": "lcdn-locator.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Content caching",
+      "section_id": "caching",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 11
+    },
+    {
+      "description": "Content caching client public IP determination",
+      "host": "serverstatus.apple.com",
+      "links": [],
+      "os": "macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Content caching",
+      "section_id": "caching",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 11
+    },
+    {
+      "description": "Beta update enrollment",
+      "host": "bpapi.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, watchOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Beta updates",
+      "section_id": "beta",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 12
+    },
+    {
+      "description": "Used by Feedback Assistant to upload files",
+      "host": "cssubmissions.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Beta updates",
+      "section_id": "beta",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 12
+    },
+    {
+      "description": "Used by Feedback Assistant to file and view feedback",
+      "host": "fba.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Beta updates",
+      "section_id": "beta",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 12
+    },
+    {
+      "description": "Used by Apple devices to help detect possible hardware issues",
+      "host": "diagassets.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple diagnostics",
+      "section_id": "diagnostics",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 13
+    },
+    {
+      "description": "Used for DNS over HTTPS (DoH)",
+      "host": "doh.dns.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Domain Name System resolution",
+      "section_id": "dns",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 14
+    },
+    {
+      "description": "Certificate validation",
+      "host": "certs.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80,
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "crl.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "crl3.digicert.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "crl4.digicert.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "ocsp.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation in China",
+      "host": "ocsp.digicert.cn",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "ocsp.digicert.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        80
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "ocsp2.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 15
+    },
+    {
+      "description": "Certificate validation",
+      "host": "valid.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 9,
+      "section": "Certificate validation",
+      "section_id": "certificate",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 15
+    },
+    {
+      "description": "Apple Account authentication in Settings and System Preferences",
+      "host": "account.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple Account",
+      "section_id": "appleaccount",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 16
+    },
+    {
+      "description": "Apple Account authentication in Settings and System Preferences",
+      "host": "appleid.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Apple Account",
+      "section_id": "appleaccount",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 16
+    },
+    {
+      "description": "Apple Account authentication",
+      "host": "idmsa.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Apple Account",
+      "section_id": "appleaccount",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 16
+    },
+    {
+      "description": "Apple Account authentication",
+      "host": "gsa.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "Apple Account",
+      "section_id": "appleaccount",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 16
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.apple-cloudkit.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.apple-livephotoskit.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services in China",
+      "host": "*.apzones.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.gc.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 5,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 6,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services in China",
+      "host": "*.icloud.com.cn",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 7,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.icloud.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 8,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud services",
+      "host": "*.icloud-content.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 9,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iWork documents",
+      "host": "*.iwork.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 10,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud Private Relay",
+      "host": "mask.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "UDP"
+      ],
+      "row_index": 11,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud Private Relay",
+      "host": "mask-h2.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 12,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud Private Relay",
+      "host": "mask-api.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 13,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud connection testing",
+      "host": "probe.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 14,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud connection testing",
+      "host": "pong.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 15,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 17
+    },
+    {
+      "description": "iCloud device diagonostics",
+      "host": "metrics.icloud.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 16,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 17
+    },
+    {
+      "description": "RCS",
+      "host": "apple-native-relay.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 17,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 17
+    },
+    {
+      "description": "DNS for iCloud services",
+      "host": "*.apple-dns.net",
+      "links": [],
+      "os": "iOS, iPadOS, tvOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 18,
+      "section": "iCloud",
+      "section_id": "icloud",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 17
+    },
+    {
+      "description": "Siri and dictation requests",
+      "host": "guzzoni.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Search services, including Siri, Spotlight, Lookup, Safari, News, Messages, and Music",
+      "host": "*.smoot.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Private Cloud Compute",
+      "host": "apple-relay.cloudflare.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 3,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Private Cloud Compute",
+      "host": "apple-relay.fastly-edge.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 4,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Private Cloud Compute",
+      "host": "cp4.cloudflare.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 5,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Apple Intelligence Extensions",
+      "host": "apple-relay.apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, and macOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 6,
+      "section": "Apple Intelligence, Siri, and Search",
+      "section_id": "aisirisearch",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 18
+    },
+    {
+      "description": "Associated domains for universal links",
+      "host": "app-site-association.cdn-apple.com",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 1,
+      "section": "Associated Domains",
+      "section_id": "domains",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 19
+    },
+    {
+      "description": "Associated domains for universal links",
+      "host": "app-site-association.networking.apple",
+      "links": [],
+      "os": "iOS, iPadOS, macOS, and visionOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 2,
+      "section": "Associated Domains",
+      "section_id": "domains",
+      "subsection": null,
+      "supports_proxies": "—",
+      "table_index": 19
+    },
+    {
+      "description": "Tap to Pay on iPhone",
+      "host": "pos-device.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP",
+        "UDP"
+      ],
+      "row_index": 1,
+      "section": "Tap to Pay on iPhone",
+      "section_id": "taptopay",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 20
+    },
+    {
+      "description": "Tap to Pay on iPhone setup",
+      "host": "humb.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "Tap to Pay on iPhone",
+      "section_id": "taptopay",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 20
+    },
+    {
+      "description": "Optional analytics sharing",
+      "host": "iphonesubmissions.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "Tap to Pay on iPhone",
+      "section_id": "taptopay",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 20
+    },
+    {
+      "description": "ID Verifier on iPhone",
+      "host": "smp-device-content.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 1,
+      "section": "ID Verifier on iPhone",
+      "section_id": "idverifier",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 21
+    },
+    {
+      "description": "ID Verifier on iPhone",
+      "host": "idv.cdn-apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 2,
+      "section": "ID Verifier on iPhone",
+      "section_id": "idverifier",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 21
+    },
+    {
+      "description": "ID Verifier on iPhone",
+      "host": "idv-prod1.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 3,
+      "section": "ID Verifier on iPhone",
+      "section_id": "idverifier",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 21
+    },
+    {
+      "description": "ID Verifier on iPhone",
+      "host": "humb.apple.com",
+      "links": [],
+      "os": "iOS",
+      "ports": [
+        443
+      ],
+      "protocols": [
+        "TCP"
+      ],
+      "row_index": 4,
+      "section": "ID Verifier on iPhone",
+      "section_id": "idverifier",
+      "subsection": null,
+      "supports_proxies": "Yes",
+      "table_index": 21
+    }
+  ],
+  "firewall": {
+    "hostname_patterns": [
+      "*.apple.com"
+    ],
+    "ip_ranges": [
+      "17.0.0.0/8",
+      "2403:300::/32",
+      "2620:149::/32",
+      "2a01:b740::/32"
+    ]
+  },
+  "published_date": "2026-08-07",
+  "recent_changes": [
+    "July 2026: Added a domain to the iCloud section (*.apple-dns.net) and corrected the hosts for Swift Playground.",
+    "April 2026: Removed Apple Business Essentials and Apple Business Manager and added Apple Business.",
+    "January 2026: Added hosts to the iCloud section (probe.icloud.com, pong.icloud.com, metrics.icloud.com, and apple-native-relay.apple.com), and updated the protocols for gateway.icloud.com and *.icloud-content.com.",
+    "July 2025: Added IPv6 information related to firewalls, added new hosts for Apple School Manager and Apple Business API, and updated the host gateway.icloud.com to include XProtect updates.",
+    "April 2025: Removed a host (ns.itunes.apple.com), corrected a host name (iphonesubmissions.apple.com), and added information for a host (deviceservices-external.apple.com).",
+    "Support",
+    "Use Apple products on enterprise networks"
+  ],
+  "schema_version": 1,
+  "semantic_sha256": "10ddf45a6e421473bdec1b70ac099e842ac8d55d1e47f386e0a859a4c9abd1a5",
+  "source": "https://support.apple.com/en-us/101555",
+  "title": "Use Apple products on enterprise networks"
+}
