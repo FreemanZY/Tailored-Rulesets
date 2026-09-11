@@ -1,4 +1,4 @@
-# DOMAIN-SET: AI service targets through Gate.
+# DOMAIN-SET: AI service targets for a consumer-selected proxy policy.
 # Plain entries match exact names; leading dots include subdomains.
 .auth0.com
 .challenges.cloudflare.com

@@ -1,4 +1,4 @@
-# RULE-SET: Non-domain high-volume traffic through 12VPX Los Angeles.
+# RULE-SET: Non-domain high-volume targets for a consumer-selected traffic policy.
 # Domain entries are maintained separately in high_traffic_domainset.txt.
 
 ## Telegram IP
@@ -7,7 +7,3 @@ IP-CIDR,91.108.56.139/32
 ## Twitter/X IP
 IP-CIDR,192.229.210.163/32
 IP-CIDR,72.21.91.70/32
-
-## macOS process
-PROCESS-NAME,/usr/bin/curl
-

@@ -1,5 +1,4 @@
-# DOMAIN-SET: Explicit Gate domains before China direct rules.
+# DOMAIN-SET: Explicit default-proxy domains before regional direct rules.
 cloudflare-dns.com
 .duolingo.com
 .duolingo.cn
-

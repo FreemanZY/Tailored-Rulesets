@@ -84,6 +84,19 @@ class RepositoryOutputTests(unittest.TestCase):
             "1270ff385c44e9ac70f6486aa3c97864600427fdfab69b9d24001859fa03c8af",
         )
 
+    def test_public_rules_omit_private_policy_names_and_global_curl_override(self):
+        published = "\n".join(
+            path.read_text(encoding="utf-8-sig")
+            for path in sorted((ROOT / "dist").glob("*.txt"))
+        )
+        for private_term in ("12VPX", "Bwgyus", "Gate", "Los Angeles"):
+            with self.subTest(private_term=private_term):
+                self.assertNotIn(private_term, published)
+        self.assertNotIn(
+            "PROCESS-NAME,/usr/bin/curl",
+            active_lines(ROOT / "dist" / "high_traffic_ruleset.txt"),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

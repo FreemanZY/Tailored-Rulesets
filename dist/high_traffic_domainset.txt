@@ -1,4 +1,4 @@
-# DOMAIN-SET: High-volume domains through 12VPX Los Angeles.
+# DOMAIN-SET: High-volume domains for a consumer-selected traffic policy.
 # Plain entries match exact names; leading dots include subdomains.
 
 ## Apple
@@ -25,4 +25,3 @@ tlu.dl.delivery.mp.microsoft.com
 .twimg.com
 enterprise.proxmox.com
 public.shrekmedia.org
-
