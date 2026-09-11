@@ -2,7 +2,7 @@ name: Update Apple enterprise rules
 
 on:
   schedule:
-    - cron: "55 7 * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
