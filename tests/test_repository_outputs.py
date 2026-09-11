@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import ipaddress
+import hashlib
 import re
 import sys
 import unittest
@@ -12,6 +13,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import update_microsoft_rules as updater  # noqa: E402
 import update_apple_rules as apple_updater  # noqa: E402
+import update_google_rules as google_updater  # noqa: E402
 
 
 def active_lines(path: Path):
@@ -28,6 +30,9 @@ class RepositoryOutputTests(unittest.TestCase):
 
     def test_generated_microsoft_outputs_match_source(self):
         updater.check()
+
+    def test_generated_google_outputs_match_source(self):
+        google_updater.check()
 
     def test_all_published_rule_files_have_declared_syntax(self):
         allowed = {
@@ -58,6 +63,7 @@ class RepositoryOutputTests(unittest.TestCase):
                             if path.name in {
                                 "microsoft_generated_ruleset.txt",
                                 "apple_generated_ip_ruleset.txt",
+                                "google_generated_ruleset.txt",
                             }:
                                 self.assertIn("no-resolve", fields[2:])
                 else:
@@ -65,6 +71,18 @@ class RepositoryOutputTests(unittest.TestCase):
 
     def test_legacy_microsoft_ip_filename_is_removed(self):
         self.assertFalse((ROOT / "dist" / "microsoft_generated_ip_ruleset.txt").exists())
+
+    def test_legacy_google_ip_filename_is_removed(self):
+        self.assertFalse((ROOT / "dist" / "google_generated_ip_ruleset.txt").exists())
+
+    def test_legacy_google_domains_are_preserved_manually(self):
+        lines = active_lines(ROOT / "dist" / "google_manual_domainset.txt")
+        payload = ("\n".join(lines) + "\n").encode()
+        self.assertEqual(len(lines), 1120)
+        self.assertEqual(
+            hashlib.sha256(payload).hexdigest(),
+            "1270ff385c44e9ac70f6486aa3c97864600427fdfab69b9d24001859fa03c8af",
+        )
 
 
 if __name__ == "__main__":

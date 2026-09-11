@@ -15,8 +15,7 @@ The main file families are:
 
 | Family | Purpose |
 | --- | --- |
-| Apple and Microsoft | Generated service domains and network ranges, with separate manual domain additions |
-| Google | Legacy generated domain snapshot, manual additions, and an IP placeholder awaiting an authoritative automated source |
+| Apple, Google, and Microsoft | Generated service domains and network ranges, with separate manual domain additions |
 | `ai_*` and `proxy_targets_*` | Curated service and target classifications |
 | `high_traffic_*` | Domains and typed targets classified as bandwidth-intensive |
 | `force_direct_*`, `reject_*`, `china_*`, and `lan_*` | Curated routing categories for a consuming profile to map to its own policies |
@@ -95,7 +94,50 @@ Run the offline consistency check with:
 python scripts/update_microsoft_rules.py --check
 ```
 
-Generated outputs should not be edited manually. Both workflows update only their declared generated files after parsing and repository tests succeed.
+### Google
+
+`scripts/update_google_rules.py` reads six fixed Google documentation pages and two official IP-range feeds. It does not recursively crawl documentation links.
+
+HTML sources:
+
+- [Google Workspace host allowlist](https://knowledge.workspace.google.com/admin/getting-started/set-up-a-google-workspace-host-name-allowlist)
+- [Firewall and proxy settings](https://knowledge.workspace.google.com/admin/security/firewall-and-proxy-settings)
+- [Obtain Google IP address ranges](https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges)
+- [ChromeOS hostname allowlist](https://support.google.com/chrome/a/answer/6334001)
+- [Meet network requirements](https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams)
+- [Drive and Sites firewall settings](https://knowledge.workspace.google.com/admin/drive/drive-and-sites-firewall-and-proxy-settings)
+
+IP sources:
+
+- [Google service prefixes (`goog.json`)](https://www.gstatic.com/ipranges/goog.json)
+- [Customer Google Cloud prefixes (`cloud.json`)](https://www.gstatic.com/ipranges/cloud.json)
+
+The generator computes the CIDR difference `goog.json - cloud.json` with Python's IP network operations. This prevents customer Google Cloud prefixes from being classified wholesale as Google service traffic. Meet media ranges retain their separate source relationship in the snapshot.
+
+Exact hostnames remain exact, standard `*.` patterns become DOMAIN-SET suffix entries, and partial-label patterns remain `DOMAIN-WILDCARD` rules. Numeric `[0-9]` templates are expanded. Country placeholders for Google Account hosts use the documented compatibility expansion `DOMAIN-WILDCARD,accounts.google.*`; this broader interpretation is marked in the output and source snapshot.
+
+Links used by the automation and its consumers:
+
+- GitHub Actions workflow: <https://github.com/FreemanZY/Tailored-Rulesets/actions/workflows/update-google-rules.yml>
+- Structured source snapshot: <https://github.com/FreemanZY/Tailored-Rulesets/blob/main/sources/google_endpoints.json>
+- DOMAIN-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/google_generated_domainset.txt>
+- Mixed RULE-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/google_generated_ruleset.txt>
+
+The Google workflow owns:
+
+- `dist/google_generated_domainset.txt`
+- `dist/google_generated_ruleset.txt`
+- `sources/google_endpoints.json`
+
+`google_manual_domainset.txt` preserves 1,120 entries from the previous generated file. Their original provenance was not recorded, so they are retained as historical review candidates even when they overlap current official data. The workflow never modifies this manual file.
+
+Run the offline consistency check with:
+
+```shell
+python scripts/update_google_rules.py --check
+```
+
+Generated outputs should not be edited manually. All three workflows update only their declared generated files after parsing and repository tests succeed.
 
 ## Manual data and DNS observations
 

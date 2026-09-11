@@ -1,0 +1,51 @@
+name: Update Google service rules
+
+on:
+  schedule:
+    - cron: "57 11 * * *"
+      timezone: "Asia/Singapore"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-google-service-rules
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Refresh Google endpoint data
+        run: python scripts/update_google_rules.py
+
+      - name: Run deterministic and repository checks
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/update_google_rules.py --check
+
+      - name: Commit changed generated files
+        shell: bash
+        run: |
+          git add -- \
+            dist/google_generated_domainset.txt \
+            dist/google_generated_ruleset.txt \
+            sources/google_endpoints.json
+          if git diff --cached --quiet; then
+            echo "Google generated files are unchanged."
+            exit 0
+          fi
+          metadata="$(python -c 'import json; d=json.load(open("sources/google_endpoints.json", encoding="utf-8")); print("syncToken={}, semantic_sha256={}".format(d["ip_sources"]["goog"]["sync_token"], d["semantic_sha256"]))')"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(rules): update Google service endpoints" -m "$metadata"
+          git push
