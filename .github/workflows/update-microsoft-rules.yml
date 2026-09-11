@@ -2,8 +2,7 @@ name: Update Microsoft 365 rules
 
 on:
   schedule:
-    - cron: "32 15 * * *"
-      timezone: "Asia/Singapore"
+    - cron: "52 7 * * *"
   workflow_dispatch:
 
 permissions:
