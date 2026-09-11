@@ -44,6 +44,14 @@ RULE-SET,<raw-ruleset-url>,<policy>,no-resolve
 
 `scripts/update_apple_rules.py` reads Apple's official [enterprise network article](https://support.apple.com/en-us/101555). The daily workflow parses every endpoint table, the firewall hostname pattern, and the published IPv4 and IPv6 ranges.
 
+Links used by the automation and its consumers:
+
+- Official source: <https://support.apple.com/en-us/101555>
+- GitHub Actions workflow: <https://github.com/FreemanZY/Tailored-Rulesets/actions/workflows/update-apple-rules.yml>
+- Structured source snapshot: <https://github.com/FreemanZY/Tailored-Rulesets/blob/main/sources/apple_enterprise_networks.json>
+- DOMAIN-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/apple_generated_domainset.txt>
+- IP RULE-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/apple_generated_ip_ruleset.txt>
+
 The structured snapshot in `sources/apple_enterprise_networks.json` retains each source row with its section, ports, protocols, operating systems, description, proxy-support field, links, publication date, and recent-change notes. A semantic hash prevents presentation-only HTML changes from rewriting the generated files.
 
 Exact source hostnames remain exact. A standard source wildcard such as `*.example.com` becomes `.example.com`; wildcard forms that cannot be represented precisely by DOMAIN-SET cause the update to fail for review. The Apple workflow owns:
@@ -63,6 +71,15 @@ python scripts/update_apple_rules.py --check
 ### Microsoft 365
 
 `scripts/update_microsoft_rules.py` uses the official Microsoft 365 endpoint web service and combines Worldwide, China (21Vianet), USGovDoD, and USGovGCCHigh. All service areas, categories, required and optional records, IPv4, and IPv6 are retained.
+
+Links used by the automation and its consumers:
+
+- Official web service documentation: <https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide>
+- API base: <https://endpoints.office.com>
+- GitHub Actions workflow: <https://github.com/FreemanZY/Tailored-Rulesets/actions/workflows/update-microsoft-rules.yml>
+- Structured source snapshot: <https://github.com/FreemanZY/Tailored-Rulesets/blob/main/sources/microsoft_endpoints.json>
+- DOMAIN-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/microsoft_generated_domainset.txt>
+- Mixed RULE-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/microsoft_generated_ruleset.txt>
 
 `sources/microsoft_endpoints.json` preserves the source versions, instances, ports, categories, requirement flags, ExpressRoute flags, and notes. Standard `*.` patterns become DOMAIN-SET suffixes. Partial-label and middle-label wildcards remain `DOMAIN-WILDCARD` entries in the mixed ruleset.
 
