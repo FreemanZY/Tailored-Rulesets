@@ -18,3 +18,6 @@ IP-ASN,9808
 
 # ChinaNet Shandong Yantai IDC network
 IP-ASN,139887
+
+# Jinhua Weian InfoTech Co.,Ltd
+IP-ASN,131516
