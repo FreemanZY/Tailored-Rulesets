@@ -1,4 +1,4 @@
-# RULE-SET: Curated Alibaba and Tencent network ASNs.
+# RULE-SET: Curated China enterprise network ASNs.
 # Network ownership does not prove content identity; cloud and CDN ASNs can host third parties.
 
 # Alibaba
@@ -13,6 +13,9 @@ IP-ASN,137753
 # Tencent
 IP-ASN,45090
 IP-ASN,132203
+
+# Huawei Cloud China
+IP-ASN,55990
 
 # 21Vianet.Co.,Ltd
 IP-ASN,17428
