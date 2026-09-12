@@ -1,3 +1,3 @@
 # RULE-SET: Explicit direct overrides that require typed Surge rules.
 # Plain HTTP WeChat MMTLS shortlinks sent directly to an IPv4 address.
-URL-REGEX,^http://([0-9][0-9]?[0-9]?\.){3}[0-9][0-9]?[0-9]?(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)
+URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)

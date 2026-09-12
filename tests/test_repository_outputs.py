@@ -108,6 +108,7 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertIsNotNone(regex.search("http://203.205.151.204:80/mmtls/00000dd9?x=1"))
         self.assertIsNone(regex.search("https://203.205.151.204/mmtls/5eac4f54"))
         self.assertIsNone(regex.search("http://extshort.weixin.qq.com/mmtls/5eac4f54"))
+        self.assertIsNone(regex.search("http://999.999.999.999/mmtls/5eac4f54"))
         self.assertIsNone(regex.search("http://203.205.151.204/other/5eac4f54"))
         self.assertIsNone(regex.search("http://203.205.151.204/mmtls/5eac4f5"))
 
