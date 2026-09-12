@@ -6,6 +6,9 @@
 IP-ASN,4134
 IP-ASN,4809
 
+# China Telecom (Group)
+IP-ASN,4812
+
 # China Unicom: China169 and CUII
 IP-ASN,4837
 IP-ASN,9929
