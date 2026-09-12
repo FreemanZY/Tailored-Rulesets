@@ -1,5 +1,5 @@
 # GENERATED DOMAIN-SET: official Google Workspace, ChromeOS and service endpoints; do not edit manually.
-# Semantic SHA-256: 585743ffe08a69b1316fd4f060b8b9a26c809419c07736539cb64c8c4854a016
+# Semantic SHA-256: e38cda64c2d89e3549e60c15dacf207449c07eb8365934223328ba5338dac162
 # Exact source names stay exact; source *.example.com becomes .example.com.
 .1e100.net
 .c.docs.google.com
@@ -141,7 +141,6 @@ maps.googleapis.com
 maps.gstatic.com
 meet.google.com
 meet.turns.goog
-meetings.clients6.google.com
 meetings.googleapis.com
 mtalk.google.com
 notebook.google.com

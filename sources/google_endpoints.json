@@ -10,7 +10,6 @@
     "8.236.0.0/17",
     "8.236.128.0/20",
     "8.236.160.0/19",
-    "8.237.64.0/18",
     "8.237.128.0/17",
     "34.0.228.0/22",
     "34.0.232.0/21",
@@ -407,7 +406,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-09-10T19:07:57.583553",
+      "creation_time": "2026-09-11T19:06:35.980001",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -612,6 +611,11 @@
         {
           "ipv4Prefix": "8.237.0.0/18",
           "scope": "asia-northeast1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "8.237.64.0/18",
+          "scope": "us-south1",
           "service": "Google Cloud"
         },
         {
@@ -5920,11 +5924,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1789092477583",
+      "sync_token": "1789178795980",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-09-10T19:07:57.583553",
+      "creation_time": "2026-09-11T19:06:35.980001",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6362,7 +6366,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1789092477583",
+      "sync_token": "1789178795980",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -9902,8 +9906,22 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams",
       "id": "meet",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-09-11",
       "records": [
+        {
+          "host": "*.clients6.google.com",
+          "optional": false,
+          "path": null,
+          "port": null,
+          "protocol": null,
+          "raw": "*.clients6.google.com",
+          "section": [
+            "Set up your network",
+            "Step 2: Allow access to uniform resource identifiers (URIs)"
+          ],
+          "source": "*.clients6.google.com",
+          "type": "host"
+        },
         {
           "host": "accounts.google.com",
           "optional": false,
@@ -9944,6 +9962,20 @@
             "Step 2: Allow access to uniform resource identifiers (URIs)"
           ],
           "source": "apps.google.com",
+          "type": "host"
+        },
+        {
+          "host": "chat.google.com",
+          "optional": false,
+          "path": null,
+          "port": null,
+          "protocol": null,
+          "raw": "chat.google.com",
+          "section": [
+            "Set up your network",
+            "Step 2: Allow access to uniform resource identifiers (URIs)"
+          ],
+          "source": "chat.google.com",
           "type": "host"
         },
         {
@@ -10084,20 +10116,6 @@
             "Step 3: Allow access to Google IP address ranges (for audio and video)"
           ],
           "source": "meet.turns.goog",
-          "type": "host"
-        },
-        {
-          "host": "meetings.clients6.google.com",
-          "optional": false,
-          "path": null,
-          "port": null,
-          "protocol": null,
-          "raw": "meetings.clients6.google.com",
-          "section": [
-            "Set up your network",
-            "Step 2: Allow access to uniform resource identifiers (URIs)"
-          ],
-          "source": "meetings.clients6.google.com",
           "type": "host"
         },
         {
@@ -10716,5 +10734,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "585743ffe08a69b1316fd4f060b8b9a26c809419c07736539cb64c8c4854a016"
+  "semantic_sha256": "e38cda64c2d89e3549e60c15dacf207449c07eb8365934223328ba5338dac162"
 }

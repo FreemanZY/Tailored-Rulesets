@@ -1,5 +1,5 @@
 # GENERATED RULE-SET: official Google complex host patterns and IP ranges; do not edit manually.
-# IP syncToken: 1789092477583; semantic SHA-256: 585743ffe08a69b1316fd4f060b8b9a26c809419c07736539cb64c8c4854a016
+# IP syncToken: 1789178795980; semantic SHA-256: e38cda64c2d89e3549e60c15dacf207449c07eb8365934223328ba5338dac162
 # accounts.google.[country] is represented as accounts.google.* by explicit repository policy.
 # Policies belong in the consuming Surge profile.
 DOMAIN-WILDCARD,accounts.google.*
@@ -15,7 +15,6 @@ IP-CIDR,8.234.18.0/23,no-resolve
 IP-CIDR,8.236.0.0/17,no-resolve
 IP-CIDR,8.236.128.0/20,no-resolve
 IP-CIDR,8.236.160.0/19,no-resolve
-IP-CIDR,8.237.64.0/18,no-resolve
 IP-CIDR,8.237.128.0/17,no-resolve
 IP-CIDR,34.0.228.0/22,no-resolve
 IP-CIDR,34.0.232.0/21,no-resolve
