@@ -47,3 +47,81 @@ DOMAIN-SUFFIX,wxapp.tc.qq.com
 
 # Group: WeChat plain HTTP MMTLS shortlinks to IPv4 hosts
 URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)
+
+# Group: Meituan and Dianping
+DOMAIN,api-unionid.meituan.com
+DOMAIN,catdot.dianping.com
+DOMAIN,ddplus.meituan.net
+DOMAIN,img.meituan.net
+DOMAIN,m3.d.meituan.net
+DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,o1.d.meituan.net
+DOMAIN,p0.meituan.net
+DOMAIN,p1.d.meituan.net
+DOMAIN,p1.meituan.net
+DOMAIN,p10.d.meituan.net
+DOMAIN,p14.d.meituan.net
+DOMAIN,p2.d.meituan.net
+DOMAIN,p4.d.meituan.net
+DOMAIN,p6.d.meituan.net
+DOMAIN,s1.d.meituan.net
+DOMAIN,s3plus-shon.meituan.net
+DOMAIN,s3plus.meituan.net
+
+# Group: Xiaomi and Mijia
+DOMAIN,api.mijia.tech
+DOMAIN,cdn.cnbj1.fds.api.mi-img.com
+DOMAIN,ott.io.mi.com
+
+# Group: Didi
+DOMAIN,api.udache.com
+DOMAIN,common.diditaxi.com.cn
+DOMAIN,dpubstatic.udache.com
+DOMAIN,epassport.diditaxi.com.cn
+DOMAIN,img-hxy021.didistatic.com
+DOMAIN,map.diditaxi.com.cn
+DOMAIN,prod.didi.cn
+DOMAIN,res.xiaojukeji.com
+DOMAIN,union.didi.cn
+DOMAIN,ut-static.udache.com
+DOMAIN,web.map.xiaojukeji.com
+
+# Group: H World and Huazhu
+DOMAIN,appgw.huazhu.com
+DOMAIN,cdn.huazhu.com
+DOMAIN,hmall-static.huazhu.com
+DOMAIN,hweb-channel.huazhu.com
+DOMAIN,hweb-hotel.huazhu.com
+DOMAIN,hweb-manager.huazhu.com
+DOMAIN,hweb-oca.huazhu.com
+DOMAIN,hweb-personalcenter.huazhu.com
+DOMAIN,res-pub.huazhu.com
+
+# Group: Luckin Coffee
+DOMAIN,capi.lkcoffee.com
+DOMAIN,ecapi.lkcoffee.com
+
+# Group: Caiyun Weather
+DOMAIN,caiyunapp.com
+DOMAIN,starplucker.cyapi.cn
+DOMAIN,wrapper.cyapi.cn
+
+# Group: China Railway 12306
+DOMAIN,eximages.12306.cn
+DOMAIN,mobile.12306.cn
+
+# Group: Baidu Maps
+DOMAIN,loc.map.baidu.com
+
+# Group: ByteDance Volcengine
+DOMAIN,gator.volces.com
+DOMAIN,tab.volces.com
+
+# Group: NetEase Yunxin
+DOMAIN,httpdns.yunxindns.com
+
+# Group: CMB Wing Lung Bank
+DOMAIN-SUFFIX,cmbwinglungbank.com
+
+# Group: China Unicom RCS
+DOMAIN-SUFFIX,rcs01.5gm.wo.cn

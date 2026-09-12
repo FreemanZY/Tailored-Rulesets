@@ -130,13 +130,25 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (40, 69, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (94, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
             self.assertIn(f"DOMAIN,{domain}", rejected)
             self.assertNotIn(f"DOMAIN,{domain}", force_direct)
         self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
+        for migrated in {
+            "DOMAIN,api-unionid.meituan.com",
+            "DOMAIN,api.mijia.tech",
+            "DOMAIN,api.udache.com",
+            "DOMAIN,appgw.huazhu.com",
+            "DOMAIN,mobile.12306.cn",
+            "DOMAIN,gator.volces.com",
+            "DOMAIN-SUFFIX,cmbwinglungbank.com",
+            "DOMAIN-SUFFIX,rcs01.5gm.wo.cn",
+        }:
+            self.assertIn(migrated, enterprise_manual)
+            self.assertNotIn(migrated, force_direct)
         published = "\n".join(force_direct + enterprise_manual)
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
