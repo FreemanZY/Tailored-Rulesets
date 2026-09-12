@@ -24,6 +24,8 @@ The main file families are:
 
 Policy names, policy-group topology, rule precedence, and fallback behavior belong in the consuming Surge profile. Published rule files do not embed those choices. Comment-only files are valid placeholders with no active entries.
 
+`force_direct_ruleset.txt` currently contains a narrowly scoped `URL-REGEX` for plain HTTP WeChat MMTLS shortlinks sent directly to an IPv4 address. URL rules require Surge's HTTP engine; they do not inspect undecrypted HTTPS paths.
+
 Raw base URL:
 
 ```text

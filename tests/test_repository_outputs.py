@@ -44,6 +44,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "IP-CIDR6",
             "IP-ASN",
             "PROCESS-NAME",
+            "URL-REGEX",
         }
         for path in sorted((ROOT / "dist").glob("*.txt")):
             with self.subTest(path=path.name):
@@ -96,6 +97,19 @@ class RepositoryOutputTests(unittest.TestCase):
             "PROCESS-NAME,/usr/bin/curl",
             active_lines(ROOT / "dist" / "high_traffic_ruleset.txt"),
         )
+
+    def test_wechat_mmtls_direct_rule_is_narrow(self):
+        rules = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
+        self.assertEqual(len(rules), 1)
+        rule_type, pattern = rules[0].split(",", 1)
+        self.assertEqual(rule_type, "URL-REGEX")
+        regex = re.compile(pattern)
+        self.assertIsNotNone(regex.search("http://203.205.151.204/mmtls/5eac4f54"))
+        self.assertIsNotNone(regex.search("http://203.205.151.204:80/mmtls/00000dd9?x=1"))
+        self.assertIsNone(regex.search("https://203.205.151.204/mmtls/5eac4f54"))
+        self.assertIsNone(regex.search("http://extshort.weixin.qq.com/mmtls/5eac4f54"))
+        self.assertIsNone(regex.search("http://203.205.151.204/other/5eac4f54"))
+        self.assertIsNone(regex.search("http://203.205.151.204/mmtls/5eac4f5"))
 
 
 if __name__ == "__main__":
