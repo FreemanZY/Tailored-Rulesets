@@ -24,6 +24,10 @@ The main file families are:
 
 Policy names, policy-group topology, rule precedence, and fallback behavior belong in the consuming Surge profile. Published rule files do not embed those choices. Comment-only files are valid placeholders with no active entries.
 
+`china_enterprise_domainset.txt` contains a reviewed core set of Alibaba and Tencent service domains. `china_enterprise_asn_ruleset.txt` adds network-owner matches for Alibaba AS24429/AS37963/AS45102 and Tencent AS45090/AS132203. The domain set is the primary classifier; ASN rules are a broader fallback because cloud and CDN networks can also host third-party traffic. Consumers should place ASN matches after explicit domain policies and must not treat network ownership as proof that a request belongs to the corresponding brand.
+
+Reference sources for this curated data include [Alibaba Group businesses](https://www.alibabagroup.com/en-US/about-alibaba-businesses-1489022236378529792), [Alibaba Cloud firewall/proxy domains](https://help.aliyun.com/zh/management-console/configure-a-local-firewall-or-proxy-to-access-alibaba-cloud-services), [Tencent products](https://www.tencent.com/who-we-are/), [Tencent Cloud endpoints](https://intl.cloud.tencent.com/document/product/494/7246), [Alibaba peering](https://peering.aliyun.com/), [Tencent peering](https://peering.tencent.com/), and the relevant APNIC registration records. These files are curated snapshots and are not automatically synchronized with vendor changes.
+
 `force_direct_ruleset.txt` currently contains a narrowly scoped `URL-REGEX` for plain HTTP WeChat MMTLS shortlinks sent directly to an IPv4 address. URL rules require Surge's HTTP engine; they do not inspect undecrypted HTTPS paths.
 
 Raw base URL:

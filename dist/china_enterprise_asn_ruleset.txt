@@ -1,0 +1,11 @@
+# RULE-SET: Curated Alibaba and Tencent network ASNs.
+# Network ownership does not prove content identity; cloud and CDN ASNs can host third parties.
+
+# Alibaba
+IP-ASN,24429
+IP-ASN,37963
+IP-ASN,45102
+
+# Tencent
+IP-ASN,45090
+IP-ASN,132203

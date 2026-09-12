@@ -1,0 +1,42 @@
+# DOMAIN-SET: Curated core domains for Alibaba and Tencent services.
+# Sources: official group, product, firewall, and endpoint documentation.
+# A leading dot matches the named domain and all subdomains.
+
+# Alibaba core services and infrastructure
+.1688.com
+.alibaba.com
+.alibabacloud.com
+.alicdn.com
+.aliexpress.com
+.alipay.com
+.alipayobjects.com
+.aliyun.com
+.aliyuncs.com
+.amap.com
+.autonavi.com
+.cainiao.com
+.dingtalk.com
+.taobao.com
+.tbcdn.cn
+.tmall.com
+.ykimg.com
+.youku.com
+
+# Tencent core services and infrastructure
+.dnspod.cn
+.dnspod.com
+.gtimg.com
+.myqcloud.com
+.qcloud.com
+.qpic.cn
+.qq.com
+.qqmail.com
+.tencent-cloud.com
+.tencent.com
+.tencentcloud.com
+.tencentcloudapi.com
+.tenpay.com
+.wechat.com
+.wechatpay.com
+.weixinbridge.com
+.weiyun.com

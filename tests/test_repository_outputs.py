@@ -112,6 +112,28 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertIsNone(regex.search("http://203.205.151.204/other/5eac4f54"))
         self.assertIsNone(regex.search("http://203.205.151.204/mmtls/5eac4f5"))
 
+    def test_china_enterprise_domains_and_asns_are_scoped(self):
+        domains = active_lines(ROOT / "dist" / "china_enterprise_domainset.txt")
+        self.assertEqual(
+            set(domains),
+            {
+                ".1688.com", ".alibaba.com", ".alibabacloud.com", ".alicdn.com",
+                ".aliexpress.com", ".alipay.com", ".alipayobjects.com", ".aliyun.com",
+                ".aliyuncs.com", ".amap.com", ".autonavi.com", ".cainiao.com",
+                ".dingtalk.com", ".taobao.com", ".tbcdn.cn", ".tmall.com",
+                ".ykimg.com", ".youku.com", ".dnspod.cn", ".dnspod.com",
+                ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
+                ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
+                ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
+                ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com",
+            },
+        )
+        self.assertTrue(all(domain.startswith(".") for domain in domains))
+        self.assertEqual(
+            active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
+            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,45090", "IP-ASN,132203"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
