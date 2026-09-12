@@ -121,7 +121,12 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".aliexpress.com", ".alipay.com", ".alipayobjects.com", ".aliyun.com",
                 ".aliyuncs.com", ".amap.com", ".autonavi.com", ".cainiao.com",
                 ".dingtalk.com", ".taobao.com", ".tbcdn.cn", ".tmall.com",
-                ".ykimg.com", ".youku.com", ".dnspod.cn", ".dnspod.com",
+                ".ykimg.com", ".youku.com", ".1mall.com", ".360buy.cn",
+                ".360buy.com", ".360buy.com.cn", ".360buyimg.com", ".7fresh.com",
+                ".baitiao.com", ".chinabank.com.cn", ".healthjd.com", ".jcloud.com",
+                ".jcloudcs.com", ".jd.com", ".jd.hk", ".jdcloud.com", ".jclps.com",
+                ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
+                ".yihaodian.com", ".yiyaojd.com", ".dnspod.cn", ".dnspod.com",
                 ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
@@ -131,7 +136,13 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertTrue(all(domain.startswith(".") for domain in domains))
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
-            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,45090", "IP-ASN,132203"],
+            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203"],
+        )
+
+    def test_china_carrier_asns_are_domestic_backbones_only(self):
+        self.assertEqual(
+            active_lines(ROOT / "dist" / "china_carrier_asn_ruleset.txt"),
+            ["IP-ASN,4134", "IP-ASN,4809", "IP-ASN,4837", "IP-ASN,9929", "IP-ASN,9808"],
         )
 
 

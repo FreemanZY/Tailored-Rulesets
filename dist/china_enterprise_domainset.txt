@@ -22,6 +22,29 @@
 .ykimg.com
 .youku.com
 
+# JD core services and infrastructure
+.1mall.com
+.360buy.cn
+.360buy.com
+.360buy.com.cn
+.360buyimg.com
+.7fresh.com
+.baitiao.com
+.chinabank.com.cn
+.healthjd.com
+.jcloud.com
+.jcloudcs.com
+.jd.com
+.jd.hk
+.jdcloud.com
+.jclps.com
+.jdpay.com
+.jdwl.com
+.wangyin.com
+.yhd.com
+.yihaodian.com
+.yiyaojd.com
+
 # Tencent core services and infrastructure
 .dnspod.cn
 .dnspod.com
