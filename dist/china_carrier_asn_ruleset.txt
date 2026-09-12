@@ -21,3 +21,6 @@ IP-ASN,139887
 
 # Jinhua Weian InfoTech Co.,Ltd
 IP-ASN,131516
+
+# UNICOM JiangSu Suzhou IDC network
+IP-ASN,140717
