@@ -1,0 +1,22 @@
+# DOMAIN-SET: Manually observed China enterprise service endpoints.
+# Exact hosts remain exact; leading-dot entries preserve reviewed suffix rules.
+# Telemetry endpoints assigned to reject_domainset.txt are intentionally absent.
+
+# Alibaba ecosystem endpoints not covered by the core enterprise suffixes
+acs-m.freshippo.com
+acs-mum.alibabachengdun.com
+adashx.ut.fliggy.com
+alsc-buy2.ele.me
+amdc-sibling.alipay.com.cn
+ipassport.ele.me
+nr-op.elemecdn.com
+restapi.ele.me
+tb.ele.me
+umdc.alibabachengdun.com
+.adashx.ut.hzshudian.com
+.bdc.alibabachengdun.com
+.cube.elemecdn.com
+.h-adashx.ut.hzshudian.com
+.shadow.elemecdn.com
+.traveldetail.feizhu.com
+.waimai-guide.ele.me

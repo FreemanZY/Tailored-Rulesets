@@ -1,3 +1,74 @@
 # DOMAIN-SET: Custom rejections; evaluated after explicit direct overrides.
 .firebaselogging-pa.googleapis.com
 
+# Alibaba ecosystem telemetry and advertising
+abtest.alibaba.com
+ad-track.fliggy.com
+apoll.m.taobao.com
+err.taobao.com
+h-adashx.ut.fliggy.com
+h-adashx4yt.ut.taobao.com
+loggw-ex.alipay.com
+loggw.alipay.com.cn
+mdap.alipay.com
+mdap.alipaylog.com
+
+# Tencent telemetry
+.ab.qq.com
+.beacon.qq.com
+.pingma.qq.com
+.trace.qq.com
+.wxs.qq.com
+
+# Pinduoduo telemetry
+th-a.pinduoduo.com
+th.pinduoduo.com
+th.yangkeduo.com
+titan-ws.pinduoduo.com
+tne.pinduoduo.com
+xg.pinduoduo.com
+
+# Analytics, verification, and push services
+alogs.umeng.com
+api.applink.mob.com
+api.share.mob.com
+api.verify.mob.com
+cdn-api-verify.mob.com
+devs.data.mob.com
+errlog.umeng.com
+errnewlog.umeng.com
+f.gm.mob.com
+l.gm.mob.com
+log-verify.mob.com
+plbslog.umeng.com
+sdk.push.mob.com
+ucc.umeng.com
+ulogs.umeng.com
+ulogs.umengcloud.com
+uop.umeng.com
+utoken.umeng.com
+.jpush.cn
+.jpush.io
+
+# Application telemetry and advertising
+ad.12306.cn
+ad.cyapi.cn
+ads-img-al.xhscdn.com
+ads-video-al.xhscdn.com
+ads.95516.com
+ads.cup.com.cn
+analytics.95516.com
+applog.uc.cn
+crash.xiaohongshu.com
+dualstack-logs.amap.com
+googleads.g.doubleclick.net
+interface-log.gaiaworkforce.com
+logs.amap.com
+referee.xiaohongshu.com
+spider-tracker.xiaohongshu.com
+tongdun-fingerprint.walmartmobile.cn
+tysdk.95516.com
+.app-monitor.ele.me
+.log.mmstat.com
+.wgo.mmstat.com
+

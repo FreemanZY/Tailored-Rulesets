@@ -1,4 +1,4 @@
-# DOMAIN-SET: Curated core domains for Alibaba and Tencent services.
+# DOMAIN-SET: Curated core domains for Alibaba, JD, and Tencent services.
 # Sources: official group, product, firewall, and endpoint documentation.
 # A leading dot matches the named domain and all subdomains.
 

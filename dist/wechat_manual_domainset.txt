@@ -1,0 +1,25 @@
+# DOMAIN-SET: Manually observed functional WeChat and Weixin endpoints.
+# Telemetry hosts remain governed by reject_domainset.txt.
+
+appcfg.v.qq.com
+dl.wechat.com
+launchwxacode.wxqcloud.qq.com.cn
+lbs.map.qq.com
+mmbiz.qpic.cn
+paydns.wechat.com
+res.wx.qq.com
+sglong.wechat.com
+sgminorshort.wechat.com
+sgshort.wechat.com
+shmmsns.qpic.cn
+tencentmap.wechat.com
+up-hl.3g.qq.com
+yun-hl.3g.qq.com
+.cube.weixinbridge.com
+.servicewechat.com
+.thirdwx.qlogo.cn
+.wechatpay.cn
+.weixin.qq.com
+.wx.gtimg.com
+.wx.qlogo.cn
+.wxapp.tc.qq.com

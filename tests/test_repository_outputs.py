@@ -112,6 +112,23 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertIsNone(regex.search("http://203.205.151.204/other/5eac4f54"))
         self.assertIsNone(regex.search("http://203.205.151.204/mmtls/5eac4f5"))
 
+    def test_legacy_manual_import_is_scoped_and_conflicts_are_resolved(self):
+        enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_domainset.txt")
+        wechat_manual = active_lines(ROOT / "dist" / "wechat_manual_domainset.txt")
+        force_direct = active_lines(ROOT / "dist" / "force_direct_domainset.txt")
+        rejected = active_lines(ROOT / "dist" / "reject_domainset.txt")
+        self.assertEqual((len(enterprise_manual), len(wechat_manual), len(force_direct), len(rejected)), (17, 22, 69, 62))
+        self.assertEqual(len(force_direct), len(set(force_direct)))
+        self.assertEqual(len(rejected), len(set(rejected)))
+        for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
+            self.assertIn(domain, rejected)
+            self.assertNotIn(domain, force_direct)
+        self.assertNotIn(".h-adashx.ut.fliggy.com", enterprise_manual)
+        published = "\n".join(force_direct + wechat_manual + active_lines(ROOT / "dist" / "force_direct_ruleset.txt"))
+        self.assertNotIn("savc-rt.com", published)
+        for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
+            self.assertNotIn(stale_ip, published)
+
     def test_china_enterprise_domains_and_asns_are_scoped(self):
         domains = active_lines(ROOT / "dist" / "china_enterprise_domainset.txt")
         self.assertEqual(
