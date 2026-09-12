@@ -18,3 +18,4 @@ DOMAIN,www.chinaebill.cn
 DOMAIN,www.earlytrip.fun
 DOMAIN,www.flyert.com
 DOMAIN,www.flyert.com.cn
+DOMAIN-SUFFIX,cup.com.cn
