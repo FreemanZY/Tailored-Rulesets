@@ -112,7 +112,7 @@ class RepositoryOutputTests(unittest.TestCase):
         )
 
     def test_wechat_mmtls_direct_rule_is_narrow(self):
-        rules = active_lines(ROOT / "dist" / "wechat_manual_ruleset.txt")
+        rules = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         url_rules = [rule for rule in rules if rule.startswith("URL-REGEX,")]
         self.assertEqual(len(url_rules), 1)
         rule_type, pattern = url_rules[0].split(",", 1)
@@ -128,17 +128,16 @@ class RepositoryOutputTests(unittest.TestCase):
 
     def test_legacy_manual_import_is_scoped_and_conflicts_are_resolved(self):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
-        wechat_manual = active_lines(ROOT / "dist" / "wechat_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(wechat_manual), len(force_direct), len(rejected)), (17, 23, 69, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (40, 69, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
             self.assertIn(f"DOMAIN,{domain}", rejected)
             self.assertNotIn(f"DOMAIN,{domain}", force_direct)
         self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
-        published = "\n".join(force_direct + wechat_manual)
+        published = "\n".join(force_direct + enterprise_manual)
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
             self.assertNotIn(stale_ip, published)
@@ -151,6 +150,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "lan_domainset.txt", "lan_ip_ruleset.txt", "local_dns_domainset.txt",
             "microsoft_manual_domainset.txt", "proxy_targets_domainset.txt",
             "reject_domainset.txt", "wechat_manual_domainset.txt",
+            "wechat_manual_ruleset.txt",
         }
         self.assertFalse(any((ROOT / "dist" / name).exists() for name in retired))
         manual_rulesets = {
@@ -159,7 +159,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "force_direct_ruleset.txt", "google_manual_ruleset.txt",
             "high_traffic_ruleset.txt", "lan_ruleset.txt", "local_dns_ruleset.txt",
             "microsoft_manual_ruleset.txt", "proxy_targets_ruleset.txt",
-            "reject_ruleset.txt", "wechat_manual_ruleset.txt",
+            "reject_ruleset.txt",
         }
         for name in manual_rulesets:
             with self.subTest(name=name):
