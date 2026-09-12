@@ -24,6 +24,19 @@ def active_lines(path: Path):
     ]
 
 
+def legacy_domain_entries_from_rules(path: Path):
+    entries = []
+    for line in active_lines(path):
+        rule_type, value, *_ = line.split(",")
+        if rule_type == "DOMAIN":
+            entries.append(value)
+        elif rule_type == "DOMAIN-SUFFIX":
+            entries.append(f".{value}")
+        else:
+            raise AssertionError(f"unexpected non-domain rule in {path.name}: {line}")
+    return entries
+
+
 class RepositoryOutputTests(unittest.TestCase):
     def test_generated_apple_outputs_match_source(self):
         apple_updater.check()
@@ -77,7 +90,7 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertFalse((ROOT / "dist" / "google_generated_ip_ruleset.txt").exists())
 
     def test_legacy_google_domains_are_preserved_manually(self):
-        lines = active_lines(ROOT / "dist" / "google_manual_domainset.txt")
+        lines = legacy_domain_entries_from_rules(ROOT / "dist" / "google_manual_ruleset.txt")
         payload = ("\n".join(lines) + "\n").encode()
         self.assertEqual(len(lines), 1120)
         self.assertEqual(
@@ -99,9 +112,10 @@ class RepositoryOutputTests(unittest.TestCase):
         )
 
     def test_wechat_mmtls_direct_rule_is_narrow(self):
-        rules = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
-        self.assertEqual(len(rules), 1)
-        rule_type, pattern = rules[0].split(",", 1)
+        rules = active_lines(ROOT / "dist" / "wechat_manual_ruleset.txt")
+        url_rules = [rule for rule in rules if rule.startswith("URL-REGEX,")]
+        self.assertEqual(len(url_rules), 1)
+        rule_type, pattern = url_rules[0].split(",", 1)
         self.assertEqual(rule_type, "URL-REGEX")
         regex = re.compile(pattern)
         self.assertIsNotNone(regex.search("http://203.205.151.204/mmtls/5eac4f54"))
@@ -113,21 +127,47 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertIsNone(regex.search("http://203.205.151.204/mmtls/5eac4f5"))
 
     def test_legacy_manual_import_is_scoped_and_conflicts_are_resolved(self):
-        enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_domainset.txt")
-        wechat_manual = active_lines(ROOT / "dist" / "wechat_manual_domainset.txt")
-        force_direct = active_lines(ROOT / "dist" / "force_direct_domainset.txt")
-        rejected = active_lines(ROOT / "dist" / "reject_domainset.txt")
-        self.assertEqual((len(enterprise_manual), len(wechat_manual), len(force_direct), len(rejected)), (17, 22, 69, 62))
+        enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
+        wechat_manual = active_lines(ROOT / "dist" / "wechat_manual_ruleset.txt")
+        force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
+        rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
+        self.assertEqual((len(enterprise_manual), len(wechat_manual), len(force_direct), len(rejected)), (17, 23, 69, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
-            self.assertIn(domain, rejected)
-            self.assertNotIn(domain, force_direct)
-        self.assertNotIn(".h-adashx.ut.fliggy.com", enterprise_manual)
-        published = "\n".join(force_direct + wechat_manual + active_lines(ROOT / "dist" / "force_direct_ruleset.txt"))
+            self.assertIn(f"DOMAIN,{domain}", rejected)
+            self.assertNotIn(f"DOMAIN,{domain}", force_direct)
+        self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
+        published = "\n".join(force_direct + wechat_manual)
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
             self.assertNotIn(stale_ip, published)
+
+    def test_manual_categories_use_one_grouped_ruleset(self):
+        retired = {
+            "ai_domainset.txt", "apple_manual_domainset.txt", "china_domainset.txt",
+            "china_enterprise_manual_domainset.txt", "force_direct_domainset.txt",
+            "google_manual_domainset.txt", "high_traffic_domainset.txt",
+            "lan_domainset.txt", "lan_ip_ruleset.txt", "local_dns_domainset.txt",
+            "microsoft_manual_domainset.txt", "proxy_targets_domainset.txt",
+            "reject_domainset.txt", "wechat_manual_domainset.txt",
+        }
+        self.assertFalse(any((ROOT / "dist" / name).exists() for name in retired))
+        manual_rulesets = {
+            "ai_manual_ruleset.txt", "apple_manual_ruleset.txt",
+            "china_enterprise_manual_ruleset.txt", "china_manual_ruleset.txt",
+            "force_direct_ruleset.txt", "google_manual_ruleset.txt",
+            "high_traffic_ruleset.txt", "lan_ruleset.txt", "local_dns_ruleset.txt",
+            "microsoft_manual_ruleset.txt", "proxy_targets_ruleset.txt",
+            "reject_ruleset.txt", "wechat_manual_ruleset.txt",
+        }
+        for name in manual_rulesets:
+            with self.subTest(name=name):
+                text = (ROOT / "dist" / name).read_text(encoding="utf-8-sig")
+                self.assertIn("# Group:", text)
+        self.assertEqual(len(active_lines(ROOT / "dist" / "high_traffic_ruleset.txt")), 18)
+        self.assertEqual(len(active_lines(ROOT / "dist" / "proxy_targets_ruleset.txt")), 7)
+        self.assertEqual(len(active_lines(ROOT / "dist" / "lan_ruleset.txt")), 9)
 
     def test_china_enterprise_domains_and_asns_are_scoped(self):
         domains = active_lines(ROOT / "dist" / "china_enterprise_domainset.txt")

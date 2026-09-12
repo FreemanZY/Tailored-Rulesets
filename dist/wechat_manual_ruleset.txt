@@ -1,0 +1,29 @@
+# MANUAL RULE-SET: Functional WeChat and Weixin endpoints.
+# Telemetry hosts remain governed by reject_ruleset.txt.
+
+# Group: Observed functional domains
+DOMAIN,appcfg.v.qq.com
+DOMAIN,dl.wechat.com
+DOMAIN,launchwxacode.wxqcloud.qq.com.cn
+DOMAIN,lbs.map.qq.com
+DOMAIN,mmbiz.qpic.cn
+DOMAIN,paydns.wechat.com
+DOMAIN,res.wx.qq.com
+DOMAIN,sglong.wechat.com
+DOMAIN,sgminorshort.wechat.com
+DOMAIN,sgshort.wechat.com
+DOMAIN,shmmsns.qpic.cn
+DOMAIN,tencentmap.wechat.com
+DOMAIN,up-hl.3g.qq.com
+DOMAIN,yun-hl.3g.qq.com
+DOMAIN-SUFFIX,cube.weixinbridge.com
+DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,thirdwx.qlogo.cn
+DOMAIN-SUFFIX,wechatpay.cn
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,wx.gtimg.com
+DOMAIN-SUFFIX,wx.qlogo.cn
+DOMAIN-SUFFIX,wxapp.tc.qq.com
+
+# Group: Plain HTTP MMTLS shortlinks to IPv4 hosts
+URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)

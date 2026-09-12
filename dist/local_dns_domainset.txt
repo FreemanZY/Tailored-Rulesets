@@ -1,4 +1,0 @@
-# DOMAIN-SET: Local-name DNS exceptions; this file does not grant direct routing.
-wpad.localdomain
-.local
-

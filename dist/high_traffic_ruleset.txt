@@ -1,9 +1,31 @@
-# RULE-SET: Non-domain high-volume targets for a consumer-selected traffic policy.
-# Domain entries are maintained separately in high_traffic_domainset.txt.
+# MANUAL RULE-SET: High-volume targets for a consumer-selected traffic policy.
 
-## Telegram IP
+# Group: Apple domains
+DOMAIN,updates.cdn-apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,swdist.apple.com
+DOMAIN,swscan.apple.com
+
+# Group: Dropbox domains
+DOMAIN-SUFFIX,dropboxstatic.com
+
+# Group: Microsoft domains
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN,dl.delivery.mp.microsoft.com
+DOMAIN,graph.microsoft.com
+DOMAIN,my.microsoftpersonalcontent.com
+DOMAIN,tlu.dl.delivery.mp.microsoft.com
+
+# Group: Google domains
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,googleusercontent.com
+
+# Group: Other high-volume domains
+DOMAIN-SUFFIX,twimg.com
+DOMAIN,enterprise.proxmox.com
+DOMAIN,public.shrekmedia.org
+
+# Group: Telegram and X address observations
 IP-CIDR,91.108.56.139/32
-
-## Twitter/X IP
 IP-CIDR,192.229.210.163/32
 IP-CIDR,72.21.91.70/32

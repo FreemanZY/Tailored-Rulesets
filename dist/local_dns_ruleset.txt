@@ -1,0 +1,5 @@
+# MANUAL RULE-SET: Local-name DNS exceptions; this file does not grant direct routing.
+
+# Group: Names resolved by the system resolver
+DOMAIN,wpad.localdomain
+DOMAIN-SUFFIX,local

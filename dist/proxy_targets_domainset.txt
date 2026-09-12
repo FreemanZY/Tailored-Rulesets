@@ -1,4 +1,0 @@
-# DOMAIN-SET: Explicit default-proxy domains before regional direct rules.
-cloudflare-dns.com
-.duolingo.com
-.duolingo.cn

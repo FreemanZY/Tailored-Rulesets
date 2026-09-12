@@ -1,0 +1,6 @@
+# MANUAL RULE-SET: Generic China domain suffix placeholders.
+# The consuming profile keeps this resource disabled pending a narrower policy.
+
+# Group: China country-code domain suffixes
+DOMAIN-SUFFIX,cn
+DOMAIN-SUFFIX,xn--fiqs8s

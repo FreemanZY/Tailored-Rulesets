@@ -1,5 +1,11 @@
-# RULE-SET: Explicit non-domain default-proxy targets before regional direct rules.
-# Domain entries are maintained separately in proxy_targets_domainset.txt.
+# MANUAL RULE-SET: Explicit targets that use the profile's default proxy policy.
+
+# Group: Domain targets
+DOMAIN,cloudflare-dns.com
+DOMAIN-SUFFIX,duolingo.com
+DOMAIN-SUFFIX,duolingo.cn
+
+# Group: IP network targets
 IP-CIDR,91.108.4.0/22,no-resolve
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,109.239.140.0/24,no-resolve

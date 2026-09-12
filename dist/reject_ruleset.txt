@@ -1,0 +1,77 @@
+# MANUAL RULE-SET: Reviewed rejection targets evaluated after explicit direct overrides.
+
+# Group: Google and Firebase telemetry
+DOMAIN-SUFFIX,firebaselogging-pa.googleapis.com
+
+# Group: Alibaba ecosystem telemetry and advertising
+DOMAIN,abtest.alibaba.com
+DOMAIN,ad-track.fliggy.com
+DOMAIN,apoll.m.taobao.com
+DOMAIN,err.taobao.com
+DOMAIN,h-adashx.ut.fliggy.com
+DOMAIN,h-adashx4yt.ut.taobao.com
+DOMAIN,loggw-ex.alipay.com
+DOMAIN,loggw.alipay.com.cn
+DOMAIN,mdap.alipay.com
+DOMAIN,mdap.alipaylog.com
+
+# Group: Tencent telemetry
+DOMAIN-SUFFIX,ab.qq.com
+DOMAIN-SUFFIX,beacon.qq.com
+DOMAIN-SUFFIX,pingma.qq.com
+DOMAIN-SUFFIX,trace.qq.com
+DOMAIN-SUFFIX,wxs.qq.com
+
+# Group: Pinduoduo telemetry
+DOMAIN,th-a.pinduoduo.com
+DOMAIN,th.pinduoduo.com
+DOMAIN,th.yangkeduo.com
+DOMAIN,titan-ws.pinduoduo.com
+DOMAIN,tne.pinduoduo.com
+DOMAIN,xg.pinduoduo.com
+
+# Group: Analytics, verification, and push services
+DOMAIN,alogs.umeng.com
+DOMAIN,api.applink.mob.com
+DOMAIN,api.share.mob.com
+DOMAIN,api.verify.mob.com
+DOMAIN,cdn-api-verify.mob.com
+DOMAIN,devs.data.mob.com
+DOMAIN,errlog.umeng.com
+DOMAIN,errnewlog.umeng.com
+DOMAIN,f.gm.mob.com
+DOMAIN,l.gm.mob.com
+DOMAIN,log-verify.mob.com
+DOMAIN,plbslog.umeng.com
+DOMAIN,sdk.push.mob.com
+DOMAIN,ucc.umeng.com
+DOMAIN,ulogs.umeng.com
+DOMAIN,ulogs.umengcloud.com
+DOMAIN,uop.umeng.com
+DOMAIN,utoken.umeng.com
+
+# Group: JPush services
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
+
+# Group: Application telemetry and advertising
+DOMAIN,ad.12306.cn
+DOMAIN,ad.cyapi.cn
+DOMAIN,ads-img-al.xhscdn.com
+DOMAIN,ads-video-al.xhscdn.com
+DOMAIN,ads.95516.com
+DOMAIN,ads.cup.com.cn
+DOMAIN,analytics.95516.com
+DOMAIN,applog.uc.cn
+DOMAIN,crash.xiaohongshu.com
+DOMAIN,dualstack-logs.amap.com
+DOMAIN,googleads.g.doubleclick.net
+DOMAIN,interface-log.gaiaworkforce.com
+DOMAIN,logs.amap.com
+DOMAIN,referee.xiaohongshu.com
+DOMAIN,spider-tracker.xiaohongshu.com
+DOMAIN,tongdun-fingerprint.walmartmobile.cn
+DOMAIN,tysdk.95516.com
+DOMAIN-SUFFIX,app-monitor.ele.me
+DOMAIN-SUFFIX,log.mmstat.com
+DOMAIN-SUFFIX,wgo.mmstat.com

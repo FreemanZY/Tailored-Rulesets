@@ -1,0 +1,21 @@
+# MANUAL RULE-SET: Observed China enterprise service endpoints outside the official core sets.
+# Telemetry endpoints assigned to reject_ruleset.txt are intentionally absent.
+
+# Group: Alibaba ecosystem domains
+DOMAIN,acs-m.freshippo.com
+DOMAIN,acs-mum.alibabachengdun.com
+DOMAIN,adashx.ut.fliggy.com
+DOMAIN,alsc-buy2.ele.me
+DOMAIN,amdc-sibling.alipay.com.cn
+DOMAIN,ipassport.ele.me
+DOMAIN,nr-op.elemecdn.com
+DOMAIN,restapi.ele.me
+DOMAIN,tb.ele.me
+DOMAIN,umdc.alibabachengdun.com
+DOMAIN-SUFFIX,adashx.ut.hzshudian.com
+DOMAIN-SUFFIX,bdc.alibabachengdun.com
+DOMAIN-SUFFIX,cube.elemecdn.com
+DOMAIN-SUFFIX,h-adashx.ut.hzshudian.com
+DOMAIN-SUFFIX,shadow.elemecdn.com
+DOMAIN-SUFFIX,traveldetail.feizhu.com
+DOMAIN-SUFFIX,waimai-guide.ele.me

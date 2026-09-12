@@ -1,0 +1,19 @@
+# MANUAL RULE-SET: AI service targets maintained from reviewed observations.
+
+# Group: AI service domains
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
