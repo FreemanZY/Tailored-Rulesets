@@ -13,3 +13,6 @@ IP-ASN,137753
 # Tencent
 IP-ASN,45090
 IP-ASN,132203
+
+# 21Vianet.Co.,Ltd
+IP-ASN,17428
