@@ -12,7 +12,6 @@ DOMAIN,api.neixin.cn
 DOMAIN,data.air-matters.com
 DOMAIN,gateway.gaiaworkforce.com
 DOMAIN,ptf.flyertrip.com
-DOMAIN,shbrt-app.hrone.cn
 DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
 DOMAIN,www.chinaebill.cn
 DOMAIN,www.earlytrip.fun
