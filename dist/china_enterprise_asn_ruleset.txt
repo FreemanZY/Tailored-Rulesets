@@ -17,5 +17,8 @@ IP-ASN,132203
 # Huawei Cloud China
 IP-ASN,55990
 
+# Jinhua Weian InfoTech IDC
+IP-ASN,131516
+
 # 21Vianet.Co.,Ltd
 IP-ASN,17428

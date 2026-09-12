@@ -205,13 +205,13 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertTrue(all(domain.startswith(".") for domain in domains))
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
-            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55990", "IP-ASN,17428"],
+            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55990", "IP-ASN,131516", "IP-ASN,17428"],
         )
 
-    def test_china_carrier_asns_are_domestic_backbones_only(self):
+    def test_china_carrier_asns_are_selected_operator_networks(self):
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_carrier_asn_ruleset.txt"),
-            ["IP-ASN,4134", "IP-ASN,4809", "IP-ASN,4812", "IP-ASN,4837", "IP-ASN,9929", "IP-ASN,17621", "IP-ASN,9808", "IP-ASN,139887", "IP-ASN,134756", "IP-ASN,131516", "IP-ASN,140717"],
+            ["IP-ASN,4134", "IP-ASN,4809", "IP-ASN,4812", "IP-ASN,4837", "IP-ASN,9929", "IP-ASN,17621", "IP-ASN,9808", "IP-ASN,139887", "IP-ASN,134756", "IP-ASN,140717"],
         )
 
 
