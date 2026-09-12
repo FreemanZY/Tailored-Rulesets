@@ -12,3 +12,6 @@ IP-ASN,9929
 
 # China Mobile: CMNET domestic backbone
 IP-ASN,9808
+
+# ChinaNet Shandong Yantai IDC network
+IP-ASN,139887
