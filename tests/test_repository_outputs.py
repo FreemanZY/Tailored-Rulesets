@@ -130,7 +130,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (87, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (85, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -138,7 +138,6 @@ class RepositoryOutputTests(unittest.TestCase):
             self.assertNotIn(f"DOMAIN,{domain}", force_direct)
         self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
         for migrated in {
-            "DOMAIN,api-unionid.meituan.com",
             "DOMAIN,api.mijia.tech",
             "DOMAIN,api.udache.com",
             "DOMAIN,mobile.12306.cn",
@@ -159,7 +158,10 @@ class RepositoryOutputTests(unittest.TestCase):
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
         published = "\n".join(force_direct + enterprise_manual)
-        for core_suffix in {"huazhu.com", "fliggy.com", "feizhu.com", "ele.me", "elemecdn.com"}:
+        for core_suffix in {
+            "huazhu.com", "fliggy.com", "feizhu.com", "ele.me", "elemecdn.com",
+            "meituan.com", "dianping.com", "yunpei.com", "yunxiu.com",
+        }:
             self.assertFalse(any(core_suffix in rule for rule in enterprise_manual))
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
@@ -208,7 +210,8 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".baitiao.com", ".chinabank.com.cn", ".healthjd.com", ".jcloud.com",
                 ".jcloudcs.com", ".jd.com", ".jd.hk", ".jdcloud.com", ".jclps.com",
                 ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
-                ".yihaodian.com", ".yiyaojd.com", ".dnspod.cn", ".dnspod.com",
+                ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
+                ".dianping.com", ".meituan.com", ".dnspod.cn", ".dnspod.com",
                 ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",

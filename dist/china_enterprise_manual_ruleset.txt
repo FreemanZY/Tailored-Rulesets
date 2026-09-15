@@ -45,8 +45,6 @@ DOMAIN-SUFFIX,wxapp.tc.qq.com
 URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)
 
 # Group: Meituan and Dianping
-DOMAIN,api-unionid.meituan.com
-DOMAIN,catdot.dianping.com
 DOMAIN,ddplus.meituan.net
 DOMAIN,img.meituan.net
 DOMAIN,m3.d.meituan.net

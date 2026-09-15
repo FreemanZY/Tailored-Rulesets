@@ -1,4 +1,4 @@
-# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, Huazhu, and Ximalaya services.
+# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, Meituan, Dianping, Huazhu, and Ximalaya services.
 # Sources: official group, product, firewall, and endpoint documentation.
 # A leading dot matches the named domain and all subdomains.
 
@@ -57,6 +57,12 @@
 .yhd.com
 .yihaodian.com
 .yiyaojd.com
+.yunpei.com
+.yunxiu.com
+
+# Meituan and Dianping core services
+.dianping.com
+.meituan.com
 
 # Tencent core services and infrastructure
 .dnspod.cn
