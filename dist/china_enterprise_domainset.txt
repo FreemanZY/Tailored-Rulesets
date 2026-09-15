@@ -35,6 +35,16 @@
 .ele.me
 .elemecdn.com
 
+# Freshippo / Hema official and redirected website domains
+.freshhema.com
+.freshippo.com
+
+# Pinduoduo China platform and first-party document/media domain
+# pddpic.com also hosts international-platform promotion documents.
+.pddpic.com
+.pinduoduo.com
+.yangkeduo.com
+
 # JD core services and infrastructure
 .1mall.com
 .360buy.cn
@@ -73,6 +83,32 @@
 
 # China Eastern Airlines
 .ceair.com
+
+# Industrial and Commercial Bank of China
+.icbc.com.cn
+
+# Agricultural Bank of China (current and retained legacy domains)
+.abchina.com
+.abchina.com.cn
+
+# Bank of China mainland website
+.boc.cn
+
+# China Construction Bank
+.ccb.cn
+.ccb.com
+
+# Bank of Communications
+.bankcomm.cn
+.bankcomm.com
+
+# China Merchants Bank
+.cmbchina.com
+
+# Shanghai Pudong Development Bank and its credit-card center
+.95528.cn
+.spdb.com.cn
+.spdbccc.com.cn
 
 # Atour Hotel and lifestyle services
 .yaduo.com

@@ -49,6 +49,12 @@ DOMAIN-SET,<raw-domainset-url>,<policy>
 RULE-SET,<raw-ruleset-url>,<policy>,no-resolve
 ```
 
+The core domain set includes official website roots for ICBC, ABC, BOC, CCB, Bank of Communications, CMB, and SPDB. It retains ABC's still-accessible `abchina.com`, includes CCB's current `ccb.cn`, and covers SPDB's alternate `95528.cn` and credit-card `spdbccc.com.cn`. ABC's older corporate-banking `95599.cn` and BOC's global `bankofchina.com` are omitted pending an explicit routing need. Overseas branch hosts also exist under `ccb.com`, `bankcomm.com`, and `cmbchina.com`; place specific host overrides before a China-direct policy for those branches. QQ Music is covered by Tencent's `qq.com`; observed shared-CDN delivery hosts remain exact entries in the manual set.
+
+Bank sources: [ICBC domain guidance](https://www.icbc.com.cn/icbc/announceme/363.htm), [ABC domain migration](https://www.abchina.com/cn/PersonalServices/SvcBulletin/202207/t20220721_2168645.htm), [BOC site](https://www.boc.cn/), [CCB site](https://www.ccb.cn/chn/home/index.shtml), [Bank of Communications](https://www.bankcomm.com/BankCommSite/default.shtml), [CMB site](https://www.cmbchina.com/), [SPDB alternate address notice](https://www.spdb.com.cn/home/sygg/202607/t20260713_18247188.shtml), and [SPDB credit cards](https://www.spdbccc.com.cn/).
+
+Pinduoduo's platform and open portal use `pinduoduo.com` and `yangkeduo.com`; its own published documents and media use `pddpic.com`. The latter also contains international-platform promotion documents, so an overseas host may need a higher-priority routing override. Freshippo's current `freshippo.com` is reached both directly and from the Alibaba Group-linked `freshhema.com`; `1688.com` was already in the core set. No comprehensive vendor endpoint inventory was found, and unrelated CDN or unverified brand-like suffixes are not added. Sources: [Pinduoduo platform agreement](https://pfile.pddpic.com/galerie-go/open_sdk/9372cfe1-780a-4b8b-95e1-4405de1cf43c.pdf), [Pinduoduo open platform](https://open.yangkeduo.com/), [Pinduoduo published privacy notice](https://pfile.pddpic.com/galerie-go/mms_file/3a0bdcc8-0b73-4cb4-ae9c-ff34facaed2c.pdf), [Alibaba Group business links](https://www.alibabagroup.com/en-US/about-alibaba-businesses-1747800973536919552), [Freshippo app](https://www.freshippo.com/down/app.html), and [1688 overview](https://www.alibabagroup.com/en-US/about-alibaba-businesses-1941299332078632960).
+
 ## Automated sources
 
 ### Apple
