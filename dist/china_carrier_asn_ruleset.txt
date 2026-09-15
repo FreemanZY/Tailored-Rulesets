@@ -9,6 +9,10 @@ IP-ASN,4809
 # China Telecom (Group)
 IP-ASN,4812
 
+# China Telecom: CNIX and Jiangxi IDC
+IP-ASN,4847
+IP-ASN,134238
+
 # China Unicom: China169 and CUII
 IP-ASN,4837
 IP-ASN,9929
@@ -16,8 +20,9 @@ IP-ASN,9929
 # China Unicom Shanghai network
 IP-ASN,17621
 
-# China Mobile: CMNET domestic backbone
+# China Mobile: CMNET domestic backbone and Hebei network
 IP-ASN,9808
+IP-ASN,24547
 
 # ChinaNet Shandong Yantai IDC network
 IP-ASN,139887

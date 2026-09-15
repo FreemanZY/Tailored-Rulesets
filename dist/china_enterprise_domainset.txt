@@ -1,4 +1,4 @@
-# DOMAIN-SET: Curated core domains for Alibaba, JD, and Tencent services.
+# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, and Huazhu services.
 # Sources: official group, product, firewall, and endpoint documentation.
 # A leading dot matches the named domain and all subdomains.
 
@@ -63,3 +63,6 @@
 .wechatpay.com
 .weixinbridge.com
 .weiyun.com
+
+# Huazhu and H World China services
+.huazhu.com

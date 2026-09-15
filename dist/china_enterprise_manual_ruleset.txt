@@ -86,16 +86,14 @@ DOMAIN,union.didi.cn
 DOMAIN,ut-static.udache.com
 DOMAIN,web.map.xiaojukeji.com
 
-# Group: H World and Huazhu
-DOMAIN,appgw.huazhu.com
-DOMAIN,cdn.huazhu.com
-DOMAIN,hmall-static.huazhu.com
-DOMAIN,hweb-channel.huazhu.com
-DOMAIN,hweb-hotel.huazhu.com
-DOMAIN,hweb-manager.huazhu.com
-DOMAIN,hweb-oca.huazhu.com
-DOMAIN,hweb-personalcenter.huazhu.com
-DOMAIN,res-pub.huazhu.com
+# Group: CITIC services
+DOMAIN,apiwealthplaza.cfhc.citic
+DOMAIN,wap.bank.ecitic.com
+DOMAIN,wealthplaza.tech.citic
+
+# Group: Tencent and QQ Music delivery hosts
+DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn
+DOMAIN,y.gtimg.cn
 
 # Group: Luckin Coffee
 DOMAIN,capi.lkcoffee.com
@@ -119,6 +117,7 @@ DOMAIN,tab.volces.com
 
 # Group: NetEase Yunxin
 DOMAIN,httpdns.yunxindns.com
+DOMAIN,lbs.netease.im
 
 # Group: CMB Wing Lung Bank
 DOMAIN-SUFFIX,cmbwinglungbank.com

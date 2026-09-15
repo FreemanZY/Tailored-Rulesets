@@ -130,7 +130,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (94, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (91, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -141,15 +141,19 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,api-unionid.meituan.com",
             "DOMAIN,api.mijia.tech",
             "DOMAIN,api.udache.com",
-            "DOMAIN,appgw.huazhu.com",
             "DOMAIN,mobile.12306.cn",
             "DOMAIN,gator.volces.com",
+            "DOMAIN,wealthplaza.tech.citic",
+            "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
+            "DOMAIN,lbs.netease.im",
+            "DOMAIN,y.gtimg.cn",
             "DOMAIN-SUFFIX,cmbwinglungbank.com",
             "DOMAIN-SUFFIX,rcs01.5gm.wo.cn",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
         published = "\n".join(force_direct + enterprise_manual)
+        self.assertFalse(any("huazhu.com" in rule for rule in enterprise_manual))
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
             self.assertNotIn(stale_ip, published)
@@ -200,18 +204,19 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
                 ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com",
+                ".huazhu.com",
             },
         )
         self.assertTrue(all(domain.startswith(".") for domain in domains))
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
-            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55990", "IP-ASN,131516", "IP-ASN,17428"],
+            ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55967", "IP-ASN,55990", "IP-ASN,131516", "IP-ASN,17428"],
         )
 
     def test_china_carrier_asns_are_selected_operator_networks(self):
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_carrier_asn_ruleset.txt"),
-            ["IP-ASN,4134", "IP-ASN,4809", "IP-ASN,4812", "IP-ASN,4837", "IP-ASN,9929", "IP-ASN,17621", "IP-ASN,9808", "IP-ASN,139887", "IP-ASN,134756", "IP-ASN,140717"],
+            ["IP-ASN,4134", "IP-ASN,4809", "IP-ASN,4812", "IP-ASN,4847", "IP-ASN,134238", "IP-ASN,4837", "IP-ASN,9929", "IP-ASN,17621", "IP-ASN,9808", "IP-ASN,24547", "IP-ASN,139887", "IP-ASN,134756", "IP-ASN,140717"],
         )
 
 

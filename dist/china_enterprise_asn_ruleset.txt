@@ -14,6 +14,9 @@ IP-ASN,137753
 IP-ASN,45090
 IP-ASN,132203
 
+# Baidu
+IP-ASN,55967
+
 # Huawei Cloud China
 IP-ASN,55990
 
