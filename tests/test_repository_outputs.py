@@ -130,7 +130,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (91, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (93, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -147,6 +147,8 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
             "DOMAIN,lbs.netease.im",
             "DOMAIN,y.gtimg.cn",
+            "DOMAIN-SUFFIX,xmcdn.com",
+            "DOMAIN-SUFFIX,zhishidashi.com",
             "DOMAIN-SUFFIX,cmbwinglungbank.com",
             "DOMAIN-SUFFIX,rcs01.5gm.wo.cn",
         }:
@@ -204,7 +206,8 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
                 ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com",
-                ".huazhu.com",
+                ".huazhu.com", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
+                ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
             },
         )
         self.assertTrue(all(domain.startswith(".") for domain in domains))

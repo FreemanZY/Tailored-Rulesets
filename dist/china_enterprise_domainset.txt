@@ -1,4 +1,4 @@
-# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, and Huazhu services.
+# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, Huazhu, and Ximalaya services.
 # Sources: official group, product, firewall, and endpoint documentation.
 # A leading dot matches the named domain and all subdomains.
 
@@ -66,3 +66,12 @@
 
 # Huazhu and H World China services
 .huazhu.com
+
+# Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
+.himalaya.com
+.qijizuopin.com
+.qingxuetang.com
+.xima.tv
+.ximalaya.com
+.ximalayaos.com
+.xiaoyastar.com

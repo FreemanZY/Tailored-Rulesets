@@ -86,6 +86,11 @@ DOMAIN,union.didi.cn
 DOMAIN,ut-static.udache.com
 DOMAIN,web.map.xiaojukeji.com
 
+# Group: Additional Ximalaya domains from the official XMSRC v2.1 scope
+# These domains were not repeated in the narrower 2023 event scope.
+DOMAIN-SUFFIX,xmcdn.com
+DOMAIN-SUFFIX,zhishidashi.com
+
 # Group: CITIC services
 DOMAIN,apiwealthplaza.cfhc.citic
 DOMAIN,wap.bank.ecitic.com
