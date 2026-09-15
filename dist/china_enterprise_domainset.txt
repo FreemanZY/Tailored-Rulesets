@@ -19,8 +19,21 @@
 .taobao.com
 .tbcdn.cn
 .tmall.com
+.tmall.hk
 .ykimg.com
 .youku.com
+
+# Fliggy services
+.alitrip.com
+.feizhu.com
+.fliggy.com
+
+# Idle Fish services
+.goofish.com
+
+# Taobao Instant Commerce services
+.ele.me
+.elemecdn.com
 
 # JD core services and infrastructure
 .1mall.com

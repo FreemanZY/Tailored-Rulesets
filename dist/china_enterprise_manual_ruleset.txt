@@ -5,21 +5,17 @@
 # Group: Alibaba ecosystem domains
 DOMAIN,acs-m.freshippo.com
 DOMAIN,acs-mum.alibabachengdun.com
-DOMAIN,adashx.ut.fliggy.com
-DOMAIN,alsc-buy2.ele.me
 DOMAIN,amdc-sibling.alipay.com.cn
-DOMAIN,ipassport.ele.me
-DOMAIN,nr-op.elemecdn.com
-DOMAIN,restapi.ele.me
-DOMAIN,tb.ele.me
 DOMAIN,umdc.alibabachengdun.com
 DOMAIN-SUFFIX,adashx.ut.hzshudian.com
 DOMAIN-SUFFIX,bdc.alibabachengdun.com
-DOMAIN-SUFFIX,cube.elemecdn.com
 DOMAIN-SUFFIX,h-adashx.ut.hzshudian.com
-DOMAIN-SUFFIX,shadow.elemecdn.com
-DOMAIN-SUFFIX,traveldetail.feizhu.com
-DOMAIN-SUFFIX,waimai-guide.ele.me
+
+# Group: Legacy Taobao domains from an older official developer allowlist
+DOMAIN-SUFFIX,taobao.net
+DOMAIN-SUFFIX,taobaocdn.com
+DOMAIN-SUFFIX,taobaocdn.net
+DOMAIN-SUFFIX,tb.cn
 
 # Group: WeChat and Weixin functional domains
 DOMAIN,appcfg.v.qq.com

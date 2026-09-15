@@ -130,7 +130,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (93, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (87, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -149,13 +149,18 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,y.gtimg.cn",
             "DOMAIN-SUFFIX,xmcdn.com",
             "DOMAIN-SUFFIX,zhishidashi.com",
+            "DOMAIN-SUFFIX,taobao.net",
+            "DOMAIN-SUFFIX,taobaocdn.com",
+            "DOMAIN-SUFFIX,taobaocdn.net",
+            "DOMAIN-SUFFIX,tb.cn",
             "DOMAIN-SUFFIX,cmbwinglungbank.com",
             "DOMAIN-SUFFIX,rcs01.5gm.wo.cn",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
         published = "\n".join(force_direct + enterprise_manual)
-        self.assertFalse(any("huazhu.com" in rule for rule in enterprise_manual))
+        for core_suffix in {"huazhu.com", "fliggy.com", "feizhu.com", "ele.me", "elemecdn.com"}:
+            self.assertFalse(any(core_suffix in rule for rule in enterprise_manual))
         self.assertNotIn("savc-rt.com", published)
         for stale_ip in {"183.134.53.177", "118.212.236.23", "118.212.235.156", "118.212.235.76"}:
             self.assertNotIn(stale_ip, published)
@@ -196,7 +201,9 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".aliexpress.com", ".alipay.com", ".alipayobjects.com", ".aliyun.com",
                 ".aliyuncs.com", ".amap.com", ".autonavi.com", ".cainiao.com",
                 ".dingtalk.com", ".taobao.com", ".tbcdn.cn", ".tmall.com",
-                ".ykimg.com", ".youku.com", ".1mall.com", ".360buy.cn",
+                ".tmall.hk", ".ykimg.com", ".youku.com", ".alitrip.com",
+                ".feizhu.com", ".fliggy.com", ".goofish.com", ".ele.me",
+                ".elemecdn.com", ".1mall.com", ".360buy.cn",
                 ".360buy.com", ".360buy.com.cn", ".360buyimg.com", ".7fresh.com",
                 ".baitiao.com", ".chinabank.com.cn", ".healthjd.com", ".jcloud.com",
                 ".jcloudcs.com", ".jd.com", ".jd.hk", ".jdcloud.com", ".jclps.com",
