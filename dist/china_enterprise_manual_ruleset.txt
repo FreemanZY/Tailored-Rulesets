@@ -68,16 +68,10 @@ DOMAIN,cdn.cnbj1.fds.api.mi-img.com
 DOMAIN,ott.io.mi.com
 
 # Group: Didi
-DOMAIN,api.udache.com
-DOMAIN,common.diditaxi.com.cn
-DOMAIN,dpubstatic.udache.com
-DOMAIN,epassport.diditaxi.com.cn
 DOMAIN,img-hxy021.didistatic.com
-DOMAIN,map.diditaxi.com.cn
 DOMAIN,prod.didi.cn
 DOMAIN,res.xiaojukeji.com
 DOMAIN,union.didi.cn
-DOMAIN,ut-static.udache.com
 DOMAIN,web.map.xiaojukeji.com
 
 # Group: Additional Ximalaya domains from the official XMSRC v2.1 scope
@@ -102,10 +96,6 @@ DOMAIN,ecapi.lkcoffee.com
 DOMAIN,caiyunapp.com
 DOMAIN,starplucker.cyapi.cn
 DOMAIN,wrapper.cyapi.cn
-
-# Group: China Railway 12306
-DOMAIN,eximages.12306.cn
-DOMAIN,mobile.12306.cn
 
 # Group: Baidu Maps
 DOMAIN,loc.map.baidu.com

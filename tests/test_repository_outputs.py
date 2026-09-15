@@ -130,7 +130,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (85, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (77, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -139,8 +139,6 @@ class RepositoryOutputTests(unittest.TestCase):
         self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
         for migrated in {
             "DOMAIN,api.mijia.tech",
-            "DOMAIN,api.udache.com",
-            "DOMAIN,mobile.12306.cn",
             "DOMAIN,gator.volces.com",
             "DOMAIN,wealthplaza.tech.citic",
             "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
@@ -161,6 +159,7 @@ class RepositoryOutputTests(unittest.TestCase):
         for core_suffix in {
             "huazhu.com", "fliggy.com", "feizhu.com", "ele.me", "elemecdn.com",
             "meituan.com", "dianping.com", "yunpei.com", "yunxiu.com",
+            "udache.com", "diditaxi.com.cn", "12306.cn", "ceair.com", "yaduo.com",
         }:
             self.assertFalse(any(core_suffix in rule for rule in enterprise_manual))
         self.assertNotIn("savc-rt.com", published)
@@ -212,6 +211,8 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
                 ".dianping.com", ".meituan.com", ".dnspod.cn", ".dnspod.com",
+                ".diditaxi.com.cn", ".udache.com", ".12306.cn", ".ceair.com",
+                ".yaduo.com",
                 ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",

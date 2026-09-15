@@ -1,4 +1,4 @@
-# DOMAIN-SET: Curated core domains for Alibaba, JD, Tencent, Meituan, Dianping, Huazhu, and Ximalaya services.
+# DOMAIN-SET: Curated core domains for major China enterprise and public-service platforms.
 # Sources: official group, product, firewall, and endpoint documentation.
 # A leading dot matches the named domain and all subdomains.
 
@@ -63,6 +63,19 @@
 # Meituan and Dianping core services
 .dianping.com
 .meituan.com
+
+# Didi China mobility services
+.diditaxi.com.cn
+.udache.com
+
+# China Railway 12306
+.12306.cn
+
+# China Eastern Airlines
+.ceair.com
+
+# Atour Hotel and lifestyle services
+.yaduo.com
 
 # Tencent core services and infrastructure
 .dnspod.cn
