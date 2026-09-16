@@ -29,6 +29,43 @@ def record(record_id: int, **overrides):
     return value
 
 
+def power_apps_markdown():
+    rows = [
+        r"| *.events.data.microsoft.com | https | Telemetry |",
+        r"| *.powerapps.com | https | Power Apps service |",
+        r"| api.bap.microsoft.com<br>\*.api.bap.microsoft.com | https | Environment management |",
+        r"| arc.msn.com<br>arc-emea.msn.com | https | In-app campaigns |",
+        (
+            "| http://*.crm#.dynamics.com and https://*.crm#.dynamics.com | https | "
+            "<ul><li>North America: no number</li><li>Europe: 4</li>"
+            "<li>Asia Pacific: 5</li></ul> |"
+        ),
+        r"| localhost<br>127.0.0.1 | http | Local desktop loopback |",
+    ]
+    rows.extend(
+        f"| fixture{index}.powerapps.example | https | Fixture endpoint {index} |"
+        for index in range(1, 20)
+    )
+    return "\n".join(
+        [
+            "---",
+            "ms.date: 09/10/2026",
+            "---",
+            "## Required services",
+            "",
+            "| Domains | Protocols | Uses |",
+            "| --- | --- | --- |",
+            *rows,
+            "",
+            "## Deprecated endpoints",
+        ]
+    )
+
+
+def fixture_power_apps_source():
+    return updater.build_power_apps_source(power_apps_markdown())
+
+
 def fixture_manifest():
     payloads = {
         "Worldwide": [
@@ -48,7 +85,7 @@ def fixture_manifest():
         "USGovGCCHigh": [record(4, urls=["*.apps.mil", "login.example.com"])],
     }
     versions = {instance: "2026091000" for instance in updater.INSTANCES}
-    return updater.build_manifest(versions, payloads)
+    return updater.build_manifest(versions, payloads, fixture_power_apps_source())
 
 
 class MicrosoftRuleGeneratorTests(unittest.TestCase):
@@ -85,6 +122,41 @@ class MicrosoftRuleGeneratorTests(unittest.TestCase):
         self.assertIn("DOMAIN-WILDCARD,autodiscover.*.onmicrosoft.com\n", ruleset)
         self.assertIn("IP-CIDR,203.0.113.0/24,no-resolve\n", ruleset)
         self.assertIn("IP-CIDR6,2001:db8::/32,no-resolve\n", ruleset)
+        self.assertIn("arc.msn.com\n", domainset)
+        self.assertIn(".crm.dynamics.com\n", domainset)
+        self.assertIn(".crm4.dynamics.com\n", domainset)
+        self.assertIn(".crm5.dynamics.com\n", domainset)
+        self.assertNotIn("localhost", domainset)
+        self.assertNotIn("127.0.0.1", ruleset)
+
+    def test_parses_power_apps_table_and_preserves_source_metadata(self):
+        source = fixture_power_apps_source()
+        self.assertEqual(source["document_date"], "09/10/2026")
+        self.assertEqual(source["excluded_local_targets"], ["127.0.0.1", "localhost"])
+        self.assertRegex(source["semantic_hash"], r"^[0-9a-f]{64}$")
+        published = {
+            domain
+            for record_value in source["records"]
+            for domain in record_value["normalized_domains"]
+        }
+        self.assertIn("arc.msn.com", published)
+        self.assertIn("*.crm.dynamics.com", published)
+        self.assertIn("*.crm4.dynamics.com", published)
+        self.assertIn("*.crm5.dynamics.com", published)
+        self.assertEqual(
+            source["semantic_hash"],
+            fixture_power_apps_source()["semantic_hash"],
+        )
+
+    def test_rejects_power_apps_structure_drift_and_unknown_url_template(self):
+        with self.assertRaises(updater.SourceDataError):
+            updater.build_power_apps_source(
+                power_apps_markdown().replace("| Domains | Protocols | Uses |", "| Host | Protocol | Use |")
+            )
+        with self.assertRaises(updater.SourceDataError):
+            updater.build_power_apps_source(
+                power_apps_markdown().replace("arc.msn.com", "https://arc.msn.com")
+            )
 
     def test_serialization_and_rendering_are_deterministic(self):
         manifest = fixture_manifest()
@@ -104,17 +176,19 @@ class MicrosoftRuleGeneratorTests(unittest.TestCase):
         bad_schema = copy.deepcopy(payloads)
         bad_schema["Worldwide"][0]["newField"] = "unexpected"
         with self.assertRaises(updater.SourceDataError):
-            updater.build_manifest(versions, bad_schema)
+            updater.build_manifest(versions, bad_schema, fixture_power_apps_source())
 
         empty = copy.deepcopy(payloads)
         empty["China"] = []
         with self.assertRaises(updater.SourceDataError):
-            updater.build_manifest(versions, empty)
+            updater.build_manifest(versions, empty, fixture_power_apps_source())
 
         bad_cidr = copy.deepcopy(payloads)
         bad_cidr["USGovDoD"][0]["ips"] = ["203.0.113.7/24"]
         with self.assertRaises(updater.SourceDataError):
-            updater.render_outputs(updater.build_manifest(versions, bad_cidr))
+            updater.render_outputs(
+                updater.build_manifest(versions, bad_cidr, fixture_power_apps_source())
+            )
 
     def test_ip_sort_order_is_numeric(self):
         manifest = fixture_manifest()

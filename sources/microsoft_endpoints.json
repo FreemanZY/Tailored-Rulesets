@@ -2356,6 +2356,405 @@
       "version": "2026081400"
     }
   },
-  "schema_version": 1,
+  "power_apps": {
+    "content_url": "https://raw.githubusercontent.com/MicrosoftDocs/powerapps-docs/main/powerapps-docs/limits-and-config.md",
+    "document_date": "01/12/2026",
+    "excluded_local_targets": [
+      "127.0.0.1",
+      "localhost"
+    ],
+    "page_url": "https://learn.microsoft.com/en-us/power-apps/limits-and-config",
+    "records": [
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.api.bap.microsoft.com",
+          "api.bap.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "api.bap.microsoft.com",
+          "*.api.bap.microsoft.com"
+        ],
+        "uses": "Environment permissions management"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "management.azure.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "management.azure.com"
+        ],
+        "uses": "Power Apps Management Service"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "msmanaged-na.azure-apim.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "msmanaged-na.azure-apim.net"
+        ],
+        "uses": "Runtime of Connectors/Apis"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.odc.officeapps.live.com",
+          "login.microsoft.com",
+          "login.microsoftonline.com",
+          "login.windows.net",
+          "secure.aadcdn.microsoftonline-p.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "login.microsoft.com",
+          "login.windows.net",
+          "login.microsoftonline.com",
+          "secure.aadcdn.microsoftonline-p.com",
+          "*.odc.officeapps.live.com"
+        ],
+        "uses": "Microsoft Authentication Library"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "graph.microsoft.com",
+          "graph.windows.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "graph.microsoft.com",
+          "graph.windows.net"
+        ],
+        "uses": "Azure Graph - For getting user info (for example, profile photo)"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.azure-apim.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.azure-apim.net"
+        ],
+        "uses": "API Hubs - Different subdomains for each locale"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.azure-apihub.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.azure-apihub.net"
+        ],
+        "uses": "API Hubs - Different subdomains for each locale"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.powerapps.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.powerapps.com"
+        ],
+        "uses": "create.powerapps.com, content.powerapps.com, apps.powerapps.com, make.powerapps.com, \\*gateway.prod.island.powerapps.com, \\*gateway.prod.cm.powerapps.com, \\*harvest.preview.powerapps.com, and \\*harvest.powerapps.com"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.gateway.prod.island.powerapps.com",
+          "*.harvest.powerapps.com",
+          "*.harvest.preview.powerapps.com"
+        ],
+        "protocol": "wss",
+        "source_domains": [
+          "*.gateway.prod.island.powerapps.com",
+          "*.harvest.preview.powerapps.com",
+          "*.harvest.powerapps.com"
+        ],
+        "uses": "Required for communication with and startup of canvas apps and real-time updates with Coding Agent."
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.azureedge.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.azureedge.net"
+        ],
+        "uses": "create.powerapps.com, content.powerapps.com, and make.powerapps.com (Optional) We highly recommend that you use the wildcard listed under Domains. You can download the complete list if you want to allow specific domain names instead of using *.azureedge.net. However, this list is subject to change."
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.azurefd.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.azurefd.net"
+        ],
+        "uses": "create.powerapps.com, content.powerapps.com, and make.powerapps.com"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.ces.microsoftcloud.com",
+          "admin.microsoft.com",
+          "config.centro.core.microsoft",
+          "oness.microsoft.com",
+          "petrol.office.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.ces.microsoftcloud.com",
+          "config.centro.core.microsoft",
+          "admin.microsoft.com",
+          "petrol.office.microsoft.com",
+          "oness.microsoft.com"
+        ],
+        "uses": "Access to net promoter score (NPS) and surveys."
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.blob.core.windows.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.blob.core.windows.net"
+        ],
+        "uses": "Blob storage (Optional) We highly recommend that you use the wildcard listed under Domains. You can download the complete list if you want to allow specific domain names instead of using *.blob.core.windows.net. However, this list is subject to change."
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.flow.microsoft.com",
+          "*.powerautomate.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.flow.microsoft.com",
+          "*.powerautomate.com"
+        ],
+        "uses": "create.powerapps.com, content.powerapps.com, and make.powerapps.com"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.crm.dynamics.com",
+          "*.crm2.dynamics.com",
+          "*.crm3.dynamics.com",
+          "*.crm4.dynamics.com",
+          "*.crm5.dynamics.com",
+          "*.crm6.dynamics.com",
+          "*.crm7.dynamics.com",
+          "*.crm8.dynamics.com",
+          "*.crm9.dynamics.com",
+          "*.crm11.dynamics.com",
+          "*.crm12.dynamics.com",
+          "*.crm14.dynamics.com",
+          "*.crm15.dynamics.com",
+          "*.crm16.dynamics.com",
+          "*.crm17.dynamics.com",
+          "*.crm20.dynamics.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "http://*.crm#.dynamics.com and https://*.crm#.dynamics.com"
+        ],
+        "uses": "Required for environments access. Includes integration and static Content Delivery Network (CDN) content endpoints. Replace # in http://\\*.crm#.dynamics.com and https://\\*.crm#.dynamics.com with your region's number: Asia/Pacific: 5 Canada: 3 Europe, Africa, and Middle East: 15 and 4 France: 12 Germany: 16 India: 8 Japan: 7 North America: no number Oceania: 6 Singapore: 20 South Africa: 14 South America: 2 Switzerland: 17 UAE: 15 United Kingdom: 11 Dynamics 365 US Government: 9"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "browser.pipe.aria.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "browser.pipe.aria.microsoft.com"
+        ],
+        "uses": "Rest of the World telemetry endpoint for model-driven apps"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.events.data.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.events.data.microsoft.com"
+        ],
+        "uses": "Telemetry endpoint for Power Apps"
+      },
+      {
+        "excluded_targets": [
+          "localhost"
+        ],
+        "normalized_domains": [],
+        "protocol": "http",
+        "source_domains": [
+          "localhost"
+        ],
+        "uses": "Power Apps Mobile"
+      },
+      {
+        "excluded_targets": [
+          "127.0.0.1"
+        ],
+        "normalized_domains": [],
+        "protocol": "http",
+        "source_domains": [
+          "127.0.0.1"
+        ],
+        "uses": "Power Apps Mobile"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "ecs.office.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "ecs.office.com"
+        ],
+        "uses": "Retrieve feature flags for Power Apps"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.augloop.svc.cloud.microsoft",
+          "augloop.svc.cloud.microsoft"
+        ],
+        "protocol": "wss",
+        "source_domains": [
+          "augloop.svc.cloud.microsoft",
+          "*.augloop.svc.cloud.microsoft"
+        ],
+        "uses": "Power Apps Studio Copilot"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "config.edge.skype.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "config.edge.skype.com"
+        ],
+        "uses": "Retrieve feature flags for Power Apps (backup)"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.api.powerplatformusercontent.com",
+          "*.powerplatform.com",
+          "*.powerplatformusercontent.com",
+          "api.powerplatform.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "api.powerplatform.com",
+          "*.powerplatform.com",
+          "*.api.powerplatformusercontent.com",
+          "*.powerplatformusercontent.com"
+        ],
+        "uses": "Required for Power Platform API connectivity used internally by Microsoft products, and Power Platform programmability and extensibility."
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.sharepointonline.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.sharepointonline.com"
+        ],
+        "uses": "Retrieve assets for presenting the header that appears at the top of app playing experiences"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "eudb.ris.api.iris.microsoft.com",
+          "ris.api.iris.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "ris.api.iris.microsoft.com",
+          "eudb.ris.api.iris.microsoft.com"
+        ],
+        "uses": "Record user action in response to Power Apps in-app campaigns"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "arc-emea.msn.com",
+          "arc.msn.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "arc.msn.com",
+          "arc-emea.msn.com"
+        ],
+        "uses": "Record user viewing of Power Apps in-app campaigns"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.hubblecontent.osi.office.net",
+          "hubble.officeapps.live.com",
+          "res.cdn.office.net"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.hubblecontent.osi.office.net",
+          "hubble.officeapps.live.com",
+          "res.cdn.office.net"
+        ],
+        "uses": "Provides stock images to use in your app"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "dc.services.visualstudio.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "dc.services.visualstudio.com"
+        ],
+        "uses": "Application Insights endpoint used for custom telemetry in canvas app"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "*.ocv.microsoft.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "*.ocv.microsoft.com"
+        ],
+        "uses": "Allows users to provide Copilot feedback data in Power Apps"
+      },
+      {
+        "excluded_targets": [],
+        "normalized_domains": [
+          "js.monitor.azure.com"
+        ],
+        "protocol": "https",
+        "source_domains": [
+          "js.monitor.azure.com"
+        ],
+        "uses": "This is used by the office header for reporting telemetry"
+      }
+    ],
+    "semantic_hash": "be95bf27496ef3cf053e144466dbe7c95192717a3a042d030b367ee48d853bd7"
+  },
+  "schema_version": 2,
   "source": "https://endpoints.office.com"
 }

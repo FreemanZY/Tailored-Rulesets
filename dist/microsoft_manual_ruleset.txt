@@ -1,5 +1,5 @@
 # MANUAL RULE-SET: Reviewed Microsoft CDN, CNAME target, and observed service endpoints.
-# These entries are not currently covered by the Microsoft 365 generated source.
+# These entries are not currently covered by the Microsoft 365 or Power Apps generated sources.
 
 # Group: Observed Microsoft domains
 DOMAIN,apac01.azure-devices.net

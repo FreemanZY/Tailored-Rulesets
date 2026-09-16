@@ -135,6 +135,9 @@
 # Huazhu and H World China services
 .huazhu.com
 
+# Umetrip services operated by Travelsky Mobile Technology
+.umetrip.com
+
 # Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
 .himalaya.com
 .qijizuopin.com

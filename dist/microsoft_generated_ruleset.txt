@@ -1,5 +1,5 @@
-# GENERATED RULE-SET: Microsoft 365 complex wildcards and IP ranges.
-# Source versions: Worldwide=2026081400, China=2026073100, USGovDoD=2026090200, USGovGCCHigh=2026070100
+# GENERATED RULE-SET: Microsoft 365 and Power Apps complex wildcards and IP ranges.
+# Source versions: Worldwide=2026081400, China=2026073100, USGovDoD=2026090200, USGovGCCHigh=2026070100, PowerApps=be95bf27496e
 # Policies belong in the consuming Surge profile.
 DOMAIN-WILDCARD,*cdn.onenote.net
 DOMAIN-WILDCARD,autodiscover.*.mail.onmicrosoft.com

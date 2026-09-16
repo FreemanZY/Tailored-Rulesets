@@ -1,4 +1,4 @@
-name: Update Microsoft 365 rules
+name: Update Microsoft rules
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-microsoft-365-rules
+  group: update-microsoft-rules
   cancel-in-progress: false
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Refresh Microsoft endpoint data
+      - name: Refresh Microsoft 365 and Power Apps endpoint data
         run: python scripts/update_microsoft_rules.py
 
       - name: Run deterministic and repository checks
@@ -44,8 +44,8 @@ jobs:
             echo "Microsoft generated files are unchanged."
             exit 0
           fi
-          versions="$(python -c 'import json; d=json.load(open("sources/microsoft_endpoints.json", encoding="utf-8")); print(", ".join("{}={}".format(k, d["instances"][k]["version"]) for k in ("Worldwide", "China", "USGovDoD", "USGovGCCHigh")))')"
+          versions="$(python -c 'import json; d=json.load(open("sources/microsoft_endpoints.json", encoding="utf-8")); parts=["{}={}".format(k, d["instances"][k]["version"]) for k in ("Worldwide", "China", "USGovDoD", "USGovGCCHigh")]; parts.append("PowerApps={}".format(d["power_apps"]["semantic_hash"][:12])); print(", ".join(parts))')"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(rules): update Microsoft 365 endpoints" -m "$versions"
+          git commit -m "chore(rules): update Microsoft endpoints" -m "$versions"
           git push

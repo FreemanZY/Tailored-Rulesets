@@ -85,6 +85,12 @@ class RepositoryOutputTests(unittest.TestCase):
 
     def test_legacy_microsoft_ip_filename_is_removed(self):
         self.assertFalse((ROOT / "dist" / "microsoft_generated_ip_ruleset.txt").exists())
+        microsoft_generated_domains = active_lines(
+            ROOT / "dist" / "microsoft_generated_domainset.txt"
+        )
+        microsoft_manual_rules = active_lines(ROOT / "dist" / "microsoft_manual_ruleset.txt")
+        self.assertIn("arc.msn.com", microsoft_generated_domains)
+        self.assertNotIn("DOMAIN,arc.msn.com", microsoft_manual_rules)
 
     def test_legacy_google_ip_filename_is_removed(self):
         self.assertFalse((ROOT / "dist" / "google_generated_ip_ruleset.txt").exists())
@@ -130,7 +136,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (77, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (78, 15, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -143,6 +149,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,wealthplaza.tech.citic",
             "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
             "DOMAIN,lbs.netease.im",
+            "DOMAIN,prewxacode.wxqcloud.qq.com.cn",
             "DOMAIN,y.gtimg.cn",
             "DOMAIN-SUFFIX,xmcdn.com",
             "DOMAIN-SUFFIX,zhishidashi.com",
@@ -222,7 +229,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
                 ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com",
-                ".huazhu.com", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
+                ".huazhu.com", ".umetrip.com", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
             },
         )

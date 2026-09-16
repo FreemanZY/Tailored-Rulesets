@@ -24,6 +24,7 @@ DOMAIN,launchwxacode.wxqcloud.qq.com.cn
 DOMAIN,lbs.map.qq.com
 DOMAIN,mmbiz.qpic.cn
 DOMAIN,paydns.wechat.com
+DOMAIN,prewxacode.wxqcloud.qq.com.cn
 DOMAIN,res.wx.qq.com
 DOMAIN,sglong.wechat.com
 DOMAIN,sgminorshort.wechat.com
