@@ -9,7 +9,6 @@ DOMAIN,dns.alidns.com
 
 # Group: Unclassified service endpoints pending provenance review
 DOMAIN,api.neixin.cn
-DOMAIN,data.air-matters.com
 DOMAIN,gateway.gaiaworkforce.com
 DOMAIN,ptf.flyertrip.com
 DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org

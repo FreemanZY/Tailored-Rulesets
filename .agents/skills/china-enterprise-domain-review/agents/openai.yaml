@@ -1,0 +1,4 @@
+interface:
+  display_name: "China Enterprise Domain Review"
+  short_description: "Research and classify China enterprise domains"
+  default_prompt: "Research the supplied domains, classify them for the China enterprise core or manual ruleset, and present a reviewable proposal before making changes."

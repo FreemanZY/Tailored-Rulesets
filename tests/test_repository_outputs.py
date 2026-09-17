@@ -136,7 +136,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (78, 15, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (81, 14, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -150,6 +150,9 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
             "DOMAIN,lbs.netease.im",
             "DOMAIN,prewxacode.wxqcloud.qq.com.cn",
+            "DOMAIN,air-matters.com",
+            "DOMAIN,data.air-matters.com",
+            "DOMAIN,heatmap.air-matters.app",
             "DOMAIN,y.gtimg.cn",
             "DOMAIN-SUFFIX,xmcdn.com",
             "DOMAIN-SUFFIX,zhishidashi.com",
@@ -219,7 +222,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".jcloudcs.com", ".jd.com", ".jd.hk", ".jdcloud.com", ".jclps.com",
                 ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
-                ".dianping.com", ".meituan.com", ".dnspod.cn", ".dnspod.com",
+                ".dianping.com", ".meituan.com", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
                 ".diditaxi.com.cn", ".udache.com", ".12306.cn", ".ceair.com",
                 ".yaduo.com", ".icbc.com.cn", ".abchina.com",
                 ".abchina.com.cn", ".boc.cn", ".ccb.cn", ".ccb.com", ".bankcomm.cn",
@@ -228,7 +231,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
-                ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com",
+                ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com", ".189.cn",
                 ".huazhu.com", ".umetrip.com", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
             },

@@ -114,6 +114,7 @@
 .yaduo.com
 
 # Tencent core services and infrastructure
+.cdn-go.cn
 .dnspod.cn
 .dnspod.com
 .gtimg.com
@@ -131,6 +132,9 @@
 .wechatpay.com
 .weixinbridge.com
 .weiyun.com
+
+# China Telecom customer and service portals
+.189.cn
 
 # Huazhu and H World China services
 .huazhu.com

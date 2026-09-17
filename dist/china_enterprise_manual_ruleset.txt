@@ -98,6 +98,11 @@ DOMAIN,caiyunapp.com
 DOMAIN,starplucker.cyapi.cn
 DOMAIN,wrapper.cyapi.cn
 
+# Group: Air Matters China application endpoints
+DOMAIN,air-matters.com
+DOMAIN,data.air-matters.com
+DOMAIN,heatmap.air-matters.app
+
 # Group: Baidu Maps
 DOMAIN,loc.map.baidu.com
 
