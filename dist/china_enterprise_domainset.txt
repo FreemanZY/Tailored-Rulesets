@@ -145,6 +145,22 @@
 # DCloud developer platform services operated by Digital Paradise Beijing
 .dcloud.net.cn
 
+# Baidu products and services covered by the official BSRC wildcard scope
+.baidu.com
+
+# Douyin application, API, and media delivery services
+.douyin.com
+.douyinpic.com
+
+# Yangshipin services operated for China Media Group
+.yangshipin.cn
+
+# WavPub podcast publishing services
+.wavpub.com
+
+# Dr.Buho software and service endpoints
+.drbuho.com
+
 # Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
 .himalaya.com
 .qijizuopin.com

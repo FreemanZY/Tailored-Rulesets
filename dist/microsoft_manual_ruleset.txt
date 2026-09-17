@@ -20,3 +20,10 @@ DOMAIN,default.exp-tas.com
 DOMAIN,img-s-msn-com.akamaized.net
 DOMAIN,in.appcenter.ms
 DOMAIN,ipv6.msftncsi.com
+
+# Group: Windows service endpoints from official Microsoft documentation
+DOMAIN,api.msn.com
+DOMAIN,download.windowsupdate.com
+DOMAIN,ntp.msn.com
+DOMAIN,time.windows.com
+DOMAIN,www.msftncsi.com

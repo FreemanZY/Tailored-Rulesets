@@ -103,12 +103,13 @@ DOMAIN,air-matters.com
 DOMAIN,data.air-matters.com
 DOMAIN,heatmap.air-matters.app
 
-# Group: Baidu Maps
-DOMAIN,loc.map.baidu.com
-
 # Group: ByteDance Volcengine
 DOMAIN,gator.volces.com
 DOMAIN,tab.volces.com
+DOMAIN,vod-license-m.volccdn.com
+
+# Group: Ctrip observed CDN host
+DOMAIN,dimg10.c-ctrip.com
 
 # Group: NetEase Yunxin
 DOMAIN,httpdns.yunxindns.com
