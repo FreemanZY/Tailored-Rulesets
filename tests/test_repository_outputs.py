@@ -91,6 +91,14 @@ class RepositoryOutputTests(unittest.TestCase):
         microsoft_manual_rules = active_lines(ROOT / "dist" / "microsoft_manual_ruleset.txt")
         self.assertIn("arc.msn.com", microsoft_generated_domains)
         self.assertNotIn("DOMAIN,arc.msn.com", microsoft_manual_rules)
+        self.assertTrue(
+            {
+                "DOMAIN,default.exp-tas.com",
+                "DOMAIN,img-s-msn-com.akamaized.net",
+                "DOMAIN,in.appcenter.ms",
+                "DOMAIN,ipv6.msftncsi.com",
+            }.issubset(microsoft_manual_rules)
+        )
 
     def test_legacy_google_ip_filename_is_removed(self):
         self.assertFalse((ROOT / "dist" / "google_generated_ip_ruleset.txt").exists())
@@ -232,7 +240,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
                 ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com", ".189.cn",
-                ".huazhu.com", ".umetrip.com", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
+                ".huazhu.com", ".umetrip.com", ".dcloud.net.cn", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
             },
         )

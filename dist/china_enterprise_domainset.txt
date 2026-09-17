@@ -142,6 +142,9 @@
 # Umetrip services operated by Travelsky Mobile Technology
 .umetrip.com
 
+# DCloud developer platform services operated by Digital Paradise Beijing
+.dcloud.net.cn
+
 # Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
 .himalaya.com
 .qijizuopin.com

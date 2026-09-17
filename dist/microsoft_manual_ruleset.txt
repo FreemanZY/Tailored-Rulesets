@@ -14,3 +14,9 @@ DOMAIN,dsm04pap002.storage.live.com
 DOMAIN,snz04pap001.storage.live.com
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN,my.microsoftpersonalcontent.com
+
+# Group: Microsoft endpoints verified in official network documentation
+DOMAIN,default.exp-tas.com
+DOMAIN,img-s-msn-com.akamaized.net
+DOMAIN,in.appcenter.ms
+DOMAIN,ipv6.msftncsi.com
