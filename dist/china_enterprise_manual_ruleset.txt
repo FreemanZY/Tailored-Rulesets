@@ -69,9 +69,14 @@ DOMAIN,cdn.cnbj1.fds.api.mi-img.com
 DOMAIN,ott.io.mi.com
 
 # Group: Didi
+DOMAIN,apm.xiaojukeji.com
+DOMAIN,catchdata.xiaojukeji.com
 DOMAIN,img-hxy021.didistatic.com
+DOMAIN,img-ys011.didistatic.com
 DOMAIN,prod.didi.cn
 DOMAIN,res.xiaojukeji.com
+DOMAIN,s3-hnapuhdd-cdn.didistatic.com
+DOMAIN,tracker.didistatic.com
 DOMAIN,union.didi.cn
 DOMAIN,web.map.xiaojukeji.com
 

@@ -26,4 +26,6 @@ DOMAIN,api.msn.com
 DOMAIN,download.windowsupdate.com
 DOMAIN,ntp.msn.com
 DOMAIN,time.windows.com
+DOMAIN,wbd.ms
+DOMAIN,whiteboard.ms
 DOMAIN,www.msftncsi.com

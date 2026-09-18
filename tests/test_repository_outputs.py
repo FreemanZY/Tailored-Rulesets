@@ -101,6 +101,8 @@ class RepositoryOutputTests(unittest.TestCase):
                 "DOMAIN,download.windowsupdate.com",
                 "DOMAIN,ntp.msn.com",
                 "DOMAIN,time.windows.com",
+                "DOMAIN,wbd.ms",
+                "DOMAIN,whiteboard.ms",
                 "DOMAIN,www.msftncsi.com",
             }.issubset(microsoft_manual_rules)
         )
@@ -149,7 +151,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (82, 14, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (87, 14, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -177,6 +179,11 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN-SUFFIX,tb.cn",
             "DOMAIN-SUFFIX,cmbwinglungbank.com",
             "DOMAIN-SUFFIX,rcs01.5gm.wo.cn",
+            "DOMAIN,apm.xiaojukeji.com",
+            "DOMAIN,catchdata.xiaojukeji.com",
+            "DOMAIN,img-ys011.didistatic.com",
+            "DOMAIN,s3-hnapuhdd-cdn.didistatic.com",
+            "DOMAIN,tracker.didistatic.com",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
@@ -250,7 +257,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".huazhu.com", ".umetrip.com", ".dcloud.net.cn", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
                 ".baidu.com", ".douyin.com", ".douyinpic.com", ".yangshipin.cn",
-                ".wavpub.com", ".drbuho.com",
+                ".wavpub.com", ".drbuho.com", ".geetest.com", ".tongdun.net",
             },
         )
         self.assertTrue(all(domain.startswith(".") for domain in domains))

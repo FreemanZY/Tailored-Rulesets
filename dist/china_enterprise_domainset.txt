@@ -161,6 +161,12 @@
 # Dr.Buho software and service endpoints
 .drbuho.com
 
+# GeeTest verification services covered by the official wildcard allowlist
+.geetest.com
+
+# Tongdun decision intelligence and risk-control services
+.tongdun.net
+
 # Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
 .himalaya.com
 .qijizuopin.com
