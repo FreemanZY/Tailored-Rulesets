@@ -5,7 +5,9 @@
 # Group: Alibaba ecosystem domains
 DOMAIN,acs-m.freshippo.com
 DOMAIN,acs-mum.alibabachengdun.com
+DOMAIN,alilang-intranet.alibaba-inc.com
 DOMAIN,amdc-sibling.alipay.com.cn
+DOMAIN,live-appserver-sh.alivecdn.com
 DOMAIN,umdc.alibabachengdun.com
 DOMAIN-SUFFIX,adashx.ut.hzshudian.com
 DOMAIN-SUFFIX,bdc.alibabachengdun.com
@@ -23,6 +25,7 @@ DOMAIN,dl.wechat.com
 DOMAIN,launchwxacode.wxqcloud.qq.com.cn
 DOMAIN,lbs.map.qq.com
 DOMAIN,mmbiz.qpic.cn
+DOMAIN,mmec.wxqcloud.qq.com.cn
 DOMAIN,paydns.wechat.com
 DOMAIN,prewxacode.wxqcloud.qq.com.cn
 DOMAIN,res.wx.qq.com
@@ -46,9 +49,11 @@ DOMAIN-SUFFIX,wxapp.tc.qq.com
 URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(:[0-9]+)?/mmtls/[0-9A-Fa-f]{8}([/?]|$)
 
 # Group: Meituan and Dianping
+DOMAIN,al-log.d.meituan.net
 DOMAIN,ddplus.meituan.net
 DOMAIN,img.meituan.net
 DOMAIN,m3.d.meituan.net
+DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,o1.d.meituan.net
 DOMAIN,p0.meituan.net
@@ -59,6 +64,7 @@ DOMAIN,p14.d.meituan.net
 DOMAIN,p2.d.meituan.net
 DOMAIN,p4.d.meituan.net
 DOMAIN,p6.d.meituan.net
+DOMAIN,route-stats.d.meituan.net
 DOMAIN,s1.d.meituan.net
 DOMAIN,s3plus-shon.meituan.net
 DOMAIN,s3plus.meituan.net
@@ -99,9 +105,11 @@ DOMAIN,capi.lkcoffee.com
 DOMAIN,ecapi.lkcoffee.com
 
 # Group: Caiyun Weather
-DOMAIN,caiyunapp.com
 DOMAIN,starplucker.cyapi.cn
 DOMAIN,wrapper.cyapi.cn
+
+# Group: China public time service
+DOMAIN,time.edu.cn
 
 # Group: Air Matters China application endpoints
 DOMAIN,air-matters.com

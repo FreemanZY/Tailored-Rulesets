@@ -21,6 +21,10 @@ DOMAIN,img-s-msn-com.akamaized.net
 DOMAIN,in.appcenter.ms
 DOMAIN,ipv6.msftncsi.com
 
+# Group: Observed Bing endpoints verified as Microsoft services
+DOMAIN,s.cn.bing.net
+DOMAIN,s1.tc.bing.net
+
 # Group: Windows service endpoints from official Microsoft documentation
 DOMAIN,api.msn.com
 DOMAIN,download.windowsupdate.com
@@ -28,4 +32,5 @@ DOMAIN,ntp.msn.com
 DOMAIN,time.windows.com
 DOMAIN,wbd.ms
 DOMAIN,whiteboard.ms
+DOMAIN,windows.msn.com
 DOMAIN,www.msftncsi.com

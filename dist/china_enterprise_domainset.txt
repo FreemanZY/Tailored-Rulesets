@@ -74,6 +74,9 @@
 .dianping.com
 .meituan.com
 
+# Caiyun Weather official service root
+.caiyunapp.com
+
 # Didi China mobility services
 .diditaxi.com.cn
 .udache.com
@@ -144,6 +147,9 @@
 
 # DCloud developer platform services operated by Digital Paradise Beijing
 .dcloud.net.cn
+
+# CITYBOX unattended retail services
+.icitybox.cn
 
 # Baidu products and services covered by the official BSRC wildcard scope
 .baidu.com

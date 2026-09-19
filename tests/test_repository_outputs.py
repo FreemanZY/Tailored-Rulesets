@@ -100,9 +100,12 @@ class RepositoryOutputTests(unittest.TestCase):
                 "DOMAIN,api.msn.com",
                 "DOMAIN,download.windowsupdate.com",
                 "DOMAIN,ntp.msn.com",
+                "DOMAIN,s.cn.bing.net",
+                "DOMAIN,s1.tc.bing.net",
                 "DOMAIN,time.windows.com",
                 "DOMAIN,wbd.ms",
                 "DOMAIN,whiteboard.ms",
+                "DOMAIN,windows.msn.com",
                 "DOMAIN,www.msftncsi.com",
             }.issubset(microsoft_manual_rules)
         )
@@ -151,7 +154,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (87, 14, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (93, 14, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -184,6 +187,13 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,img-ys011.didistatic.com",
             "DOMAIN,s3-hnapuhdd-cdn.didistatic.com",
             "DOMAIN,tracker.didistatic.com",
+            "DOMAIN,al-log.d.meituan.net",
+            "DOMAIN,maplocatesdksnapshot.d.meituan.net",
+            "DOMAIN,route-stats.d.meituan.net",
+            "DOMAIN,mmec.wxqcloud.qq.com.cn",
+            "DOMAIN,alilang-intranet.alibaba-inc.com",
+            "DOMAIN,live-appserver-sh.alivecdn.com",
+            "DOMAIN,time.edu.cn",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
@@ -245,6 +255,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
                 ".dianping.com", ".meituan.com", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
+                ".caiyunapp.com", ".icitybox.cn",
                 ".diditaxi.com.cn", ".udache.com", ".12306.cn", ".ceair.com",
                 ".yaduo.com", ".icbc.com.cn", ".abchina.com",
                 ".abchina.com.cn", ".boc.cn", ".ccb.cn", ".ccb.com", ".bankcomm.cn",
