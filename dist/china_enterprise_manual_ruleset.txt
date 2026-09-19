@@ -8,6 +8,8 @@ DOMAIN,acs-mum.alibabachengdun.com
 DOMAIN,alilang-intranet.alibaba-inc.com
 DOMAIN,amdc-sibling.alipay.com.cn
 DOMAIN,live-appserver-sh.alivecdn.com
+DOMAIN,mum.alibabachengdun.net
+DOMAIN,ntp.ynuf.aliapp.org
 DOMAIN,umdc.alibabachengdun.com
 DOMAIN-SUFFIX,adashx.ut.hzshudian.com
 DOMAIN-SUFFIX,bdc.alibabachengdun.com
@@ -98,6 +100,7 @@ DOMAIN,wealthplaza.tech.citic
 
 # Group: Tencent and QQ Music delivery hosts
 DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn
+DOMAIN,sdkconfig.tlivedns.com
 DOMAIN,y.gtimg.cn
 
 # Group: Luckin Coffee
@@ -105,6 +108,7 @@ DOMAIN,capi.lkcoffee.com
 DOMAIN,ecapi.lkcoffee.com
 
 # Group: Caiyun Weather
+DOMAIN,biz.cyapi.cn
 DOMAIN,starplucker.cyapi.cn
 DOMAIN,wrapper.cyapi.cn
 

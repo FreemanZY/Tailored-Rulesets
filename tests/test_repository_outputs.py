@@ -154,7 +154,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (93, 14, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (97, 14, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
