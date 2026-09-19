@@ -3,17 +3,12 @@
 # Group: Existing operational overrides
 DOMAIN,app.koofr.net
 DOMAIN-SUFFIX,v2.argotunnel.com
-DOMAIN,wpad.localdomain
 DOMAIN-SUFFIX,derps.link
+# Retained as a bootstrap exception even though .alidns.com is in the enterprise set.
 DOMAIN,dns.alidns.com
 
-# Group: Unclassified service endpoints pending provenance review
-DOMAIN,api.neixin.cn
-DOMAIN,gateway.gaiaworkforce.com
-DOMAIN,ptf.flyertrip.com
+# Group: Mobile network service endpoint
 DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
-DOMAIN,www.chinaebill.cn
+
+# Group: Endpoint pending reliable provenance
 DOMAIN,www.earlytrip.fun
-DOMAIN,www.flyert.com
-DOMAIN,www.flyert.com.cn
-DOMAIN-SUFFIX,cup.com.cn

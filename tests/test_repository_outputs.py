@@ -154,7 +154,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (97, 14, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (97, 6, 62))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
@@ -197,6 +197,17 @@ class RepositoryOutputTests(unittest.TestCase):
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
+        for promoted in {
+            "DOMAIN,api.neixin.cn",
+            "DOMAIN,gateway.gaiaworkforce.com",
+            "DOMAIN,ptf.flyertrip.com",
+            "DOMAIN,www.chinaebill.cn",
+            "DOMAIN,www.flyert.com",
+            "DOMAIN,www.flyert.com.cn",
+            "DOMAIN-SUFFIX,cup.com.cn",
+        }:
+            self.assertNotIn(promoted, force_direct)
+        self.assertIn("DOMAIN,dns.alidns.com", force_direct)
         published = "\n".join(force_direct + enterprise_manual)
         for core_suffix in {
             "huazhu.com", "fliggy.com", "feizhu.com", "ele.me", "elemecdn.com",
@@ -233,14 +244,22 @@ class RepositoryOutputTests(unittest.TestCase):
                 self.assertIn("# Group:", text)
         self.assertEqual(len(active_lines(ROOT / "dist" / "high_traffic_ruleset.txt")), 18)
         self.assertEqual(len(active_lines(ROOT / "dist" / "proxy_targets_ruleset.txt")), 7)
-        self.assertEqual(len(active_lines(ROOT / "dist" / "lan_ruleset.txt")), 9)
+        lan_rules = active_lines(ROOT / "dist" / "lan_ruleset.txt")
+        local_dns = active_lines(ROOT / "dist" / "local_dns_ruleset.txt")
+        self.assertEqual(len(lan_rules), 10)
+        self.assertIn("DOMAIN,wpad.localdomain", lan_rules)
+        self.assertIn("DOMAIN,wpad.localdomain", local_dns)
+        self.assertNotIn(
+            "DOMAIN,wpad.localdomain",
+            active_lines(ROOT / "dist" / "force_direct_ruleset.txt"),
+        )
 
     def test_china_enterprise_domains_and_asns_are_scoped(self):
         domains = active_lines(ROOT / "dist" / "china_enterprise_domainset.txt")
         self.assertEqual(
             set(domains),
             {
-                ".1688.com", ".alibaba.com", ".alibabacloud.com", ".alicdn.com",
+                ".1688.com", ".alibaba.com", ".alibabacloud.com", ".alicdn.com", ".alidns.com",
                 ".aliexpress.com", ".alipay.com", ".alipayobjects.com", ".aliyun.com",
                 ".aliyuncs.com", ".amap.com", ".autonavi.com", ".cainiao.com",
                 ".dingtalk.com", ".taobao.com", ".tbcdn.cn", ".tmall.com",
@@ -254,7 +273,9 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".jcloudcs.com", ".jd.com", ".jd.hk", ".jdcloud.com", ".jclps.com",
                 ".jdpay.com", ".jdwl.com", ".wangyin.com", ".yhd.com",
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
-                ".dianping.com", ".meituan.com", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
+                ".dianping.com", ".meituan.com", ".neixin.cn", ".gaiaworkforce.com",
+                ".flyertrip.com", ".flyert.com", ".flyert.com.cn", ".chinaebill.cn",
+                ".cup.com.cn", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
                 ".caiyunapp.com", ".icitybox.cn",
                 ".diditaxi.com.cn", ".udache.com", ".12306.cn", ".ceair.com",
                 ".yaduo.com", ".icbc.com.cn", ".abchina.com",

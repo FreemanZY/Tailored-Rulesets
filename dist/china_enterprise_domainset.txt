@@ -7,6 +7,7 @@
 .alibaba.com
 .alibabacloud.com
 .alicdn.com
+.alidns.com
 .aliexpress.com
 .alipay.com
 .alipayobjects.com
@@ -73,6 +74,21 @@
 # Meituan and Dianping core services
 .dianping.com
 .meituan.com
+.neixin.cn
+
+# GaiaWorks workforce management services
+.gaiaworkforce.com
+
+# Flyert and FlyerTrip travel services
+.flyertrip.com
+.flyert.com
+.flyert.com.cn
+
+# Bosssoft electronic-bill services
+.chinaebill.cn
+
+# China UnionPay internet services
+.cup.com.cn
 
 # Caiyun Weather official service root
 .caiyunapp.com

@@ -1,6 +1,7 @@
 # MANUAL RULE-SET: Local names and infrastructure; explicit Tailnet routes take precedence.
 
 # Group: Local hostnames
+DOMAIN,wpad.localdomain
 DOMAIN-SUFFIX,local
 
 # Group: Private, loopback, link-local, and compatibility ranges
