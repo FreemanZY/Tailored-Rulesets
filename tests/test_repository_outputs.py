@@ -154,10 +154,15 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (97, 6, 62))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (98, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
-        for domain in {"h-adashx.ut.fliggy.com", "interface-log.gaiaworkforce.com", "mdap.alipay.com"}:
+        for domain in {
+            "h-adashx.ut.fliggy.com",
+            "interface-log.gaiaworkforce.com",
+            "mdap.alipay.com",
+            "statistic.live.126.net",
+        }:
             self.assertIn(f"DOMAIN,{domain}", rejected)
             self.assertNotIn(f"DOMAIN,{domain}", force_direct)
         self.assertNotIn("DOMAIN-SUFFIX,h-adashx.ut.fliggy.com", enterprise_manual)
@@ -166,6 +171,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,gator.volces.com",
             "DOMAIN,wealthplaza.tech.citic",
             "DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn",
+            "DOMAIN,ap2.qiyukf.com",
             "DOMAIN,lbs.netease.im",
             "DOMAIN,prewxacode.wxqcloud.qq.com.cn",
             "DOMAIN,air-matters.com",

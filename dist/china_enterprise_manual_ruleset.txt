@@ -129,6 +129,7 @@ DOMAIN,vod-license-m.volccdn.com
 DOMAIN,dimg10.c-ctrip.com
 
 # Group: NetEase Yunxin
+DOMAIN,ap2.qiyukf.com
 DOMAIN,httpdns.yunxindns.com
 DOMAIN,lbs.netease.im
 

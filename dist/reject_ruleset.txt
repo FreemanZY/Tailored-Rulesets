@@ -22,6 +22,9 @@ DOMAIN-SUFFIX,pingma.qq.com
 DOMAIN-SUFFIX,trace.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
 
+# Group: NetEase telemetry
+DOMAIN,statistic.live.126.net
+
 # Group: Pinduoduo telemetry
 DOMAIN,th-a.pinduoduo.com
 DOMAIN,th.pinduoduo.com
