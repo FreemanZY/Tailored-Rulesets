@@ -391,7 +391,6 @@
     "2600:1902:8000::/33",
     "2600:1903::/32",
     "2600:1904::/30",
-    "2600:1908::/29",
     "2605:ef80::/32",
     "2606:40::/32",
     "2606:73c0::/32",
@@ -406,7 +405,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-09-11T19:06:35.980001",
+      "creation_time": "2026-09-19T19:41:53.273088",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -5924,11 +5923,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1789178795980",
+      "sync_token": "1789872113273",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-09-11T19:06:35.980001",
+      "creation_time": "2026-09-19T19:41:53.273088",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6330,7 +6329,7 @@
           "ipv6Prefix": "2404:f340::/32"
         },
         {
-          "ipv6Prefix": "2600:1900::/28"
+          "ipv6Prefix": "2600:1900::/29"
         },
         {
           "ipv6Prefix": "2605:ef80::/32"
@@ -6366,7 +6365,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1789178795980",
+      "sync_token": "1789872113273",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -6374,7 +6373,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/getting-started/set-up-a-google-workspace-host-name-allowlist",
       "id": "workspace",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-09-18",
       "records": [
         {
           "host": "*.googleapis.com",
@@ -7363,7 +7362,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/firewall-and-proxy-settings",
       "id": "firewall",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-09-18",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -8576,7 +8575,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges",
       "id": "ip_ranges",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-09-18",
       "records": [],
       "title": "Obtain Google IP address ranges",
       "url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges"
@@ -9906,7 +9905,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams",
       "id": "meet",
-      "last_updated": "2026-09-11",
+      "last_updated": "2026-09-18",
       "records": [
         {
           "host": "*.clients6.google.com",
@@ -10269,7 +10268,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/drive/drive-and-sites-firewall-and-proxy-settings",
       "id": "drive",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-09-18",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -10734,5 +10733,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "e38cda64c2d89e3549e60c15dacf207449c07eb8365934223328ba5338dac162"
+  "semantic_sha256": "c395eaf85fb5457de2069fc6bbe835a3ad85fc64536d3ae704e8104c8dce149d"
 }
