@@ -98,15 +98,25 @@ class RepositoryOutputTests(unittest.TestCase):
                 "DOMAIN,in.appcenter.ms",
                 "DOMAIN,ipv6.msftncsi.com",
                 "DOMAIN,api.msn.com",
+                "DOMAIN,ax-ring.msedge.net",
                 "DOMAIN,download.windowsupdate.com",
+                "DOMAIN,fp.msedge.net",
+                "DOMAIN,lamr-staging-t-tunicast.msedge.net",
+                "DOMAIN,marketplace.visualstudio.com",
                 "DOMAIN,ntp.msn.com",
                 "DOMAIN,s.cn.bing.net",
                 "DOMAIN,s1.tc.bing.net",
+                "DOMAIN,teams.nelgallatin.measure.office365.cn",
                 "DOMAIN,time.windows.com",
+                "DOMAIN,update.code.visualstudio.com",
+                "DOMAIN,vscode-sync.trafficmanager.net",
                 "DOMAIN,wbd.ms",
                 "DOMAIN,whiteboard.ms",
                 "DOMAIN,windows.msn.com",
                 "DOMAIN,www.msftncsi.com",
+                "DOMAIN-SUFFIX,gallery.vsassets.io",
+                "DOMAIN-SUFFIX,gallerycdn.vsassets.io",
+                "DOMAIN-SUFFIX,vscode-cdn.net",
             }.issubset(microsoft_manual_rules)
         )
 
@@ -154,7 +164,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (98, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (126, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -200,6 +210,13 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,alilang-intranet.alibaba-inc.com",
             "DOMAIN,live-appserver-sh.alivecdn.com",
             "DOMAIN,time.edu.cn",
+            "DOMAIN-SUFFIX,hrone.cn",
+            "DOMAIN,bd0.d.meituan.net",
+            "DOMAIN,ddfs-public.ddimg.mobi",
+            "DOMAIN,device-sec.s3.cn-north-1.jdcloud-oss.com",
+            "DOMAIN,mlvbdc.live.tlivesource.com",
+            "DOMAIN,report-online.sh.wxgateway.com",
+            "DOMAIN,trip-hisv.alibtrip.com",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
@@ -249,7 +266,9 @@ class RepositoryOutputTests(unittest.TestCase):
                 text = (ROOT / "dist" / name).read_text(encoding="utf-8-sig")
                 self.assertIn("# Group:", text)
         self.assertEqual(len(active_lines(ROOT / "dist" / "high_traffic_ruleset.txt")), 18)
-        self.assertEqual(len(active_lines(ROOT / "dist" / "proxy_targets_ruleset.txt")), 7)
+        proxy_targets = active_lines(ROOT / "dist" / "proxy_targets_ruleset.txt")
+        self.assertEqual(len(proxy_targets), 8)
+        self.assertIn("DOMAIN,api.peakwatch.co", proxy_targets)
         lan_rules = active_lines(ROOT / "dist" / "lan_ruleset.txt")
         local_dns = active_lines(ROOT / "dist" / "local_dns_ruleset.txt")
         self.assertEqual(len(lan_rules), 10)
@@ -281,8 +300,10 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
                 ".dianping.com", ".meituan.com", ".neixin.cn", ".gaiaworkforce.com",
                 ".flyertrip.com", ".flyert.com", ".flyert.com.cn", ".chinaebill.cn",
-                ".cup.com.cn", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
-                ".caiyunapp.com", ".icitybox.cn",
+                ".95516.com", ".cup.com.cn", ".zztfly.com", ".guanaitong.com",
+                ".igeidao.com", ".ddxq.mobi", ".soboten.com", ".xinstall.top",
+                ".starbucks.com.cn", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
+                ".caiyunapp.com", ".cityboxai.com", ".icitybox.cn",
                 ".diditaxi.com.cn", ".udache.com", ".12306.cn", ".ceair.com",
                 ".yaduo.com", ".icbc.com.cn", ".abchina.com",
                 ".abchina.com.cn", ".boc.cn", ".ccb.cn", ".ccb.com", ".bankcomm.cn",
@@ -291,7 +312,8 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".gtimg.com", ".myqcloud.com", ".qcloud.com", ".qpic.cn", ".qq.com",
                 ".qqmail.com", ".tencent-cloud.com", ".tencent.com",
                 ".tencentcloud.com", ".tencentcloudapi.com", ".tenpay.com",
-                ".wechat.com", ".wechatpay.com", ".weixinbridge.com", ".weiyun.com", ".189.cn",
+                ".trtcube-license.cn", ".wechat.com", ".wechatpay.com",
+                ".weixinbridge.com", ".weiyun.com", ".189.cn",
                 ".huazhu.com", ".umetrip.com", ".dcloud.net.cn", ".himalaya.com", ".qijizuopin.com", ".qingxuetang.com",
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
                 ".baidu.com", ".douyin.com", ".douyinpic.com", ".yangshipin.cn",

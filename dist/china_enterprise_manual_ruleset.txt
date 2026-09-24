@@ -10,6 +10,7 @@ DOMAIN,amdc-sibling.alipay.com.cn
 DOMAIN,live-appserver-sh.alivecdn.com
 DOMAIN,mum.alibabachengdun.net
 DOMAIN,ntp.ynuf.aliapp.org
+DOMAIN,trip-hisv.alibtrip.com
 DOMAIN,umdc.alibabachengdun.com
 DOMAIN-SUFFIX,adashx.ut.hzshudian.com
 DOMAIN-SUFFIX,bdc.alibabachengdun.com
@@ -22,15 +23,18 @@ DOMAIN-SUFFIX,taobaocdn.net
 DOMAIN-SUFFIX,tb.cn
 
 # Group: WeChat and Weixin functional domains
+DOMAIN,a1d794322-wx621112590b635086.sh.wxgateway.com
 DOMAIN,appcfg.v.qq.com
 DOMAIN,dl.wechat.com
 DOMAIN,launchwxacode.wxqcloud.qq.com.cn
 DOMAIN,lbs.map.qq.com
+DOMAIN,mmbiz.qlogo.cn
 DOMAIN,mmbiz.qpic.cn
 DOMAIN,mmec.wxqcloud.qq.com.cn
 DOMAIN,paydns.wechat.com
 DOMAIN,prewxacode.wxqcloud.qq.com.cn
 DOMAIN,res.wx.qq.com
+DOMAIN,report-online.sh.wxgateway.com
 DOMAIN,sglong.wechat.com
 DOMAIN,sgminorshort.wechat.com
 DOMAIN,sgshort.wechat.com
@@ -52,9 +56,14 @@ URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2
 
 # Group: Meituan and Dianping
 DOMAIN,al-log.d.meituan.net
+DOMAIN,bd0.d.meituan.net
+DOMAIN,csc-native-call-log.d.meituan.net
 DOMAIN,ddplus.meituan.net
+DOMAIN,hcl0.d.meituan.net
 DOMAIN,img.meituan.net
 DOMAIN,m3.d.meituan.net
+DOMAIN,m4.d.meituan.net
+DOMAIN,m6.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,o1.d.meituan.net
@@ -62,18 +71,31 @@ DOMAIN,p0.meituan.net
 DOMAIN,p1.d.meituan.net
 DOMAIN,p1.meituan.net
 DOMAIN,p10.d.meituan.net
+DOMAIN,p13.d.meituan.net
 DOMAIN,p14.d.meituan.net
 DOMAIN,p2.d.meituan.net
 DOMAIN,p4.d.meituan.net
 DOMAIN,p6.d.meituan.net
+DOMAIN,p9.d.meituan.net
+DOMAIN,patch.meituan.net
+DOMAIN,qcloud.dpfile.com
 DOMAIN,route-stats.d.meituan.net
 DOMAIN,s1.d.meituan.net
 DOMAIN,s3plus-shon.meituan.net
 DOMAIN,s3plus.meituan.net
+DOMAIN,www.dpfile.com
+
+# Group: Dingdong Maicai delivery hosts
+DOMAIN,ddfs-public.ddimg.mobi
+DOMAIN,img.ddimg.mobi
+DOMAIN,imgnew.ddimg.mobi
+DOMAIN,pub.ddimg.mobi
+DOMAIN,static-fe.ddimg.mobi
 
 # Group: Xiaomi and Mijia
 DOMAIN,api.mijia.tech
 DOMAIN,cdn.cnbj1.fds.api.mi-img.com
+DOMAIN,ot.io.mi.com
 DOMAIN,ott.io.mi.com
 
 # Group: Didi
@@ -100,8 +122,17 @@ DOMAIN,wealthplaza.tech.citic
 
 # Group: Tencent and QQ Music delivery hosts
 DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn
+DOMAIN,mlvbdc.live.tlivesource.com
 DOMAIN,sdkconfig.tlivedns.com
+DOMAIN,webrtc-dk.tliveplay.com
+DOMAIN,webrtc-signal-scheduler.tlivesource.com
+DOMAIN,wx-channels4-webrtc-dk.tcdnlive.com
 DOMAIN,y.gtimg.cn
+
+# Group: JD observed service and delivery hosts
+DOMAIN,device-sec.s3.cn-north-1.jdcloud-oss.com
+DOMAIN,jstatic.3.cn
+DOMAIN,jvod.300hu.com
 
 # Group: Luckin Coffee
 DOMAIN,capi.lkcoffee.com
@@ -138,3 +169,6 @@ DOMAIN-SUFFIX,cmbwinglungbank.com
 
 # Group: China Unicom RCS
 DOMAIN-SUFFIX,rcs01.5gm.wo.cn
+
+# Group: HROne workforce services
+DOMAIN-SUFFIX,hrone.cn

@@ -1,6 +1,7 @@
 # MANUAL RULE-SET: Explicit targets that use the profile's default proxy policy.
 
 # Group: Domain targets
+DOMAIN,api.peakwatch.co
 DOMAIN,cloudflare-dns.com
 DOMAIN-SUFFIX,duolingo.com
 DOMAIN-SUFFIX,duolingo.cn

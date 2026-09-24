@@ -88,7 +88,27 @@
 .chinaebill.cn
 
 # China UnionPay internet services
+.95516.com
 .cup.com.cn
+
+# MobTech / ZZT mobile services
+.zztfly.com
+
+# Guanaitong and Igeidao employee-benefit services
+.guanaitong.com
+.igeidao.com
+
+# Dingdong Maicai services
+.ddxq.mobi
+
+# Sobot customer-service platform
+.soboten.com
+
+# Xinstall mobile attribution services
+.xinstall.top
+
+# Starbucks China services
+.starbucks.com.cn
 
 # Caiyun Weather official service root
 .caiyunapp.com
@@ -147,6 +167,7 @@
 .tencentcloud.com
 .tencentcloudapi.com
 .tenpay.com
+.trtcube-license.cn
 .wechat.com
 .wechatpay.com
 .weixinbridge.com
@@ -165,6 +186,7 @@
 .dcloud.net.cn
 
 # CITYBOX unattended retail services
+.cityboxai.com
 .icitybox.cn
 
 # Baidu products and services covered by the official BSRC wildcard scope

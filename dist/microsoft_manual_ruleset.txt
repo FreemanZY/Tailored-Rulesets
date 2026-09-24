@@ -21,6 +21,20 @@ DOMAIN,img-s-msn-com.akamaized.net
 DOMAIN,in.appcenter.ms
 DOMAIN,ipv6.msftncsi.com
 
+# Group: Visual Studio Code official network endpoints
+DOMAIN,marketplace.visualstudio.com
+DOMAIN,update.code.visualstudio.com
+DOMAIN,vscode-sync.trafficmanager.net
+DOMAIN-SUFFIX,gallery.vsassets.io
+DOMAIN-SUFFIX,gallerycdn.vsassets.io
+DOMAIN-SUFFIX,vscode-cdn.net
+
+# Group: Additional observed Microsoft endpoints
+DOMAIN,ax-ring.msedge.net
+DOMAIN,fp.msedge.net
+DOMAIN,lamr-staging-t-tunicast.msedge.net
+DOMAIN,teams.nelgallatin.measure.office365.cn
+
 # Group: Observed Bing endpoints verified as Microsoft services
 DOMAIN,s.cn.bing.net
 DOMAIN,s1.tc.bing.net
