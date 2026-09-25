@@ -164,7 +164,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (126, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (127, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -217,6 +217,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,mlvbdc.live.tlivesource.com",
             "DOMAIN,report-online.sh.wxgateway.com",
             "DOMAIN,trip-hisv.alibtrip.com",
+            "DOMAIN,cn-afp.apitd.net",
         }:
             self.assertIn(migrated, enterprise_manual)
             self.assertNotIn(migrated, force_direct)
@@ -318,9 +319,14 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
                 ".baidu.com", ".douyin.com", ".douyinpic.com", ".yangshipin.cn",
                 ".wavpub.com", ".drbuho.com", ".geetest.com", ".tongdun.net",
+                "cn-fp.apitd.net",
             },
         )
-        self.assertTrue(all(domain.startswith(".") for domain in domains))
+        self.assertEqual(
+            [domain for domain in domains if not domain.startswith(".")],
+            ["cn-fp.apitd.net"],
+        )
+        self.assertNotIn(".apitd.net", domains)
         self.assertEqual(
             active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
             ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55967", "IP-ASN,55990", "IP-ASN,131516", "IP-ASN,17428"],

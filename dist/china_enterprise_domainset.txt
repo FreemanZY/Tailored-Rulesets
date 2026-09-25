@@ -210,6 +210,7 @@
 
 # Tongdun decision intelligence and risk-control services
 .tongdun.net
+cn-fp.apitd.net
 
 # Ximalaya core and affiliated services confirmed again by the 2023 XMSRC scope
 .himalaya.com

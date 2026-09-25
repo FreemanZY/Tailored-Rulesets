@@ -170,5 +170,8 @@ DOMAIN-SUFFIX,cmbwinglungbank.com
 # Group: China Unicom RCS
 DOMAIN-SUFFIX,rcs01.5gm.wo.cn
 
+# Group: Tongdun observed China fingerprint endpoint
+DOMAIN,cn-afp.apitd.net
+
 # Group: HROne workforce services
 DOMAIN-SUFFIX,hrone.cn
