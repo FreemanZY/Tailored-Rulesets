@@ -41,7 +41,7 @@ DOMAIN,s1.tc.bing.net
 
 # Group: Windows service endpoints from official Microsoft documentation
 DOMAIN,api.msn.com
-DOMAIN,download.windowsupdate.com
+DOMAIN-SUFFIX,download.windowsupdate.com
 DOMAIN,ntp.msn.com
 DOMAIN,time.windows.com
 DOMAIN,wbd.ms

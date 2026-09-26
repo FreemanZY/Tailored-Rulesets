@@ -90,6 +90,7 @@
 # China UnionPay internet services
 .95516.com
 .cup.com.cn
+.unionpay.com
 
 # MobTech / ZZT mobile services
 .zztfly.com
@@ -220,3 +221,13 @@ cn-fp.apitd.net
 .ximalaya.com
 .ximalayaos.com
 .xiaoyastar.com
+
+# Xiaoyuzhou podcast services and dedicated media delivery
+.xiaoyuzhoufm.com
+.xyzcdn.net
+
+# OpenInstall mobile attribution services
+.openinstall.com
+
+# Gcores media and community services
+.gcores.com

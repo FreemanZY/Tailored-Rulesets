@@ -99,7 +99,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 "DOMAIN,ipv6.msftncsi.com",
                 "DOMAIN,api.msn.com",
                 "DOMAIN,ax-ring.msedge.net",
-                "DOMAIN,download.windowsupdate.com",
+                "DOMAIN-SUFFIX,download.windowsupdate.com",
                 "DOMAIN,fp.msedge.net",
                 "DOMAIN,lamr-staging-t-tunicast.msedge.net",
                 "DOMAIN,marketplace.visualstudio.com",
@@ -164,7 +164,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (127, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (131, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -301,7 +301,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".yihaodian.com", ".yiyaojd.com", ".yunpei.com", ".yunxiu.com",
                 ".dianping.com", ".meituan.com", ".neixin.cn", ".gaiaworkforce.com",
                 ".flyertrip.com", ".flyert.com", ".flyert.com.cn", ".chinaebill.cn",
-                ".95516.com", ".cup.com.cn", ".zztfly.com", ".guanaitong.com",
+                ".95516.com", ".cup.com.cn", ".unionpay.com", ".zztfly.com", ".guanaitong.com",
                 ".igeidao.com", ".ddxq.mobi", ".soboten.com", ".xinstall.top",
                 ".starbucks.com.cn", ".cdn-go.cn", ".dnspod.cn", ".dnspod.com",
                 ".caiyunapp.com", ".cityboxai.com", ".icitybox.cn",
@@ -319,6 +319,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".xima.tv", ".ximalaya.com", ".ximalayaos.com", ".xiaoyastar.com",
                 ".baidu.com", ".douyin.com", ".douyinpic.com", ".yangshipin.cn",
                 ".wavpub.com", ".drbuho.com", ".geetest.com", ".tongdun.net",
+                ".xiaoyuzhoufm.com", ".xyzcdn.net", ".openinstall.com", ".gcores.com",
                 "cn-fp.apitd.net",
             },
         )

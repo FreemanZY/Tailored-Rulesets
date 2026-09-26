@@ -66,6 +66,7 @@ DOMAIN,m4.d.meituan.net
 DOMAIN,m6.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
+DOMAIN,mrn.meituan.net
 DOMAIN,o1.d.meituan.net
 DOMAIN,p0.meituan.net
 DOMAIN,p1.d.meituan.net
@@ -83,6 +84,7 @@ DOMAIN,route-stats.d.meituan.net
 DOMAIN,s1.d.meituan.net
 DOMAIN,s3plus-shon.meituan.net
 DOMAIN,s3plus.meituan.net
+DOMAIN,s3plus.sankuai.com
 DOMAIN,www.dpfile.com
 
 # Group: Dingdong Maicai delivery hosts
@@ -130,9 +132,11 @@ DOMAIN,wx-channels4-webrtc-dk.tcdnlive.com
 DOMAIN,y.gtimg.cn
 
 # Group: JD observed service and delivery hosts
+DOMAIN,device-sec.s3-cache-accelerate.cn-north-1.jdcloud-oss.com
 DOMAIN,device-sec.s3.cn-north-1.jdcloud-oss.com
 DOMAIN,jstatic.3.cn
 DOMAIN,jvod.300hu.com
+DOMAIN,vod.300hu.com
 
 # Group: Luckin Coffee
 DOMAIN,capi.lkcoffee.com
