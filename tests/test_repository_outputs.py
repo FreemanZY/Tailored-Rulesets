@@ -127,8 +127,11 @@ class RepositoryOutputTests(unittest.TestCase):
                 "DOMAIN,icmgzq.by.files.1drv.com",
                 "DOMAIN,my.microsoftpersonalcontent.com",
                 "DOMAIN,in.appcenter.ms",
+                "DOMAIN,arm-ring.msedge.net",
                 "DOMAIN,ax-ring.msedge.net",
                 "DOMAIN,lamr-staging-t-tunicast.msedge.net",
+                "DOMAIN,mcr-ring.msedge.net",
+                "DOMAIN,spo-ring.msedge.net",
                 "DOMAIN,teams.nelgallatin.measure.office365.cn",
                 "DOMAIN,s.cn.bing.net",
                 "DOMAIN,s1.tc.bing.net",
@@ -221,7 +224,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (131, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (132, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -271,6 +274,7 @@ class RepositoryOutputTests(unittest.TestCase):
             "DOMAIN,bd0.d.meituan.net",
             "DOMAIN,ddfs-public.ddimg.mobi",
             "DOMAIN,device-sec.s3.cn-north-1.jdcloud-oss.com",
+            "DOMAIN,discover.300hu.com",
             "DOMAIN,mlvbdc.live.tlivesource.com",
             "DOMAIN,report-online.sh.wxgateway.com",
             "DOMAIN,trip-hisv.alibtrip.com",

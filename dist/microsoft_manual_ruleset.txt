@@ -11,8 +11,11 @@ DOMAIN,my.microsoftpersonalcontent.com
 DOMAIN,in.appcenter.ms
 
 # Group: Additional observed Microsoft endpoints
+DOMAIN,arm-ring.msedge.net
 DOMAIN,ax-ring.msedge.net
 DOMAIN,lamr-staging-t-tunicast.msedge.net
+DOMAIN,mcr-ring.msedge.net
+DOMAIN,spo-ring.msedge.net
 DOMAIN,teams.nelgallatin.measure.office365.cn
 
 # Group: Observed Bing endpoints verified as Microsoft services

@@ -135,6 +135,9 @@ DOMAIN,y.gtimg.cn
 DOMAIN,device-sec.s3-cache-accelerate.cn-north-1.jdcloud-oss.com
 DOMAIN,device-sec.s3.cn-north-1.jdcloud-oss.com
 DOMAIN,jstatic.3.cn
+
+# Group: 300hu observed service and video-delivery hosts
+DOMAIN,discover.300hu.com
 DOMAIN,jvod.300hu.com
 DOMAIN,vod.300hu.com
 
