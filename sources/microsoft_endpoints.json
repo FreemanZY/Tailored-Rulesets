@@ -2755,6 +2755,2331 @@
     ],
     "semantic_hash": "be95bf27496ef3cf053e144466dbe7c95192717a3a042d030b367ee48d853bd7"
   },
-  "schema_version": 2,
-  "source": "https://endpoints.office.com"
+  "schema_version": 3,
+  "source": "https://endpoints.office.com",
+  "supplemental_sources": {
+    "ncsi": {
+      "content_url": "https://raw.githubusercontent.com/MicrosoftDocs/SupportArticles-docs/main/support/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network.md",
+      "document_date": "02/12/2026",
+      "page_url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network",
+      "records": [
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "1. NCSI sends a DNS request to resolve the address of the `www.msftconnecttest.com` FQDN."
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftconnecttest.com/connecttest.txt`."
+        },
+        {
+          "normalized_domains": [
+            "dns.msftncsi.com"
+          ],
+          "source": "4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN."
+        },
+        {
+          "normalized_domains": [
+            "www.msftncsi.com"
+          ],
+          "source": "1. NCSI sends a DNS request to resolve the address of the `www.msftncsi.com` FQDN."
+        },
+        {
+          "normalized_domains": [
+            "www.msftncsi.com"
+          ],
+          "source": "2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftncsi.com/ncsi.txt`."
+        },
+        {
+          "normalized_domains": [
+            "dns.msftncsi.com"
+          ],
+          "source": "4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN."
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "In some cases, such as when you connect to a network that uses a proxy server to connect to the internet or when network restrictions prevent NCSI from completing its active probe process, Windows opens the MSN Portal page in the default browser. If you analyze a network trace on the computer, it shows an HTTP connection to `http://www.msftconnecttest.com/redirect` that is followed by a connection to the MSN Portal. Windows opens this page for the benefit of the passive probe process. If the page loads, NCSI concludes that the computer has internet access. As the different probes fail and then succeed, the network status alert appears and then disappears."
+        },
+        {
+          "normalized_domains": [
+            "*.msftncsi.com"
+          ],
+          "source": "> - \\*.msftncsi.com"
+        },
+        {
+          "normalized_domains": [
+            "*.msftconnecttest.com"
+          ],
+          "source": "> - \\*.msftconnecttest.com"
+        }
+      ],
+      "semantic_hash": "068dbeca5524b785757cacc0094b719365b18ad9e944168cbeb8fb23624693f0"
+    },
+    "vscode": {
+      "content_url": "https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/setup/network.md",
+      "document_date": "unknown",
+      "page_url": "https://code.visualstudio.com/docs/setup/network",
+      "records": [
+        {
+          "normalized_domains": [
+            "update.code.visualstudio.com"
+          ],
+          "source": "* `update.code.visualstudio.com` - {% data variables.product.prodname_vscode %} download and update server"
+        },
+        {
+          "normalized_domains": [
+            "code.visualstudio.com"
+          ],
+          "source": "* `code.visualstudio.com` - {% data variables.product.prodname_vscode %} documentation"
+        },
+        {
+          "normalized_domains": [
+            "go.microsoft.com"
+          ],
+          "source": "* `go.microsoft.com` - Microsoft link forwarding service"
+        },
+        {
+          "normalized_domains": [
+            "marketplace.visualstudio.com"
+          ],
+          "source": "* `marketplace.visualstudio.com` - Visual Studio Marketplace"
+        },
+        {
+          "normalized_domains": [
+            "*.gallery.vsassets.io"
+          ],
+          "source": "* `*.gallery.vsassets.io` - Visual Studio Marketplace"
+        },
+        {
+          "normalized_domains": [
+            "*.gallerycdn.vsassets.io"
+          ],
+          "source": "* `*.gallerycdn.vsassets.io` - Visual Studio Marketplace"
+        },
+        {
+          "normalized_domains": [
+            "rink.hockeyapp.net"
+          ],
+          "source": "* `rink.hockeyapp.net` - Crash reporting service"
+        },
+        {
+          "normalized_domains": [
+            "raw.githubusercontent.com"
+          ],
+          "source": "* `raw.githubusercontent.com` - GitHub repository raw file access"
+        },
+        {
+          "normalized_domains": [
+            "vsmarketplacebadges.dev"
+          ],
+          "source": "* `vsmarketplacebadges.dev` - Visual Studio Marketplace badge service"
+        },
+        {
+          "normalized_domains": [
+            "*.vscode-cdn.net"
+          ],
+          "source": "* `*.vscode-cdn.net` - {% data variables.product.prodname_vscode %} CDN"
+        },
+        {
+          "normalized_domains": [
+            "vscode.download.prss.microsoft.com"
+          ],
+          "source": "* `vscode.download.prss.microsoft.com` - {% data variables.product.prodname_vscode %} download CDN"
+        },
+        {
+          "normalized_domains": [
+            "download.visualstudio.microsoft.com"
+          ],
+          "source": "* `download.visualstudio.microsoft.com` - Visual Studio download server, provides dependencies for some {% data variables.product.prodname_vscode_shortname %} extensions (C++, C#)"
+        },
+        {
+          "normalized_domains": [
+            "vscode-sync.trafficmanager.net"
+          ],
+          "source": "* `vscode-sync.trafficmanager.net` - {% data variables.product.prodname_vscode %} Settings Sync service"
+        },
+        {
+          "normalized_domains": [
+            "vscode-sync-insiders.trafficmanager.net"
+          ],
+          "source": "* `vscode-sync-insiders.trafficmanager.net` - {% data variables.product.prodname_vscode %} Settings Sync service (Insiders)"
+        },
+        {
+          "normalized_domains": [
+            "vscode.dev"
+          ],
+          "source": "* `vscode.dev` - Used as a fallback when logging in with GitHub or Microsoft for an extension or Settings Sync (just `vscode.dev/redirect`)"
+        },
+        {
+          "normalized_domains": [
+            "*.vscode-unpkg.net"
+          ],
+          "source": "* `*.vscode-unpkg.net` - Used when loading web extensions"
+        },
+        {
+          "normalized_domains": [
+            "default.exp-tas.com"
+          ],
+          "source": "* `default.exp-tas.com` - {% data variables.product.prodname_vscode %} Experiment Service, used to provide experimental user experiences"
+        }
+      ],
+      "semantic_hash": "e5925ebc05db476a4946141f2e5ea655c428a8268723f1ba34ce27a32cad4fea"
+    },
+    "whiteboard": {
+      "content_url": "https://learn.microsoft.com/en-us/surface-hub/whiteboard-collaboration",
+      "document_date": "2026-07-14T00:00:00.0000000Z",
+      "page_url": "https://learn.microsoft.com/en-us/surface-hub/whiteboard-collaboration",
+      "records": [
+        {
+          "normalized_domains": [
+            "*.whiteboard.microsoft.com",
+            "wbd.ms",
+            "whiteboard.ms"
+          ],
+          "source": "- Add Whiteboard.ms, *.whiteboard.microsoft.com, and wbd.ms to your list of allowed sites."
+        }
+      ],
+      "semantic_hash": "9d43d998338df601215183db613c59bbc267397e61e0de551a14b0e6dbd87361"
+    },
+    "windows_enterprise": {
+      "content_url": "https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints",
+      "document_date": "2026-06-16T00:00:00.0000000Z",
+      "page_url": "https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints",
+      "records": [
+        {
+          "normalized_domains": [
+            "tile-service.weather.microsoft.com"
+          ],
+          "source": "tile-service.weather.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "cdn.onenote.net"
+          ],
+          "source": "cdn.onenote.net"
+        },
+        {
+          "normalized_domains": [
+            "evoke-windowsservices-tas.msedge.net"
+          ],
+          "source": "evoke-windowsservices-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "ctldl.windowsupdate.com"
+          ],
+          "source": "ctldl.windowsupdate.com"
+        },
+        {
+          "normalized_domains": [
+            "ocsp.digicert.com"
+          ],
+          "source": "ocsp.digicert.com"
+        },
+        {
+          "normalized_domains": [
+            "www.bing.com"
+          ],
+          "source": "www.bing.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "business.bing.com"
+          ],
+          "source": "business.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "c.bing.com"
+          ],
+          "source": "c.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "th.bing.com"
+          ],
+          "source": "th.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "c-ring.msedge.net"
+          ],
+          "source": "c-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "fp.msedge.net"
+          ],
+          "source": "fp.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "i-ring.msedge.net"
+          ],
+          "source": "I-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "s-ring.msedge.net"
+          ],
+          "source": "s-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "dual-s-ring.msedge.net"
+          ],
+          "source": "dual-s-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "creativecdn.com"
+          ],
+          "source": "creativecdn.com"
+        },
+        {
+          "normalized_domains": [
+            "edgeassetservice.azureedge.net"
+          ],
+          "source": "edgeassetservice.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "r.bing.com"
+          ],
+          "source": "r.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "a-ring-fallback.msedge.net"
+          ],
+          "source": "a-ring-fallback.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "fp-afd-nocache-ccp.azureedge.net"
+          ],
+          "source": "fp-afd-nocache-ccp.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "prod-azurecdn-akamai-iris.azureedge.net"
+          ],
+          "source": "prod-azurecdn-akamai-iris.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "widgetcdn.azureedge.net"
+          ],
+          "source": "widgetcdn.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "widgetservice.azurefd.net"
+          ],
+          "source": "widgetservice.azurefd.net"
+        },
+        {
+          "normalized_domains": [
+            "login.live.com"
+          ],
+          "source": "login.live.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "dmd.metaservices.microsoft.com"
+          ],
+          "source": "dmd.metaservices.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "functional.events.data.microsoft.com"
+          ],
+          "source": "functional.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "browser.events.data.msn.com"
+          ],
+          "source": "browser.events.data.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "www.microsoft.com"
+          ],
+          "source": "www.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "v10.events.data.microsoft.com"
+          ],
+          "source": "v10.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "telecommand.telemetry.microsoft.com"
+          ],
+          "source": "telecommand.telemetry.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "watson.*.microsoft.com"
+          ],
+          "source": "watson.\\*.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.telecommandsvc.microsoft.com"
+          ],
+          "source": "www.telecommandsvc.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "fs.microsoft.com"
+          ],
+          "source": "fs.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "licensing.mp.microsoft.com"
+          ],
+          "source": "licensing.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "inference.location.live.net"
+          ],
+          "source": "inference.location.live.net"
+        },
+        {
+          "normalized_domains": [
+            "maps.windows.com"
+          ],
+          "source": "maps.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "ecn.dev.virtualearth.net"
+          ],
+          "source": "ecn.dev.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "ecn-us.dev.virtualearth.net"
+          ],
+          "source": "ecn-us.dev.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "weathermapdata.blob.core.windows.net"
+          ],
+          "source": "weathermapdata.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "login.live.com"
+          ],
+          "source": "login.live.com"
+        },
+        {
+          "normalized_domains": [
+            "wdcp.microsoft.com"
+          ],
+          "source": "wdcp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen-prod.microsoft.com"
+          ],
+          "source": "\\*.smartscreen-prod.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "checkappexec.microsoft.com"
+          ],
+          "source": "checkappexec.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "ping-edge.smartscreen.microsoft.com"
+          ],
+          "source": "ping-edge.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "data-edge.smartscreen.microsoft.com"
+          ],
+          "source": "data-edge.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "nav-edge.smartscreen.microsoft.com"
+          ],
+          "source": "nav-edge.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "edge.microsoft.com"
+          ],
+          "source": "edge.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "windows.msn.com"
+          ],
+          "source": "windows.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "iecvlist.microsoft.com"
+          ],
+          "source": "iecvlist.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "msedge.api.cdp.microsoft.com"
+          ],
+          "source": "msedge.api.cdp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "img-prod-cms-rt-microsoft-com.akamaized.net"
+          ],
+          "source": "img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "img-s-msn-com.akamaized.net"
+          ],
+          "source": "img-s-msn-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "livetileedge.dsx.mp.microsoft.com"
+          ],
+          "source": "livetileedge.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "storeedgefd.dsx.mp.microsoft.com"
+          ],
+          "source": "storeedgefd.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.wns.windows.com"
+          ],
+          "source": "\\*.wns.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "storecatalogrevocation.storequality.microsoft.com"
+          ],
+          "source": "storecatalogrevocation.storequality.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "manage.devcenter.microsoft.com"
+          ],
+          "source": "manage.devcenter.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*displaycatalog.mp.microsoft.com"
+          ],
+          "source": "\\*displaycatalog.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "share.microsoft.com"
+          ],
+          "source": "share.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "manage.devcenter.microsoft.com"
+          ],
+          "source": "manage.devcenter.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "staging.to-do.microsoft.com"
+          ],
+          "source": "staging.to-do.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "to-do.microsoft.com"
+          ],
+          "source": "to-do.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "www.msftconnecttest.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "ipv6.msftconnecttest.com"
+          ],
+          "source": "ipv6.msftconnecttest.com"
+        },
+        {
+          "normalized_domains": [
+            "www.office.com"
+          ],
+          "source": "www.office.com"
+        },
+        {
+          "normalized_domains": [
+            "blobs.officehome.msocdn.com"
+          ],
+          "source": "blobs.officehome.msocdn.com"
+        },
+        {
+          "normalized_domains": [
+            "officehomeblobs.blob.core.windows.net"
+          ],
+          "source": "officehomeblobs.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "outlookmobile-office365-tas.msedge.net"
+          ],
+          "source": "outlookmobile-office365-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "officeclient.microsoft.com"
+          ],
+          "source": "officeclient.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "ecs.nel.measure.office.net"
+          ],
+          "source": "ecs.nel.measure.office.net"
+        },
+        {
+          "normalized_domains": [
+            "telecommandstorageprod.blob.core.windows.net"
+          ],
+          "source": "telecommandstorageprod.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "odc.officeapps.live.com"
+          ],
+          "source": "odc.officeapps.live.com"
+        },
+        {
+          "normalized_domains": [
+            "g.live.com"
+          ],
+          "source": "g.live.com"
+        },
+        {
+          "normalized_domains": [
+            "onedrive.live.com"
+          ],
+          "source": "onedrive.live.com"
+        },
+        {
+          "normalized_domains": [
+            "oneclient.sfx.ms"
+          ],
+          "source": "oneclient.sfx.ms"
+        },
+        {
+          "normalized_domains": [
+            "logincdn.msauth.net"
+          ],
+          "source": "logincdn.msauth.net"
+        },
+        {
+          "normalized_domains": [
+            "settings-win.data.microsoft.com"
+          ],
+          "source": "settings-win.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "settings.data.microsoft.com"
+          ],
+          "source": "settings.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.pipe.aria.microsoft.com"
+          ],
+          "source": "\\*.pipe.aria.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "config.edge.skype.com"
+          ],
+          "source": "config.edge.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "config.teams.microsoft.com"
+          ],
+          "source": "config.teams.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "teams.live.com"
+          ],
+          "source": "teams.live.com"
+        },
+        {
+          "normalized_domains": [
+            "teams.events.data.microsoft.com"
+          ],
+          "source": "teams.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "statics.teams.cdn.live.net"
+          ],
+          "source": "statics.teams.cdn.live.net"
+        },
+        {
+          "normalized_domains": [
+            "arc.msn.com"
+          ],
+          "source": "arc.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "ris.api.iris.microsoft.com"
+          ],
+          "source": "ris.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "api.msn.com"
+          ],
+          "source": "api.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "assets.msn.com"
+          ],
+          "source": "assets.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "c.msn.com"
+          ],
+          "source": "c.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "ntp.msn.com"
+          ],
+          "source": "ntp.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "srtb.msn.com"
+          ],
+          "source": "srtb.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msn.com"
+          ],
+          "source": "www.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "fd.api.iris.microsoft.com"
+          ],
+          "source": "fd.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "staticview.msn.com"
+          ],
+          "source": "staticview.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "definitionupdates.microsoft.com"
+          ],
+          "source": "definitionupdates.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.prod.do.dsp.mp.microsoft.com"
+          ],
+          "source": "\\*.prod.do.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.dl.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.dl.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.windowsupdate.com"
+          ],
+          "source": "\\*.windowsupdate.com"
+        },
+        {
+          "normalized_domains": [
+            "*.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.update.microsoft.com"
+          ],
+          "source": "\\*.update.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "adl.windows.com"
+          ],
+          "source": "adl.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tsfe.trafficshaping.dsp.mp.microsoft.com"
+          ],
+          "source": "tsfe.trafficshaping.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.api.cdp.microsoft.com"
+          ],
+          "source": "\\*.api.cdp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "dlassets-ssl.xboxlive.com"
+          ],
+          "source": "dlassets-ssl.xboxlive.com"
+        },
+        {
+          "normalized_domains": [
+            "da.xboxservices.com"
+          ],
+          "source": "da.xboxservices.com"
+        }
+      ],
+      "semantic_hash": "c968db34ea87eef849757c9aac55a41cc804ea8067417887435368847ae73097"
+    },
+    "windows_non_enterprise": {
+      "content_url": "https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions",
+      "document_date": "2025-05-23T00:00:00.0000000Z",
+      "page_url": "https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions",
+      "records": [
+        {
+          "normalized_domains": [
+            "activity.windows.com"
+          ],
+          "source": "activity.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tile-service.weather.microsoft.com"
+          ],
+          "source": "tile-service.weather.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "evoke-windowsservices-tas.msedge.net"
+          ],
+          "source": "evoke-windowsservices-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "cdn.onenote.net"
+          ],
+          "source": "cdn.onenote.net"
+        },
+        {
+          "normalized_domains": [
+            "spclient.wg.spotify.com"
+          ],
+          "source": "spclient.wg.spotify.com"
+        },
+        {
+          "normalized_domains": [
+            "ctldl.windowsupdate.com"
+          ],
+          "source": "ctldl.windowsupdate.com/\\*"
+        },
+        {
+          "normalized_domains": [
+            "www.bing.com"
+          ],
+          "source": "www.bing.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "fp.msedge.net"
+          ],
+          "source": "fp.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "k-ring.msedge.net"
+          ],
+          "source": "k-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "b-ring.msedge.net"
+          ],
+          "source": "b-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "login.live.com"
+          ],
+          "source": "login.live.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "cs.dds.microsoft.com"
+          ],
+          "source": "cs.dds.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "dmd.metaservices.microsoft.com"
+          ],
+          "source": "dmd.metaservices.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "v10.events.data.microsoft.com"
+          ],
+          "source": "v10.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "watson.telemetry.microsoft.com"
+          ],
+          "source": "watson.telemetry.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "fs.microsoft.com"
+          ],
+          "source": "fs.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*licensing.mp.microsoft.com"
+          ],
+          "source": "\\*licensing.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "licensing.mp.microsoft.com"
+          ],
+          "source": "licensing.mp.microsoft.com/v7.0/licenses/content"
+        },
+        {
+          "normalized_domains": [
+            "inference.location.live.net"
+          ],
+          "source": "inference.location.live.net"
+        },
+        {
+          "normalized_domains": [
+            "maps.windows.com"
+          ],
+          "source": "maps.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "*.ssl.ak.dynamic.tiles.virtualearth.net"
+          ],
+          "source": "\\*.ssl.ak.dynamic.tiles.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "*.ssl.ak.tiles.virtualearth.net"
+          ],
+          "source": "\\*.ssl.ak.tiles.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "dev.virtualearth.net"
+          ],
+          "source": "dev.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "ecn.dev.virtualearth.net"
+          ],
+          "source": "ecn.dev.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "ssl.bing.com"
+          ],
+          "source": "ssl.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "*login.live.com"
+          ],
+          "source": "\\*login.live.com"
+        },
+        {
+          "normalized_domains": [
+            "edge.activity.windows.com",
+            "edge.microsoft.com"
+          ],
+          "source": "edge.activity.windows.com  edge.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "msedge.api.cdp.microsoft.com"
+          ],
+          "source": "msedge.api.cdp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "img-prod-cms-rt-microsoft-com.akamaized.net"
+          ],
+          "source": "img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "*.wns.windows.com"
+          ],
+          "source": "\\*.wns.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "storecatalogrevocation.storequality.microsoft.com"
+          ],
+          "source": "storecatalogrevocation.storequality.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*displaycatalog.mp.microsoft.com"
+          ],
+          "source": "\\*displaycatalog.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "storesdk.dsx.mp.microsoft.com"
+          ],
+          "source": "storesdk.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "manage.devcenter.microsoft.com"
+          ],
+          "source": "manage.devcenter.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "store-images.s-microsoft.com"
+          ],
+          "source": "store-images.s-microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "www.msftconnecttest.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "outlook.office365.com"
+          ],
+          "source": "outlook.office365.com"
+        },
+        {
+          "normalized_domains": [
+            "office.com"
+          ],
+          "source": "office.com"
+        },
+        {
+          "normalized_domains": [
+            "blobs.officehome.msocdn.com"
+          ],
+          "source": "blobs.officehome.msocdn.com"
+        },
+        {
+          "normalized_domains": [
+            "officehomeblobs.blob.core.windows.net"
+          ],
+          "source": "officehomeblobs.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "*.blob.core.windows.net"
+          ],
+          "source": "\\*.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "outlookmobile-office365-tas.msedge.net"
+          ],
+          "source": "outlookmobile-office365-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "roaming.officeapps.live.com"
+          ],
+          "source": "roaming.officeapps.live.com"
+        },
+        {
+          "normalized_domains": [
+            "substrate.office.com"
+          ],
+          "source": "substrate.office.com"
+        },
+        {
+          "normalized_domains": [
+            "g.live.com"
+          ],
+          "source": "g.live.com"
+        },
+        {
+          "normalized_domains": [
+            "oneclient.sfx.ms"
+          ],
+          "source": "oneclient.sfx.ms"
+        },
+        {
+          "normalized_domains": [
+            "logincdn.msauth.net"
+          ],
+          "source": "logincdn.msauth.net"
+        },
+        {
+          "normalized_domains": [
+            "windows.policies.live.net"
+          ],
+          "source": "windows.policies.live.net"
+        },
+        {
+          "normalized_domains": [
+            "api.onedrive.com"
+          ],
+          "source": "api.onedrive.com"
+        },
+        {
+          "normalized_domains": [
+            "skydrivesync.policies.live.net"
+          ],
+          "source": "skydrivesync.policies.live.net"
+        },
+        {
+          "normalized_domains": [
+            "*storage.live.com"
+          ],
+          "source": "\\*storage.live.com"
+        },
+        {
+          "normalized_domains": [
+            "*settings.live.net"
+          ],
+          "source": "\\*settings.live.net"
+        },
+        {
+          "normalized_domains": [
+            "settings.data.microsoft.com"
+          ],
+          "source": "settings.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "settings-win.data.microsoft.com"
+          ],
+          "source": "settings-win.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*.pipe.aria.microsoft.com"
+          ],
+          "source": "\\*.pipe.aria.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "config.edge.skype.com"
+          ],
+          "source": "config.edge.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "config.teams.microsoft.com"
+          ],
+          "source": "config.teams.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "wdcp.microsoft.com",
+            "wdcpalt.microsoft.com"
+          ],
+          "source": "wdcp.microsoft.com wdcpalt.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen-prod.microsoft.com"
+          ],
+          "source": "\\*.smartscreen-prod.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "definitionupdates.microsoft.com"
+          ],
+          "source": "definitionupdates.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen.microsoft.com"
+          ],
+          "source": "\\*.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "checkappexec.microsoft.com"
+          ],
+          "source": "checkappexec.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "arc.msn.com",
+            "ris.api.iris.microsoft.com"
+          ],
+          "source": "arc.msn.com\\*ris.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "mucp.api.account.microsoft.com"
+          ],
+          "source": "mucp.api.account.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.prod.do.dsp.mp.microsoft.com"
+          ],
+          "source": "\\*.prod.do.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.dl.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.dl.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.windowsupdate.com"
+          ],
+          "source": "\\*.windowsupdate.com"
+        },
+        {
+          "normalized_domains": [
+            "*.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.update.microsoft.com"
+          ],
+          "source": "\\*.update.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "adl.windows.com"
+          ],
+          "source": "adl.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tsfe.trafficshaping.dsp.mp.microsoft.com"
+          ],
+          "source": "tsfe.trafficshaping.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "dlassets-ssl.xboxlive.com"
+          ],
+          "source": "dlassets-ssl.xboxlive.com"
+        },
+        {
+          "normalized_domains": [
+            "da.xboxservices.com"
+          ],
+          "source": "da.xboxservices.com"
+        },
+        {
+          "normalized_domains": [
+            "www.xboxab.com"
+          ],
+          "source": "www.xboxab.com"
+        },
+        {
+          "normalized_domains": [
+            "activity.windows.com"
+          ],
+          "source": "activity.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "assets.activity.windows.com"
+          ],
+          "source": "assets.activity.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tile-service.weather.microsoft.com"
+          ],
+          "source": "tile-service.weather.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "evoke-windowsservices-tas.msedge.net"
+          ],
+          "source": "evoke-windowsservices-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "cdn.onenote.net"
+          ],
+          "source": "cdn.onenote.net"
+        },
+        {
+          "normalized_domains": [
+            "spclient.wg.spotify.com"
+          ],
+          "source": "spclient.wg.spotify.com"
+        },
+        {
+          "normalized_domains": [
+            "ctldl.windowsupdate.com"
+          ],
+          "source": "ctldl.windowsupdate.com/\\*"
+        },
+        {
+          "normalized_domains": [
+            "ocsp.digicert.com"
+          ],
+          "source": "ocsp.digicert.com"
+        },
+        {
+          "normalized_domains": [
+            "www.bing.com"
+          ],
+          "source": "www.bing.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "business.bing.com"
+          ],
+          "source": "business.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "c.bing.com"
+          ],
+          "source": "c.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "edgeassetservice.azureedge.net"
+          ],
+          "source": "edgeassetservice.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "fp.msedge.net"
+          ],
+          "source": "fp.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "fp-vs.azureedge.net"
+          ],
+          "source": "fp-vs.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "ln-ring.msedge.net"
+          ],
+          "source": "ln-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "prod-azurecdn-akamai-iris.azureedge.net"
+          ],
+          "source": "prod-azurecdn-akamai-iris.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "r.bing.com"
+          ],
+          "source": "r.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "s-ring.msedge.net"
+          ],
+          "source": "s-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "t-ring.msedge.net"
+          ],
+          "source": "t-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "t-ring-fdv2.msedge.net"
+          ],
+          "source": "t-ring-fdv2.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "tse1.mm.bing.net"
+          ],
+          "source": "tse1.mm.bing.net"
+        },
+        {
+          "normalized_domains": [
+            "widgetcdn.azureedge.net"
+          ],
+          "source": "widgetcdn.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "widgetservice.azurefd.net"
+          ],
+          "source": "widgetservice.azurefd.net"
+        },
+        {
+          "normalized_domains": [
+            "login.live.com"
+          ],
+          "source": "login.live.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "dmd.metaservices.microsoft.com"
+          ],
+          "source": "dmd.metaservices.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "browser.events.data.msn.com"
+          ],
+          "source": "browser.events.data.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "functional.events.data.microsoft.com"
+          ],
+          "source": "functional.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.microsoft.com"
+          ],
+          "source": "www.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "v10.events.data.microsoft.com"
+          ],
+          "source": "v10.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "watson.telemetry.microsoft.com"
+          ],
+          "source": "watson.telemetry.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "watson.events.data.microsoft.com"
+          ],
+          "source": "watson.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "fs.microsoft.com"
+          ],
+          "source": "fs.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*licensing.mp.microsoft.com"
+          ],
+          "source": "\\*licensing.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "inference.location.live.net"
+          ],
+          "source": "inference.location.live.net"
+        },
+        {
+          "normalized_domains": [
+            "maps.windows.com"
+          ],
+          "source": "maps.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "ecn-us.dev.virtualearth.net"
+          ],
+          "source": "ecn-us.dev.virtualearth.net"
+        },
+        {
+          "normalized_domains": [
+            "*login.live.com"
+          ],
+          "source": "\\*login.live.com"
+        },
+        {
+          "normalized_domains": [
+            "wdcp.microsoft.com"
+          ],
+          "source": "wdcp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "wdcpalt.microsoft.com"
+          ],
+          "source": "wdcpalt.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen-prod.microsoft.com"
+          ],
+          "source": "\\*.smartscreen-prod.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen.microsoft.com"
+          ],
+          "source": "\\*.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "checkappexec.microsoft.com"
+          ],
+          "source": "checkappexec.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "msedge.api.cdp.microsoft.com"
+          ],
+          "source": "msedge.api.cdp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "edge.microsoft.com"
+          ],
+          "source": "edge.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "edge.nelreports.net"
+          ],
+          "source": "edge.nelreports.net"
+        },
+        {
+          "normalized_domains": [
+            "windows.msn.com"
+          ],
+          "source": "windows.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "img-prod-cms-rt-microsoft-com.akamaized.net"
+          ],
+          "source": "img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "img-s-msn-com.akamaized.net"
+          ],
+          "source": "img-s-msn-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "*.wns.windows.com"
+          ],
+          "source": "\\*.wns.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "storecatalogrevocation.storequality.microsoft.com"
+          ],
+          "source": "storecatalogrevocation.storequality.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*displaycatalog.mp.microsoft.com"
+          ],
+          "source": "\\*displaycatalog.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "storesdk.dsx.mp.microsoft.com"
+          ],
+          "source": "storesdk.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "manage.devcenter.microsoft.com"
+          ],
+          "source": "manage.devcenter.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "storeedgefd.dsx.mp.microsoft.com"
+          ],
+          "source": "storeedgefd.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "staging.to-do.microsoft.com"
+          ],
+          "source": "staging.to-do.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "to-do.microsoft.com"
+          ],
+          "source": "to-do.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "www.msftconnecttest.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "ipv6.msftconnecttest.com"
+          ],
+          "source": "ipv6.msftconnecttest.com"
+        },
+        {
+          "normalized_domains": [
+            "blobs.officehome.msocdn.com"
+          ],
+          "source": "blobs.officehome.msocdn.com"
+        },
+        {
+          "normalized_domains": [
+            "*.blob.core.windows.net"
+          ],
+          "source": "\\*.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "ecs.nel.measure.office.net"
+          ],
+          "source": "ecs.nel.measure.office.net"
+        },
+        {
+          "normalized_domains": [
+            "ocws.officeapps.live.com"
+          ],
+          "source": "ocws.officeapps.live.com"
+        },
+        {
+          "normalized_domains": [
+            "odc.officeapps.live.com"
+          ],
+          "source": "odc.officeapps.live.com"
+        },
+        {
+          "normalized_domains": [
+            "office.com"
+          ],
+          "source": "office.com"
+        },
+        {
+          "normalized_domains": [
+            "officeclient.microsoft.com"
+          ],
+          "source": "officeclient.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "officehomeblobs.blob.core.windows.net"
+          ],
+          "source": "officehomeblobs.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "outlook.office365.com"
+          ],
+          "source": "outlook.office365.com"
+        },
+        {
+          "normalized_domains": [
+            "outlookmobile-office365-tas.msedge.net"
+          ],
+          "source": "outlookmobile-office365-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "roaming.officeapps.live.com"
+          ],
+          "source": "roaming.officeapps.live.com"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "substrate.office.com"
+          ],
+          "source": "substrate.office.com"
+        },
+        {
+          "normalized_domains": [
+            "tfl.nel.measure.office.net"
+          ],
+          "source": "tfl.nel.measure.office.net"
+        },
+        {
+          "normalized_domains": [
+            "ams03pap005.storage.live.com"
+          ],
+          "source": "ams03pap005.storage.live.com"
+        },
+        {
+          "normalized_domains": [
+            "api.onedrive.com"
+          ],
+          "source": "api.onedrive.com"
+        },
+        {
+          "normalized_domains": [
+            "g.live.com"
+          ],
+          "source": "g.live.com"
+        },
+        {
+          "normalized_domains": [
+            "logincdn.msauth.net"
+          ],
+          "source": "logincdn.msauth.net"
+        },
+        {
+          "normalized_domains": [
+            "oneclient.sfx.ms"
+          ],
+          "source": "oneclient.sfx.ms"
+        },
+        {
+          "normalized_domains": [
+            "onedrive.live.com"
+          ],
+          "source": "onedrive.live.com"
+        },
+        {
+          "normalized_domains": [
+            "sat02pap005.storage.live.com"
+          ],
+          "source": "sat02pap005.storage.live.com"
+        },
+        {
+          "normalized_domains": [
+            "*settings.live.net"
+          ],
+          "source": "\\*settings.live.net"
+        },
+        {
+          "normalized_domains": [
+            "skyapi.live.net"
+          ],
+          "source": "skyapi.live.net"
+        },
+        {
+          "normalized_domains": [
+            "skydrivesync.policies.live.net"
+          ],
+          "source": "skydrivesync.policies.live.net"
+        },
+        {
+          "normalized_domains": [
+            "*storage.live.com"
+          ],
+          "source": "\\*storage.live.com"
+        },
+        {
+          "normalized_domains": [
+            "windows.policies.live.net"
+          ],
+          "source": "windows.policies.live.net"
+        },
+        {
+          "normalized_domains": [
+            "settings.data.microsoft.com"
+          ],
+          "source": "settings.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "settings-win.data.microsoft.com"
+          ],
+          "source": "settings-win.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*.pipe.aria.microsoft.com"
+          ],
+          "source": "\\*.pipe.aria.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "config.edge.skype.com"
+          ],
+          "source": "config.edge.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "edge.skype.com"
+          ],
+          "source": "edge.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "experimental-api.asm.skype.com"
+          ],
+          "source": "experimental-api.asm.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "trouter-azsc-ukwe-0-b.trouter.skype.com"
+          ],
+          "source": "trouter-azsc-ukwe-0-b.trouter.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "us-api.asm.skype.com"
+          ],
+          "source": "us-api.asm.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "config.teams.microsoft.com"
+          ],
+          "source": "config.teams.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "teams.events.data.microsoft.com"
+          ],
+          "source": "teams.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "teams.live.com"
+          ],
+          "source": "teams.live.com"
+        },
+        {
+          "normalized_domains": [
+            "statics.teams.cdn.live.net"
+          ],
+          "source": "statics.teams.cdn.live.net"
+        },
+        {
+          "normalized_domains": [
+            "statics.teams.cdn.office.net"
+          ],
+          "source": "statics.teams.cdn.office.net"
+        },
+        {
+          "normalized_domains": [
+            "api.msn.com"
+          ],
+          "source": "api.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "arc.msn.com"
+          ],
+          "source": "arc.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "assets.msn.com"
+          ],
+          "source": "assets.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "c.msn.com"
+          ],
+          "source": "c.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "fd.api.iris.microsoft.com"
+          ],
+          "source": "fd.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "ntp.msn.com"
+          ],
+          "source": "ntp.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "ris.api.iris.microsoft.com"
+          ],
+          "source": "ris.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "srtb.msn.com"
+          ],
+          "source": "srtb.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msn.com"
+          ],
+          "source": "www.msn.com"
+        },
+        {
+          "normalized_domains": [
+            "definitionupdates.microsoft.com"
+          ],
+          "source": "definitionupdates.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.prod.do.dsp.mp.microsoft.com"
+          ],
+          "source": "\\*.prod.do.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.dl.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.dl.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.windowsupdate.com"
+          ],
+          "source": "\\*.windowsupdate.com"
+        },
+        {
+          "normalized_domains": [
+            "*.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.update.microsoft.com"
+          ],
+          "source": "\\*.update.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "adl.windows.com"
+          ],
+          "source": "adl.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tsfe.trafficshaping.dsp.mp.microsoft.com"
+          ],
+          "source": "tsfe.trafficshaping.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "dlassets-ssl.xboxlive.com"
+          ],
+          "source": "dlassets-ssl.xboxlive.com"
+        },
+        {
+          "normalized_domains": [
+            "da.xboxservices.com"
+          ],
+          "source": "da.xboxservices.com"
+        },
+        {
+          "normalized_domains": [
+            "activity.windows.com"
+          ],
+          "source": "activity.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tile-service.weather.microsoft.com"
+          ],
+          "source": "tile-service.weather.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "evoke-windowsservices-tas.msedge.net"
+          ],
+          "source": "evoke-windowsservices-tas.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "cdn.onenote.net"
+          ],
+          "source": "cdn.onenote.net"
+        },
+        {
+          "normalized_domains": [
+            "business.bing.com"
+          ],
+          "source": "business.bing.com"
+        },
+        {
+          "normalized_domains": [
+            "ctldl.windowsupdate.com"
+          ],
+          "source": "ctldl.windowsupdate.com/\\*"
+        },
+        {
+          "normalized_domains": [
+            "www.bing.com"
+          ],
+          "source": "www.bing.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "fp.msedge.net"
+          ],
+          "source": "fp.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "odinvzc.azureedge.net"
+          ],
+          "source": "odinvzc.azureedge.net"
+        },
+        {
+          "normalized_domains": [
+            "b-ring.msedge.net"
+          ],
+          "source": "b-ring.msedge.net"
+        },
+        {
+          "normalized_domains": [
+            "dmd.metaservices.microsoft.com"
+          ],
+          "source": "dmd.metaservices.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "v10.events.data.microsoft.com"
+          ],
+          "source": "v10.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "watson.telemetry.microsoft.com"
+          ],
+          "source": "watson.telemetry.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "fs.microsoft.com"
+          ],
+          "source": "fs.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*licensing.mp.microsoft.com"
+          ],
+          "source": "\\*licensing.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "inference.location.live.net"
+          ],
+          "source": "inference.location.live.net"
+        },
+        {
+          "normalized_domains": [
+            "maps.windows.com"
+          ],
+          "source": "maps.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "*login.live.com"
+          ],
+          "source": "\\*login.live.com"
+        },
+        {
+          "normalized_domains": [
+            "msedge.api.cdp.microsoft.com"
+          ],
+          "source": "msedge.api.cdp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "img-prod-cms-rt-microsoft-com.akamaized.net"
+          ],
+          "source": "img-prod-cms-rt-microsoft-com.akamaized.net"
+        },
+        {
+          "normalized_domains": [
+            "*.wns.windows.com"
+          ],
+          "source": "\\*.wns.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "storecatalogrevocation.storequality.microsoft.com"
+          ],
+          "source": "storecatalogrevocation.storequality.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "1storecatalogrevocation.storequality.microsoft.com"
+          ],
+          "source": "1storecatalogrevocation.storequality.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*displaycatalog.mp.microsoft.com"
+          ],
+          "source": "\\*displaycatalog.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "storesdk.dsx.mp.microsoft.com"
+          ],
+          "source": "storesdk.dsx.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "manage.devcenter.microsoft.com"
+          ],
+          "source": "manage.devcenter.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "www.msftconnecttest.com"
+          ],
+          "source": "www.msftconnecttest.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "office.com"
+          ],
+          "source": "office.com"
+        },
+        {
+          "normalized_domains": [
+            "officehomeblobs.blob.core.windows.net"
+          ],
+          "source": "officehomeblobs.blob.core.windows.net"
+        },
+        {
+          "normalized_domains": [
+            "self.events.data.microsoft.com"
+          ],
+          "source": "self.events.data.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "g.live.com"
+          ],
+          "source": "g.live.com"
+        },
+        {
+          "normalized_domains": [
+            "oneclient.sfx.ms"
+          ],
+          "source": "oneclient.sfx.ms"
+        },
+        {
+          "normalized_domains": [
+            "logincdn.msauth.net"
+          ],
+          "source": "logincdn.msauth.net"
+        },
+        {
+          "normalized_domains": [
+            "settings.data.microsoft.com"
+          ],
+          "source": "settings.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "settings-win.data.microsoft.com"
+          ],
+          "source": "settings-win.data.microsoft.com\\*"
+        },
+        {
+          "normalized_domains": [
+            "*.pipe.aria.microsoft.com"
+          ],
+          "source": "\\*.pipe.aria.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "config.edge.skype.com"
+          ],
+          "source": "config.edge.skype.com"
+        },
+        {
+          "normalized_domains": [
+            "config.teams.microsoft.com"
+          ],
+          "source": "config.teams.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "wdcp.microsoft.com",
+            "wdcpalt.microsoft.com"
+          ],
+          "source": "wdcp.microsoft.comwdcpalt.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen-prod.microsoft.com"
+          ],
+          "source": "\\*.smartscreen-prod.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.smartscreen.microsoft.com"
+          ],
+          "source": "\\*.smartscreen.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "checkappexec.microsoft.com"
+          ],
+          "source": "checkappexec.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "arc.msn.com",
+            "ris.api.iris.microsoft.com"
+          ],
+          "source": "arc.msn.com\\*ris.api.iris.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.prod.do.dsp.mp.microsoft.com"
+          ],
+          "source": "\\*.prod.do.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.dl.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.dl.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.windowsupdate.com"
+          ],
+          "source": "\\*.windowsupdate.com"
+        },
+        {
+          "normalized_domains": [
+            "*.delivery.mp.microsoft.com"
+          ],
+          "source": "\\*.delivery.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "*.update.microsoft.com"
+          ],
+          "source": "\\*.update.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "adl.windows.com"
+          ],
+          "source": "adl.windows.com"
+        },
+        {
+          "normalized_domains": [
+            "tsfe.trafficshaping.dsp.mp.microsoft.com"
+          ],
+          "source": "tsfe.trafficshaping.dsp.mp.microsoft.com"
+        },
+        {
+          "normalized_domains": [
+            "dlassets-ssl.xboxlive.com"
+          ],
+          "source": "dlassets-ssl.xboxlive.com"
+        },
+        {
+          "normalized_domains": [
+            "da.xboxservices.com"
+          ],
+          "source": "da.xboxservices.com"
+        }
+      ],
+      "semantic_hash": "094678b9974e7ef949d2ac07b86c0a374848af58f7a2d7238c60ad402020b3c8"
+    },
+    "windows_time": {
+      "content_url": "https://raw.githubusercontent.com/MicrosoftDocs/windowsserverdocs/main/WindowsServerDocs/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings.md",
+      "document_date": "09/18/2025",
+      "page_url": "https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings",
+      "records": [
+        {
+          "normalized_domains": [
+            "time.windows.com"
+          ],
+          "source": "|NtpServer|`time.windows.com`, 0x9|"
+        }
+      ],
+      "semantic_hash": "4cf129f1ce15683b61679580527851cc1786dc8b62c46a52890fbf640ab3c999"
+    }
+  }
 }

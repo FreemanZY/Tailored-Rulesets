@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ipaddress
 import hashlib
+import fnmatch
 import re
 import sys
 import unittest
@@ -35,6 +36,33 @@ def legacy_domain_entries_from_rules(path: Path):
         else:
             raise AssertionError(f"unexpected non-domain rule in {path.name}: {line}")
     return entries
+
+
+def generated_domain_coverage(vendor: str, rule: str):
+    domainset = active_lines(ROOT / "dist" / f"{vendor}_generated_domainset.txt")
+    ruleset_name = (
+        "apple_generated_ip_ruleset.txt"
+        if vendor == "apple"
+        else f"{vendor}_generated_ruleset.txt"
+    )
+    ruleset = active_lines(ROOT / "dist" / ruleset_name)
+    exact = {entry for entry in domainset if not entry.startswith(".")}
+    suffixes = {entry[1:] for entry in domainset if entry.startswith(".")}
+    wildcards = {
+        entry.split(",", 1)[1]
+        for entry in ruleset
+        if entry.startswith("DOMAIN-WILDCARD,")
+    }
+    rule_type, value = rule.split(",", 1)
+    if rule_type == "DOMAIN":
+        return (
+            value in exact
+            or any(value == suffix or value.endswith(f".{suffix}") for suffix in suffixes)
+            or any(fnmatch.fnmatchcase(value, wildcard) for wildcard in wildcards)
+        )
+    if rule_type == "DOMAIN-SUFFIX":
+        return any(value == suffix or value.endswith(f".{suffix}") for suffix in suffixes)
+    raise AssertionError(f"unexpected manual domain rule: {rule}")
 
 
 class RepositoryOutputTests(unittest.TestCase):
@@ -91,46 +119,75 @@ class RepositoryOutputTests(unittest.TestCase):
         microsoft_manual_rules = active_lines(ROOT / "dist" / "microsoft_manual_ruleset.txt")
         self.assertIn("arc.msn.com", microsoft_generated_domains)
         self.assertNotIn("DOMAIN,arc.msn.com", microsoft_manual_rules)
-        self.assertTrue(
+        self.assertEqual(
+            set(microsoft_manual_rules),
             {
-                "DOMAIN,default.exp-tas.com",
-                "DOMAIN,img-s-msn-com.akamaized.net",
+                "DOMAIN,apac01.azure-devices.net",
+                "DOMAIN,kbmvdg.dm.files.1drv.com",
+                "DOMAIN,icmgzq.by.files.1drv.com",
+                "DOMAIN,my.microsoftpersonalcontent.com",
                 "DOMAIN,in.appcenter.ms",
-                "DOMAIN,ipv6.msftncsi.com",
-                "DOMAIN,api.msn.com",
                 "DOMAIN,ax-ring.msedge.net",
-                "DOMAIN-SUFFIX,download.windowsupdate.com",
-                "DOMAIN,fp.msedge.net",
                 "DOMAIN,lamr-staging-t-tunicast.msedge.net",
-                "DOMAIN,marketplace.visualstudio.com",
-                "DOMAIN,ntp.msn.com",
+                "DOMAIN,teams.nelgallatin.measure.office365.cn",
                 "DOMAIN,s.cn.bing.net",
                 "DOMAIN,s1.tc.bing.net",
-                "DOMAIN,teams.nelgallatin.measure.office365.cn",
-                "DOMAIN,time.windows.com",
-                "DOMAIN,update.code.visualstudio.com",
-                "DOMAIN,vscode-sync.trafficmanager.net",
-                "DOMAIN,wbd.ms",
-                "DOMAIN,whiteboard.ms",
-                "DOMAIN,windows.msn.com",
-                "DOMAIN,www.msftncsi.com",
-                "DOMAIN-SUFFIX,gallery.vsassets.io",
-                "DOMAIN-SUFFIX,gallerycdn.vsassets.io",
-                "DOMAIN-SUFFIX,vscode-cdn.net",
-            }.issubset(microsoft_manual_rules)
+            },
         )
+        for migrated in {
+            "DOMAIN,default.exp-tas.com",
+            "DOMAIN,img-s-msn-com.akamaized.net",
+            "DOMAIN,ipv6.msftncsi.com",
+            "DOMAIN,api.msn.com",
+            "DOMAIN-SUFFIX,download.windowsupdate.com",
+            "DOMAIN,fp.msedge.net",
+            "DOMAIN,marketplace.visualstudio.com",
+            "DOMAIN,ntp.msn.com",
+            "DOMAIN,time.windows.com",
+            "DOMAIN,update.code.visualstudio.com",
+            "DOMAIN,vscode-sync.trafficmanager.net",
+            "DOMAIN,wbd.ms",
+            "DOMAIN,whiteboard.ms",
+            "DOMAIN,windows.msn.com",
+            "DOMAIN,www.msftncsi.com",
+            "DOMAIN-SUFFIX,gallery.vsassets.io",
+            "DOMAIN-SUFFIX,gallerycdn.vsassets.io",
+            "DOMAIN-SUFFIX,vscode-cdn.net",
+        }:
+            self.assertTrue(generated_domain_coverage("microsoft", migrated), migrated)
 
     def test_legacy_google_ip_filename_is_removed(self):
         self.assertFalse((ROOT / "dist" / "google_generated_ip_ruleset.txt").exists())
 
-    def test_legacy_google_domains_are_preserved_manually(self):
+    def test_uncovered_legacy_google_domains_remain_manual(self):
         lines = legacy_domain_entries_from_rules(ROOT / "dist" / "google_manual_ruleset.txt")
         payload = ("\n".join(lines) + "\n").encode()
-        self.assertEqual(len(lines), 1120)
+        self.assertEqual(len(lines), 414)
         self.assertEqual(
             hashlib.sha256(payload).hexdigest(),
-            "1270ff385c44e9ac70f6486aa3c97864600427fdfab69b9d24001859fa03c8af",
+            "03530fc4c643e0601ad96ac9f04c39fbc9281454f0d033820c4c08d9a12faf73",
         )
+
+    def test_vendor_manual_rules_do_not_duplicate_or_broaden_generated_rules(self):
+        for vendor in ("apple", "microsoft", "google"):
+            manual = active_lines(ROOT / "dist" / f"{vendor}_manual_ruleset.txt")
+            generated_exact = {
+                entry
+                for entry in active_lines(ROOT / "dist" / f"{vendor}_generated_domainset.txt")
+                if not entry.startswith(".")
+            }
+            for rule in manual:
+                with self.subTest(vendor=vendor, rule=rule):
+                    self.assertFalse(generated_domain_coverage(vendor, rule))
+                    rule_type, value = rule.split(",", 1)
+                    if rule_type == "DOMAIN-SUFFIX":
+                        self.assertNotIn(value, generated_exact)
+
+        apple_manual = active_lines(ROOT / "dist" / "apple_manual_ruleset.txt")
+        self.assertIn("DOMAIN-SUFFIX,apple.com.akadns.net", apple_manual)
+        self.assertIn("DOMAIN-SUFFIX,apple.com.edgekey.net", apple_manual)
+        self.assertNotIn("DOMAIN-SUFFIX,com.akadns.net", apple_manual)
+        self.assertNotIn("DOMAIN-SUFFIX,com.edgekey.net", apple_manual)
 
     def test_public_rules_omit_private_policy_names_and_global_curl_override(self):
         published = "\n".join(

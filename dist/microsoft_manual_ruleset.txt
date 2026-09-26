@@ -1,50 +1,20 @@
 # MANUAL RULE-SET: Reviewed Microsoft CDN, CNAME target, and observed service endpoints.
-# These entries are not currently covered by the Microsoft 365 or Power Apps generated sources.
+# These entries are not covered by the current official-source generator.
 
 # Group: Observed Microsoft domains
 DOMAIN,apac01.azure-devices.net
-DOMAIN,r.bing.com
-DOMAIN,skyapi.live.net
 DOMAIN,kbmvdg.dm.files.1drv.com
-DOMAIN,dsm01pap009.storage.live.com
-DOMAIN,api.onedrive.com
 DOMAIN,icmgzq.by.files.1drv.com
-DOMAIN,sjc04pap002.storage.live.com
-DOMAIN,dsm04pap002.storage.live.com
-DOMAIN,snz04pap001.storage.live.com
-DOMAIN-SUFFIX,storage.live.com
 DOMAIN,my.microsoftpersonalcontent.com
 
-# Group: Microsoft endpoints verified in official network documentation
-DOMAIN,default.exp-tas.com
-DOMAIN,img-s-msn-com.akamaized.net
+# Group: Retired official service retained for observed legacy traffic
 DOMAIN,in.appcenter.ms
-DOMAIN,ipv6.msftncsi.com
-
-# Group: Visual Studio Code official network endpoints
-DOMAIN,marketplace.visualstudio.com
-DOMAIN,update.code.visualstudio.com
-DOMAIN,vscode-sync.trafficmanager.net
-DOMAIN-SUFFIX,gallery.vsassets.io
-DOMAIN-SUFFIX,gallerycdn.vsassets.io
-DOMAIN-SUFFIX,vscode-cdn.net
 
 # Group: Additional observed Microsoft endpoints
 DOMAIN,ax-ring.msedge.net
-DOMAIN,fp.msedge.net
 DOMAIN,lamr-staging-t-tunicast.msedge.net
 DOMAIN,teams.nelgallatin.measure.office365.cn
 
 # Group: Observed Bing endpoints verified as Microsoft services
 DOMAIN,s.cn.bing.net
 DOMAIN,s1.tc.bing.net
-
-# Group: Windows service endpoints from official Microsoft documentation
-DOMAIN,api.msn.com
-DOMAIN-SUFFIX,download.windowsupdate.com
-DOMAIN,ntp.msn.com
-DOMAIN,time.windows.com
-DOMAIN,wbd.ms
-DOMAIN,whiteboard.ms
-DOMAIN,windows.msn.com
-DOMAIN,www.msftncsi.com

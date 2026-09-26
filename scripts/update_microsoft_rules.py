@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build deterministic Surge rules from Microsoft 365 and Power Apps sources."""
+"""Build deterministic Surge rules from official Microsoft endpoint sources."""
 
 from __future__ import annotations
 
@@ -60,8 +60,78 @@ POWER_APPS_REQUIRED_DOMAINS = {
     "arc.msn.com",
     "*.crm.dynamics.com",
 }
+SUPPLEMENTAL_SOURCES = {
+    "vscode": {
+        "page_url": "https://code.visualstudio.com/docs/setup/network",
+        "content_url": "https://raw.githubusercontent.com/microsoft/vscode-docs/main/docs/setup/network.md",
+        "mode": "vscode_markdown",
+        "min_domains": 15,
+        "required": {
+            "default.exp-tas.com",
+            "marketplace.visualstudio.com",
+            "update.code.visualstudio.com",
+            "vscode-sync.trafficmanager.net",
+            "*.gallery.vsassets.io",
+            "*.gallerycdn.vsassets.io",
+            "*.vscode-cdn.net",
+        },
+    },
+    "windows_enterprise": {
+        "page_url": "https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints",
+        "content_url": "https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints",
+        "mode": "windows_markdown",
+        "min_domains": 60,
+        "required": {
+            "r.bing.com",
+            "fp.msedge.net",
+            "img-s-msn-com.akamaized.net",
+            "api.msn.com",
+            "ntp.msn.com",
+            "windows.msn.com",
+            "*.windowsupdate.com",
+            "watson.*.microsoft.com",
+        },
+    },
+    "windows_non_enterprise": {
+        "page_url": "https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions",
+        "content_url": "https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions",
+        "mode": "windows_markdown",
+        "min_domains": 60,
+        "required": {
+            "skyapi.live.net",
+            "api.onedrive.com",
+            "*storage.live.com",
+            "wdcpalt.microsoft.com",
+        },
+    },
+    "ncsi": {
+        "page_url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network",
+        "content_url": "https://raw.githubusercontent.com/MicrosoftDocs/SupportArticles-docs/main/support/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network.md",
+        "mode": "ncsi_markdown",
+        "min_domains": 4,
+        "required": {"*.msftncsi.com", "*.msftconnecttest.com"},
+    },
+    "windows_time": {
+        "page_url": "https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings",
+        "content_url": "https://raw.githubusercontent.com/MicrosoftDocs/windowsserverdocs/main/WindowsServerDocs/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings.md",
+        "mode": "windows_time_markdown",
+        "min_domains": 1,
+        "required": {"time.windows.com"},
+    },
+    "whiteboard": {
+        "page_url": "https://learn.microsoft.com/en-us/surface-hub/whiteboard-collaboration",
+        "content_url": "https://learn.microsoft.com/en-us/surface-hub/whiteboard-collaboration",
+        "mode": "whiteboard_markdown",
+        "min_domains": 3,
+        "required": {"whiteboard.ms", "*.whiteboard.microsoft.com", "wbd.ms"},
+    },
+}
 HTML_BREAK_RE = re.compile(r"<br\s*/?>", re.IGNORECASE)
 HTML_TAG_RE = re.compile(r"<[^>]+>")
+HOST_TOKEN_RE = re.compile(
+    r"(?i)(?:https?://)?(?:[a-z0-9*-]+\.)+[a-z0-9*-]+(?:/[^\s`<>,;|)]*)?"
+)
+CODE_SPAN_RE = re.compile(r"`([^`\n]+)`")
 
 
 class SourceDataError(ValueError):
@@ -320,6 +390,211 @@ def validate_power_apps_source(source: Any) -> dict[str, Any]:
     return source
 
 
+def _document_date(text: str) -> str:
+    for pattern in (
+        r"(?mi)^ms\.date:\s*['\"]?([^'\"\s]+)",
+        r'(?i)<meta[^>]+name=["\']ms\.date["\'][^>]+content=["\']([^"\']+)',
+        r'(?i)<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']ms\.date["\']',
+    ):
+        match = re.search(pattern, text)
+        if match:
+            return match.group(1).strip()
+    return "unknown"
+
+
+def _extract_host_patterns(text: str) -> list[str]:
+    patterns: set[str] = set()
+    normalized_text = html.unescape(text)
+    # Learn's Markdown renderer escapes wildcard asterisks and occasionally
+    # joins a footnote marker directly to the next hostname in a table cell.
+    normalized_text = re.sub(
+        r"(?i)(?<=[a-z0-9])\\\*(?=[a-z0-9])", " ", normalized_text
+    )
+    normalized_text = normalized_text.replace("\\*", "*")
+    # One current source row uses an HTML line break that is lost by the
+    # Markdown representation. Keep the two published destinations distinct.
+    normalized_text = normalized_text.replace(
+        "wdcp.microsoft.comwdcpalt.microsoft.com",
+        "wdcp.microsoft.com wdcpalt.microsoft.com",
+    )
+    for match in HOST_TOKEN_RE.finditer(normalized_text):
+        token = match.group(0).strip("`'\"()[]{}.,")
+        if "://" in token:
+            token = token.split("://", 1)[1]
+        token = token.split("/", 1)[0].rstrip(".")
+        # Microsoft tables use a trailing asterisk as a footnote marker on
+        # otherwise exact names. Leading and in-label asterisks are patterns.
+        if token.endswith("*") and token.count("*") == 1:
+            token = token[:-1]
+        if not token or "." not in token:
+            continue
+        try:
+            kind, normalized = classify_url(token)
+        except SourceDataError as exc:
+            raise SourceDataError(
+                f"unsupported hostname pattern in supplemental source: {token!r}"
+            ) from exc
+        source_pattern = normalized if kind == "wildcard" else (
+            f"*{normalized}" if normalized.startswith(".") else normalized
+        )
+        patterns.add(source_pattern)
+    return sorted(patterns)
+
+
+def _source_block(spec: dict[str, Any], document_date: str, records: list[dict[str, Any]]) -> dict[str, Any]:
+    published = {
+        pattern
+        for record in records
+        for pattern in record["normalized_domains"]
+    }
+    missing = set(spec["required"]) - published
+    if missing:
+        raise SourceDataError(
+            f"{spec['page_url']}: missing required domains {sorted(missing)}"
+        )
+    if len(published) < spec["min_domains"]:
+        raise SourceDataError(
+            f"{spec['page_url']}: source appears truncated ({len(published)} domains)"
+        )
+    semantic = {"records": records}
+    semantic_hash = hashlib.sha256(
+        json.dumps(semantic, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    ).hexdigest()
+    return {
+        "page_url": spec["page_url"],
+        "content_url": spec["content_url"],
+        "document_date": document_date,
+        "semantic_hash": semantic_hash,
+        **semantic,
+    }
+
+
+def build_supplemental_source(name: str, content: str) -> dict[str, Any]:
+    if name not in SUPPLEMENTAL_SOURCES:
+        raise SourceDataError(f"unknown supplemental Microsoft source: {name}")
+    if not isinstance(content, str) or not content.strip():
+        raise SourceDataError(f"{name}: source must be non-empty text")
+    spec = SUPPLEMENTAL_SOURCES[name]
+    mode = spec["mode"]
+    records: list[dict[str, Any]] = []
+    document_date = _document_date(content)
+
+    if mode == "windows_markdown":
+        saw_destination_header = False
+        for line in content.splitlines():
+            stripped = line.strip()
+            if not stripped.startswith("|") or not stripped.endswith("|"):
+                continue
+            cells = [cell.strip() for cell in stripped[1:-1].split("|")]
+            if cells and cells[-1].strip("*_ ").lower() == "destination":
+                saw_destination_header = True
+                continue
+            if not saw_destination_header or not cells:
+                continue
+            raw = cells[-1]
+            domains = _extract_host_patterns(raw)
+            if domains:
+                records.append({"source": raw, "normalized_domains": domains})
+        if not saw_destination_header:
+            raise SourceDataError(f"{name}: destination table header changed")
+    elif mode == "vscode_markdown":
+        start = "## Common hostnames"
+        if content.count(start) != 1:
+            raise SourceDataError("VS Code common-hostnames section changed")
+        section = content.split(start, 1)[1].split("\n## ", 1)[0]
+        for line in section.splitlines():
+            if not line.lstrip().startswith(("-", "*")):
+                continue
+            domains = sorted({
+                domain
+                for code_span in CODE_SPAN_RE.findall(line)
+                for domain in _extract_host_patterns(code_span)
+            })
+            if domains:
+                records.append({"source": line.strip(), "normalized_domains": domains})
+    elif mode == "ncsi_markdown":
+        start = "## More information"
+        end = "## Workaround"
+        if content.count(start) != 1 or content.count(end) != 1:
+            raise SourceDataError("NCSI source section markers changed")
+        section = content.split(start, 1)[1].split(end, 1)[0]
+        for line in section.splitlines():
+            code_spans = CODE_SPAN_RE.findall(line)
+            candidates = code_spans or (
+                [line]
+                if line.lstrip().startswith(">") and "*." in line.replace("\\", "")
+                else []
+            )
+            domains = sorted({
+                domain
+                for candidate in candidates
+                for domain in _extract_host_patterns(candidate)
+            })
+            if domains:
+                records.append({"source": line.strip(), "normalized_domains": domains})
+    elif mode == "windows_time_markdown":
+        matching = [line for line in content.splitlines() if re.match(r"^\|\s*NtpServer\s*\|", line)]
+        if len(matching) != 1:
+            raise SourceDataError("Windows Time NtpServer table row changed")
+        domains = _extract_host_patterns(matching[0])
+        records.append({"source": matching[0].strip(), "normalized_domains": domains})
+    elif mode == "whiteboard_markdown":
+        matching = [
+            line for line in content.splitlines()
+            if all(token in line.lower().replace("\\", "") for token in (
+                "whiteboard.ms", "*.whiteboard.microsoft.com", "wbd.ms"
+            ))
+        ]
+        if len(matching) != 1:
+            raise SourceDataError("Whiteboard allowlist sentence changed")
+        source = matching[0].replace("\\", "").strip()
+        domains = _extract_host_patterns(source)
+        records.append({"source": source, "normalized_domains": domains})
+    else:
+        raise AssertionError(f"unsupported supplemental source mode: {mode}")
+
+    return _source_block(spec, document_date, records)
+
+
+def validate_supplemental_source(name: str, source: Any) -> dict[str, Any]:
+    if name not in SUPPLEMENTAL_SOURCES:
+        raise SourceDataError(f"unknown stored supplemental source: {name}")
+    spec = SUPPLEMENTAL_SOURCES[name]
+    expected = {"page_url", "content_url", "document_date", "semantic_hash", "records"}
+    if not isinstance(source, dict) or set(source) != expected:
+        raise SourceDataError(f"{name}: stored source schema changed")
+    if source["page_url"] != spec["page_url"] or source["content_url"] != spec["content_url"]:
+        raise SourceDataError(f"{name}: stored source URLs changed")
+    if not isinstance(source["document_date"], str):
+        raise SourceDataError(f"{name}: stored document date is invalid")
+    if not isinstance(source["records"], list):
+        raise SourceDataError(f"{name}: stored records are invalid")
+    records: list[dict[str, Any]] = []
+    for record in source["records"]:
+        if not isinstance(record, dict) or set(record) != {"source", "normalized_domains"}:
+            raise SourceDataError(f"{name}: stored record schema changed")
+        if not isinstance(record["source"], str) or not isinstance(record["normalized_domains"], list):
+            raise SourceDataError(f"{name}: stored record values are invalid")
+        normalized: list[str] = []
+        for pattern in record["normalized_domains"]:
+            kind, value = classify_url(pattern)
+            normalized.append(value if kind == "wildcard" else (f"*{value}" if value.startswith(".") else value))
+        records.append({"source": record["source"], "normalized_domains": sorted(set(normalized))})
+    rebuilt = _source_block(spec, source["document_date"], records)
+    if rebuilt["semantic_hash"] != source["semantic_hash"]:
+        raise SourceDataError(f"{name}: stored semantic hash does not match its records")
+    return source
+
+
+def validate_supplemental_sources(sources: Any) -> dict[str, Any]:
+    if not isinstance(sources, dict) or set(sources) != set(SUPPLEMENTAL_SOURCES):
+        raise SourceDataError("stored supplemental source set changed")
+    return {
+        name: validate_supplemental_source(name, sources[name])
+        for name in sorted(SUPPLEMENTAL_SOURCES)
+    }
+
+
 def validate_record(record: Any, instance: str) -> dict[str, Any]:
     if not isinstance(record, dict):
         raise SourceDataError(f"{instance}: endpoint record is not an object")
@@ -381,6 +656,7 @@ def build_manifest(
     versions: dict[str, str],
     payloads: dict[str, Any],
     power_apps: dict[str, Any],
+    supplemental_sources: dict[str, Any],
 ) -> dict[str, Any]:
     if set(versions) != set(INSTANCES) or set(payloads) != set(INSTANCES):
         raise SourceDataError("manifest inputs must contain exactly the four target instances")
@@ -394,10 +670,11 @@ def build_manifest(
             "records": normalize_records(payloads[instance], instance),
         }
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "source": SOURCE_BASE,
         "instances": instances,
         "power_apps": validate_power_apps_source(power_apps),
+        "supplemental_sources": validate_supplemental_sources(supplemental_sources),
     }
 
 
@@ -407,9 +684,10 @@ def validate_manifest(manifest: Any) -> dict[str, Any]:
         "source",
         "instances",
         "power_apps",
+        "supplemental_sources",
     }:
         raise SourceDataError("stored manifest has an unsupported top-level schema")
-    if manifest["schema_version"] != 2 or manifest["source"] != SOURCE_BASE:
+    if manifest["schema_version"] != 3 or manifest["source"] != SOURCE_BASE:
         raise SourceDataError("stored manifest schema version or source is invalid")
     instances = manifest["instances"]
     if not isinstance(instances, dict) or set(instances) != set(INSTANCES):
@@ -422,7 +700,12 @@ def validate_manifest(manifest: Any) -> dict[str, Any]:
             raise SourceDataError(f"{instance}: invalid stored instance block")
         versions[instance] = block["version"]
         payloads[instance] = block["records"]
-    return build_manifest(versions, payloads, validate_power_apps_source(manifest["power_apps"]))
+    return build_manifest(
+        versions,
+        payloads,
+        validate_power_apps_source(manifest["power_apps"]),
+        validate_supplemental_sources(manifest["supplemental_sources"]),
+    )
 
 
 def manifest_versions(manifest: dict[str, Any]) -> dict[str, str]:
@@ -436,7 +719,16 @@ def _version_header(manifest: dict[str, Any]) -> str:
         f"{instance}={manifest['instances'][instance]['version']}"
         for instance in INSTANCES
     )
-    return f"{m365_versions}, PowerApps={manifest['power_apps']['semantic_hash'][:12]}"
+    supplemental_hash = hashlib.sha256(
+        "".join(
+            manifest["supplemental_sources"][name]["semantic_hash"]
+            for name in sorted(manifest["supplemental_sources"])
+        ).encode("ascii")
+    ).hexdigest()[:12]
+    return (
+        f"{m365_versions}, PowerApps={manifest['power_apps']['semantic_hash'][:12]}, "
+        f"Supplemental={supplemental_hash}"
+    )
 
 
 def render_outputs(manifest: dict[str, Any]) -> tuple[str, str]:
@@ -465,15 +757,21 @@ def render_outputs(manifest: dict[str, Any]) -> tuple[str, str]:
             kind, value = classify_url(source_url)
             (domains if kind == "domainset" else wildcards).add(value)
 
+    for source in manifest["supplemental_sources"].values():
+        for record in source["records"]:
+            for source_url in record["normalized_domains"]:
+                kind, value = classify_url(source_url)
+                (domains if kind == "domainset" else wildcards).add(value)
+
     versions = _version_header(manifest)
     domain_lines = [
-        "# GENERATED DOMAIN-SET: Microsoft 365 and Power Apps endpoints; do not edit manually.",
+        "# GENERATED DOMAIN-SET: Official Microsoft service endpoints; do not edit manually.",
         f"# Source versions: {versions}",
         "# Exact source names stay exact; source *.example.com becomes .example.com.",
         *sorted(domains),
     ]
     rule_lines = [
-        "# GENERATED RULE-SET: Microsoft 365 and Power Apps complex wildcards and IP ranges.",
+        "# GENERATED RULE-SET: Official Microsoft complex wildcards and IP ranges.",
         f"# Source versions: {versions}",
         "# Policies belong in the consuming Surge profile.",
         *(f"DOMAIN-WILDCARD,{value}" for value in sorted(wildcards)),
@@ -593,6 +891,13 @@ def fetch_power_apps_source() -> dict[str, Any]:
     return build_power_apps_source(_request_text(POWER_APPS_CONTENT_URL))
 
 
+def fetch_supplemental_sources() -> dict[str, Any]:
+    return {
+        name: build_supplemental_source(name, _request_text(spec["content_url"]))
+        for name, spec in SUPPLEMENTAL_SOURCES.items()
+    }
+
+
 def _read_manifest_if_valid() -> dict[str, Any] | None:
     if not SOURCE_FILE.exists():
         return None
@@ -627,6 +932,7 @@ def _atomic_replace_many(contents: dict[Path, str]) -> list[Path]:
 def update() -> list[Path]:
     versions = fetch_versions()
     power_apps = fetch_power_apps_source()
+    supplemental_sources = fetch_supplemental_sources()
     stored_manifest = _read_manifest_if_valid()
     if stored_manifest is None or manifest_versions(stored_manifest) != versions:
         payloads = fetch_payloads()
@@ -645,7 +951,14 @@ def update() -> list[Path]:
         print("Power Apps endpoint semantics are unchanged; preserved stored metadata.")
     else:
         print("Power Apps endpoint semantics changed; refreshed the stored source.")
-    manifest = build_manifest(versions, payloads, power_apps)
+    if stored_manifest is not None:
+        for name in supplemental_sources:
+            if (
+                stored_manifest["supplemental_sources"][name]["semantic_hash"]
+                == supplemental_sources[name]["semantic_hash"]
+            ):
+                supplemental_sources[name] = stored_manifest["supplemental_sources"][name]
+    manifest = build_manifest(versions, payloads, power_apps, supplemental_sources)
     domainset, ruleset = render_outputs(manifest)
     changed = _atomic_replace_many(
         {

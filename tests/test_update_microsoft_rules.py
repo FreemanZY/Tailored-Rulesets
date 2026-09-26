@@ -66,6 +66,20 @@ def fixture_power_apps_source():
     return updater.build_power_apps_source(power_apps_markdown())
 
 
+def fixture_supplemental_sources():
+    sources = {}
+    for name, spec in updater.SUPPLEMENTAL_SOURCES.items():
+        patterns = sorted(spec["required"])
+        while len(patterns) < spec["min_domains"]:
+            patterns.append(f"fixture{len(patterns)}.{name.replace('_', '-')}.example.com")
+        records = [
+            {"source": pattern, "normalized_domains": [pattern]}
+            for pattern in patterns
+        ]
+        sources[name] = updater._source_block(spec, "09/10/2026", records)
+    return sources
+
+
 def fixture_manifest():
     payloads = {
         "Worldwide": [
@@ -85,7 +99,12 @@ def fixture_manifest():
         "USGovGCCHigh": [record(4, urls=["*.apps.mil", "login.example.com"])],
     }
     versions = {instance: "2026091000" for instance in updater.INSTANCES}
-    return updater.build_manifest(versions, payloads, fixture_power_apps_source())
+    return updater.build_manifest(
+        versions,
+        payloads,
+        fixture_power_apps_source(),
+        fixture_supplemental_sources(),
+    )
 
 
 class MicrosoftRuleGeneratorTests(unittest.TestCase):
@@ -126,6 +145,9 @@ class MicrosoftRuleGeneratorTests(unittest.TestCase):
         self.assertIn(".crm.dynamics.com\n", domainset)
         self.assertIn(".crm4.dynamics.com\n", domainset)
         self.assertIn(".crm5.dynamics.com\n", domainset)
+        self.assertIn("marketplace.visualstudio.com\n", domainset)
+        self.assertIn(".windowsupdate.com\n", domainset)
+        self.assertIn("time.windows.com\n", domainset)
         self.assertNotIn("localhost", domainset)
         self.assertNotIn("127.0.0.1", ruleset)
 
@@ -158,6 +180,77 @@ class MicrosoftRuleGeneratorTests(unittest.TestCase):
                 power_apps_markdown().replace("arc.msn.com", "https://arc.msn.com")
             )
 
+    def test_parses_all_supplemental_source_shapes(self):
+        vscode_spec = updater.SUPPLEMENTAL_SOURCES["vscode"]
+        vscode_domains = sorted(vscode_spec["required"])
+        while len(vscode_domains) < vscode_spec["min_domains"]:
+            vscode_domains.append(f"fixture{len(vscode_domains)}.vscode.example.com")
+        vscode = "---\nms.date: 09/10/2026\n---\n## Common hostnames\n" + "\n".join(
+            f"- `{domain}` - {{% data variables.product.prodname_vscode %}} fixture"
+            for domain in vscode_domains
+        ) + "\n## Proxy server support\n"
+        parsed_vscode = {
+            value
+            for record_value in updater.build_supplemental_source("vscode", vscode)["records"]
+            for value in record_value["normalized_domains"]
+        }
+        self.assertIn("marketplace.visualstudio.com", parsed_vscode)
+        self.assertNotIn("variables.product.prodname", parsed_vscode)
+
+        for name in ("windows_enterprise", "windows_non_enterprise"):
+            spec = updater.SUPPLEMENTAL_SOURCES[name]
+            domains = sorted(spec["required"])
+            while len(domains) < spec["min_domains"]:
+                domains.append(f"fixture{len(domains)}.{name.replace('_', '-')}.example.com")
+            markdown = "---\nms.date: 09/10/2026\n---\n| Area | Destination |\n| --- | --- |\n" + "\n".join(
+                f"| Area | {domain} |" for domain in domains
+            )
+            source = updater.build_supplemental_source(name, markdown)
+            self.assertGreaterEqual(len(source["records"]), spec["min_domains"])
+
+        ncsi = "---\nms.date: 09/10/2026\n---\n## More information\n" + "\n".join(
+            [
+                "`www.msftncsi.com`",
+                "`dns.msftncsi.com`",
+                "`*.msftncsi.com`",
+                "`*.msftconnecttest.com`",
+                "- Windows 8.1 or earlier versions:",
+                "See [proxy guidance](use-authenticated-proxy-servers.md).",
+            ]
+        ) + "\n## Workaround\n"
+        self.assertEqual(
+            len(updater.build_supplemental_source("ncsi", ncsi)["records"]),
+            4,
+        )
+
+        time_source = "---\nms.date: 09/10/2026\n---\n| NtpServer | `time.windows.com`, 0x9 |\n"
+        self.assertEqual(
+            updater.build_supplemental_source("windows_time", time_source)["records"][0]["normalized_domains"],
+            ["time.windows.com"],
+        )
+
+        whiteboard = '---\nms.date: 09/10/2026\n---\n* Add Whiteboard.ms, \\*.whiteboard.microsoft.com, and wbd.ms to your list of allowed sites.'
+        self.assertEqual(
+            updater.build_supplemental_source("whiteboard", whiteboard)["records"][0]["normalized_domains"],
+            ["*.whiteboard.microsoft.com", "wbd.ms", "whiteboard.ms"],
+        )
+
+    def test_markdown_wildcards_footnotes_and_joined_hosts_are_normalized(self):
+        self.assertEqual(
+            updater._extract_host_patterns(
+                r"watson.\*.microsoft.com arc.msn.com\*ris.api.iris.microsoft.com "
+                r"wdcp.microsoft.comwdcpalt.microsoft.com login.live.com\*"
+            ),
+            [
+                "arc.msn.com",
+                "login.live.com",
+                "ris.api.iris.microsoft.com",
+                "watson.*.microsoft.com",
+                "wdcp.microsoft.com",
+                "wdcpalt.microsoft.com",
+            ],
+        )
+
     def test_serialization_and_rendering_are_deterministic(self):
         manifest = fixture_manifest()
         reversed_manifest = copy.deepcopy(manifest)
@@ -176,18 +269,27 @@ class MicrosoftRuleGeneratorTests(unittest.TestCase):
         bad_schema = copy.deepcopy(payloads)
         bad_schema["Worldwide"][0]["newField"] = "unexpected"
         with self.assertRaises(updater.SourceDataError):
-            updater.build_manifest(versions, bad_schema, fixture_power_apps_source())
+            updater.build_manifest(
+                versions, bad_schema, fixture_power_apps_source(), fixture_supplemental_sources()
+            )
 
         empty = copy.deepcopy(payloads)
         empty["China"] = []
         with self.assertRaises(updater.SourceDataError):
-            updater.build_manifest(versions, empty, fixture_power_apps_source())
+            updater.build_manifest(
+                versions, empty, fixture_power_apps_source(), fixture_supplemental_sources()
+            )
 
         bad_cidr = copy.deepcopy(payloads)
         bad_cidr["USGovDoD"][0]["ips"] = ["203.0.113.7/24"]
         with self.assertRaises(updater.SourceDataError):
             updater.render_outputs(
-                updater.build_manifest(versions, bad_cidr, fixture_power_apps_source())
+                updater.build_manifest(
+                    versions,
+                    bad_cidr,
+                    fixture_power_apps_source(),
+                    fixture_supplemental_sources(),
+                )
             )
 
     def test_ip_sort_order_is_numeric(self):

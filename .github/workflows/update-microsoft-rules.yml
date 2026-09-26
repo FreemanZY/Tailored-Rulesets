@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Refresh Microsoft 365 and Power Apps endpoint data
+      - name: Refresh official Microsoft endpoint data
         run: python scripts/update_microsoft_rules.py
 
       - name: Run deterministic and repository checks
@@ -44,7 +44,7 @@ jobs:
             echo "Microsoft generated files are unchanged."
             exit 0
           fi
-          versions="$(python -c 'import json; d=json.load(open("sources/microsoft_endpoints.json", encoding="utf-8")); parts=["{}={}".format(k, d["instances"][k]["version"]) for k in ("Worldwide", "China", "USGovDoD", "USGovGCCHigh")]; parts.append("PowerApps={}".format(d["power_apps"]["semantic_hash"][:12])); print(", ".join(parts))')"
+          versions="$(python -c 'import hashlib,json; d=json.load(open("sources/microsoft_endpoints.json", encoding="utf-8")); parts=["{}={}".format(k, d["instances"][k]["version"]) for k in ("Worldwide", "China", "USGovDoD", "USGovGCCHigh")]; parts.append("PowerApps={}".format(d["power_apps"]["semantic_hash"][:12])); supplemental=hashlib.sha256("".join(d["supplemental_sources"][k]["semantic_hash"] for k in sorted(d["supplemental_sources"])).encode("ascii")).hexdigest()[:12]; parts.append("Supplemental={}".format(supplemental)); print(", ".join(parts))')"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(rules): update Microsoft endpoints" -m "$versions"

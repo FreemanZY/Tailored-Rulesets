@@ -83,7 +83,7 @@ Exact source hostnames remain exact. A standard source wildcard such as `*.examp
 - `dist/apple_generated_ip_ruleset.txt`
 - `sources/apple_enterprise_networks.json`
 
-The initial entries in `apple_manual_ruleset.txt` were migrated from the earlier generated snapshot when the official source did not preserve their previous matching scope. Their original provenance was not recorded, so they remain review candidates rather than official Apple declarations. The workflow never modifies the manual file.
+The remaining entries in `apple_manual_ruleset.txt` were migrated from the earlier generated snapshot when the official source did not preserve their previous matching scope. Their original provenance was not recorded, so they remain review candidates rather than official Apple declarations. The Apple-specific CNAME suffixes `apple.com.akadns.net` and `apple.com.edgekey.net` are retained, while the shared-parent suffixes `com.akadns.net` and `com.edgekey.net` were removed because they could classify unrelated tenants. Manual suffixes duplicating exact current official entries were also removed so the generated source controls their scope. The workflow never modifies the manual file.
 
 Run the offline consistency check with:
 
@@ -91,9 +91,9 @@ Run the offline consistency check with:
 python scripts/update_apple_rules.py --check
 ```
 
-### Microsoft 365 and Power Apps
+### Microsoft
 
-`scripts/update_microsoft_rules.py` combines the official Microsoft 365 endpoint web service with the required-services table from the official Power Apps limits and configuration page. Microsoft 365 covers Worldwide, China (21Vianet), USGovDoD, and USGovGCCHigh; all service areas, categories, required and optional records, IPv4, and IPv6 are retained. Power Apps is parsed from the Microsoft-maintained Markdown backing the Learn page on every run.
+`scripts/update_microsoft_rules.py` combines the official Microsoft 365 endpoint web service, the required-services table from the official Power Apps limits and configuration page, and six fixed Microsoft documentation sources for Visual Studio Code, Windows 11, NCSI, Windows Time, and Whiteboard. Microsoft 365 covers Worldwide, China (21Vianet), USGovDoD, and USGovGCCHigh; all service areas, categories, required and optional records, IPv4, and IPv6 are retained. Each supplemental source has an explicit parser contract and minimum required entries so upstream format drift fails the update instead of silently dropping rules.
 
 Links used by the automation and its consumers:
 
@@ -101,14 +101,20 @@ Links used by the automation and its consumers:
 - API base: <https://endpoints.office.com>
 - Official Power Apps endpoint table: <https://learn.microsoft.com/en-us/power-apps/limits-and-config>
 - Microsoft-maintained Power Apps Markdown: <https://raw.githubusercontent.com/MicrosoftDocs/powerapps-docs/main/powerapps-docs/limits-and-config.md>
+- Visual Studio Code network connections: <https://code.visualstudio.com/docs/setup/network>
+- Windows 11 Enterprise endpoints: <https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints>
+- Windows 11 non-Enterprise endpoints: <https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions>
+- NCSI connectivity guidance: <https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network>
+- Windows Time settings: <https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings>
+- Whiteboard network requirements: <https://learn.microsoft.com/en-us/surface-hub/whiteboard-collaboration>
 - GitHub Actions workflow: <https://github.com/FreemanZY/Tailored-Rulesets/actions/workflows/update-microsoft-rules.yml>
 - Structured source snapshot: <https://github.com/FreemanZY/Tailored-Rulesets/blob/main/sources/microsoft_endpoints.json>
 - DOMAIN-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/microsoft_generated_domainset.txt>
 - Mixed RULE-SET raw file: <https://raw.githubusercontent.com/FreemanZY/Tailored-Rulesets/refs/heads/main/dist/microsoft_generated_ruleset.txt>
 
-`sources/microsoft_endpoints.json` preserves the Microsoft 365 source versions, instances, ports, categories, requirement flags, ExpressRoute flags, and notes. It also preserves each Power Apps table row, protocol, usage description, document date, exclusions, and a semantic hash. Standard `*.` patterns become DOMAIN-SET suffixes. Partial-label and middle-label wildcards remain `DOMAIN-WILDCARD` entries in the mixed ruleset. The documented Dynamics CRM region template is expanded into its published numbered forms; local-only `localhost` and `127.0.0.1` entries remain source metadata and are not emitted as routing rules.
+`sources/microsoft_endpoints.json` preserves the Microsoft 365 source versions, instances, ports, categories, requirement flags, ExpressRoute flags, and notes. It also preserves each Power Apps table row and the parsed records, document dates, canonical URLs, and semantic hashes for all supplemental sources. Standard `*.` patterns become DOMAIN-SET suffixes. Partial-label and middle-label wildcards remain `DOMAIN-WILDCARD` entries in the mixed ruleset. The documented Dynamics CRM region template is expanded into its published numbered forms; local-only `localhost` and `127.0.0.1` entries remain source metadata and are not emitted as routing rules.
 
-`dist/microsoft_manual_ruleset.txt` separately keeps reviewed Microsoft endpoints that are not covered by either official automated source. Exact manual entries include the VS Code Web experimentation endpoint documented by [Azure Machine Learning network requirements](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-access-azureml-behind-firewall?view=azureml-api-2), the MSN image hostname documented in [Windows 11 connection endpoints](https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions), the [App Center ingestion endpoint](https://learn.microsoft.com/en-us/appcenter/diagnostics/upload-crashes), and the NCSI host documented in [DirectAccess planning guidance](https://learn.microsoft.com/en-us/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure). It also keeps observed Bing, Windows Spotlight, Windows Update, legacy NCSI, Windows Time, MSN, and Whiteboard hosts documented in the [Windows Enterprise connection endpoint list](https://learn.microsoft.com/en-us/windows/privacy/manage-windows-11-endpoints), [Windows non-Enterprise endpoint list](https://learn.microsoft.com/en-us/windows/privacy/windows-11-endpoints-non-enterprise-editions), [legacy Whiteboard endpoint list](https://learn.microsoft.com/en-us/windows/privacy/manage-windows-1809-endpoints), [NCSI guidance](https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network), and [Windows Time settings](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings). These Windows sources remain manual because the Microsoft automation has a narrower contract: Microsoft 365 Web Service plus Power Apps. `windows.msn.com` is published in the Windows 11 endpoint table, but adding the entire Windows HTML page is a separate source-contract expansion; `s1.tc.bing.net` and `s.cn.bing.net` are not present in the two current automated sources. Hard-coding observed names into the generator would break source traceability. The Visual Studio Code entries follow the official [network connections guide](https://code.visualstudio.com/docs/setup/network); observed Microsoft Edge and Teams hosts remain exact because the available evidence does not establish safe suffix-wide scope. The Akamai hostname remains exact because `akamaized.net` is shared infrastructure. The workflow never modifies this manual file.
+`dist/microsoft_manual_ruleset.txt` now contains only ten reviewed observations not covered by the current official-source contract. It retains two observed OneDrive file hosts, an Azure IoT host, a Microsoft personal-content host, three observed Edge or Teams hosts, and two Bing delivery hosts at exact scope. `in.appcenter.ms` remains manual because [Visual Studio App Center was retired](https://learn.microsoft.com/en-us/appcenter/diagnostics/upload-crashes); a retired endpoint is not suitable for ongoing source automation. Officially published VS Code, Windows, NCSI, Windows Time, Whiteboard, MSN, Windows Update, and storage endpoints were removed from the manual file after becoming traceable generated entries. The workflow never modifies the manual file.
 
 The Microsoft workflow owns:
 
@@ -157,7 +163,7 @@ The Google workflow owns:
 - `dist/google_generated_ruleset.txt`
 - `sources/google_endpoints.json`
 
-`google_manual_ruleset.txt` preserves 1,120 entries from the previous generated file. Their original provenance was not recorded, so they are retained as historical review candidates even when they overlap current official data. The workflow never modifies this manual file.
+`google_manual_ruleset.txt` retains 414 entries from the previous generated file whose original provenance was not recorded and which are not covered by the current official-source contract. The review removed 674 entries already covered by generated suffixes and narrowed 32 legacy suffix rules to the exact hostnames published by the current official sources. The workflow never modifies this manual file.
 
 Run the offline consistency check with:
 
