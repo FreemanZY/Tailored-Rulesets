@@ -124,6 +124,10 @@
 # China Eastern Airlines
 .ceair.com
 
+# Spring Airlines first-party passenger and service domains
+.ch.com
+.springairlines.com
+
 # Industrial and Commercial Bank of China
 .icbc.com.cn
 

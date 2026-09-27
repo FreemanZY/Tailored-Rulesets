@@ -123,8 +123,10 @@ DOMAIN,wap.bank.ecitic.com
 DOMAIN,wealthplaza.tech.citic
 
 # Group: Tencent and QQ Music delivery hosts
+DOMAIN,api.tencentmusic.com
 DOMAIN,isure6-stream-qqmusic.a.bdycdn.cn
 DOMAIN,mlvbdc.live.tlivesource.com
+DOMAIN,p.tencentmusic.com
 DOMAIN,sdkconfig.tlivedns.com
 DOMAIN,webrtc-dk.tliveplay.com
 DOMAIN,webrtc-signal-scheduler.tlivesource.com
@@ -182,3 +184,9 @@ DOMAIN,cn-afp.apitd.net
 
 # Group: HROne workforce services
 DOMAIN-SUFFIX,hrone.cn
+
+# Group: Oka Apps VidHub observed service hosts
+DOMAIN,vh.api.okaapps.com
+DOMAIN,vh.config.okaapps.com
+DOMAIN,vh.image.okaapps.com
+DOMAIN,vh.image1.okaapps.com
