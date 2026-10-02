@@ -10,7 +10,7 @@
     "8.236.0.0/17",
     "8.236.128.0/20",
     "8.236.160.0/19",
-    "8.237.128.0/17",
+    "8.237.128.0/18",
     "34.0.228.0/22",
     "34.0.232.0/21",
     "34.1.64.0/18",
@@ -250,7 +250,6 @@
     "142.250.0.0/15",
     "146.148.0.0/23",
     "152.238.0.0/16",
-    "152.239.128.0/17",
     "162.120.128.0/17",
     "172.110.32.0/21",
     "172.217.0.0/16",
@@ -259,7 +258,7 @@
     "177.176.0.0/16",
     "177.178.0.0/15",
     "177.208.0.0/15",
-    "179.67.0.0/17",
+    "179.67.64.0/18",
     "179.69.128.0/17",
     "179.193.128.0/17",
     "179.199.0.0/17",
@@ -405,7 +404,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-09-19T19:41:53.273088",
+      "creation_time": "2026-10-02T01:07:13.663126",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -614,6 +613,11 @@
         },
         {
           "ipv4Prefix": "8.237.64.0/18",
+          "scope": "us-south1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "8.237.192.0/18",
           "scope": "us-south1",
           "service": "Google Cloud"
         },
@@ -5403,6 +5407,16 @@
           "service": "Google Cloud"
         },
         {
+          "ipv4Prefix": "152.239.128.0/18",
+          "scope": "us-south1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "152.239.192.0/18",
+          "scope": "asia-southeast1",
+          "service": "Google Cloud"
+        },
+        {
           "ipv4Prefix": "162.216.148.0/22",
           "scope": "us-east1",
           "service": "Google Cloud"
@@ -5420,6 +5434,11 @@
         {
           "ipv4Prefix": "173.255.120.0/21",
           "scope": "us-central2",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "179.67.0.0/18",
+          "scope": "asia-southeast1",
           "service": "Google Cloud"
         },
         {
@@ -5923,11 +5942,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1789872113273",
+      "sync_token": "1790928433663",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-09-19T19:41:53.273088",
+      "creation_time": "2026-10-02T01:07:13.663126",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6365,7 +6384,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1789872113273",
+      "sync_token": "1790928433663",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -6373,7 +6392,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/getting-started/set-up-a-google-workspace-host-name-allowlist",
       "id": "workspace",
-      "last_updated": "2026-09-18",
+      "last_updated": "2026-10-01",
       "records": [
         {
           "host": "*.googleapis.com",
@@ -7362,7 +7381,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/firewall-and-proxy-settings",
       "id": "firewall",
-      "last_updated": "2026-09-18",
+      "last_updated": "2026-10-01",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -8575,7 +8594,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges",
       "id": "ip_ranges",
-      "last_updated": "2026-09-18",
+      "last_updated": "2026-10-01",
       "records": [],
       "title": "Obtain Google IP address ranges",
       "url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges"
@@ -9905,7 +9924,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams",
       "id": "meet",
-      "last_updated": "2026-09-18",
+      "last_updated": "2026-10-01",
       "records": [
         {
           "host": "*.clients6.google.com",
@@ -10268,7 +10287,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/drive/drive-and-sites-firewall-and-proxy-settings",
       "id": "drive",
-      "last_updated": "2026-09-18",
+      "last_updated": "2026-10-01",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -10733,5 +10752,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "c395eaf85fb5457de2069fc6bbe835a3ad85fc64536d3ae704e8104c8dce149d"
+  "semantic_sha256": "e7565af9fa414c76c514f944dc9fe0f29cec167d9ce26e8fb1f244dbb00609ed"
 }
