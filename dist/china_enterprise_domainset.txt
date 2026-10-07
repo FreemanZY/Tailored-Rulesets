@@ -235,3 +235,36 @@ cn-fp.apitd.net
 
 # Gcores media and community services
 .gcores.com
+
+# China Unicom customer services
+.10010.com
+
+# China Mobile customer, cloud, authentication, and payment services
+.10086.cn
+.139.com
+.cmpassport.com
+.cmpay.com
+
+# Bilibili video and community services
+.bilibili.com
+
+# CITIC Bank customer services
+.citicbank.com
+
+# DeepSeek AI services
+.deepseek.com
+
+# Kankanews news services
+.kankanews.com
+
+# Laifen consumer product services
+.laifen.net
+
+# China Media Group Yunting audio services
+.radio.cn
+
+# Xuexi public learning platform
+.xuexi.cn
+
+# Zhangyue reading services
+.zhangyue.com

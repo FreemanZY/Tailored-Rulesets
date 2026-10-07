@@ -57,6 +57,8 @@ URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2
 # Group: Meituan and Dianping
 DOMAIN,al-log.d.meituan.net
 DOMAIN,bd0.d.meituan.net
+DOMAIN,beauty-hw-flv-live.meituan.net
+DOMAIN,beauty-tx-flv-live.meituan.net
 DOMAIN,csc-native-call-log.d.meituan.net
 DOMAIN,ddplus.meituan.net
 DOMAIN,hcl0.d.meituan.net
@@ -68,6 +70,7 @@ DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,mrn.meituan.net
 DOMAIN,o1.d.meituan.net
+DOMAIN,o3.d.meituan.net
 DOMAIN,p0.meituan.net
 DOMAIN,p1.d.meituan.net
 DOMAIN,p1.meituan.net
@@ -82,6 +85,8 @@ DOMAIN,patch.meituan.net
 DOMAIN,qcloud.dpfile.com
 DOMAIN,route-stats.d.meituan.net
 DOMAIN,s1.d.meituan.net
+DOMAIN,s3.meituan.net
+DOMAIN,s3plus-hlvideo.meituan.net
 DOMAIN,s3plus-shon.meituan.net
 DOMAIN,s3plus.meituan.net
 DOMAIN,s3plus.sankuai.com
@@ -95,19 +100,32 @@ DOMAIN,pub.ddimg.mobi
 DOMAIN,static-fe.ddimg.mobi
 
 # Group: Xiaomi and Mijia
+DOMAIN,api.m.mi.com
+DOMAIN,api.miinsurtech.com
 DOMAIN,api.mijia.tech
+DOMAIN,api2.mina.mi.com
+DOMAIN,atlas.nr.mi.com
+DOMAIN,business.smartcamera.api.io.mi.com
 DOMAIN,cdn.cnbj1.fds.api.mi-img.com
+DOMAIN,home.mi.com
 DOMAIN,ot.io.mi.com
 DOMAIN,ott.io.mi.com
+DOMAIN,trade-api.retail.mi.com
+DOMAIN,xiaomishop.retail.mi.com
 
 # Group: Didi
 DOMAIN,apm.xiaojukeji.com
+DOMAIN,as.xiaojukeji.com
 DOMAIN,catchdata.xiaojukeji.com
 DOMAIN,img-hxy021.didistatic.com
 DOMAIN,img-ys011.didistatic.com
+DOMAIN,member.xiaojukeji.com
+DOMAIN,omgup2.xiaojukeji.com
 DOMAIN,prod.didi.cn
 DOMAIN,res.xiaojukeji.com
 DOMAIN,s3-hnapuhdd-cdn.didistatic.com
+DOMAIN,security.xiaojukeji.com
+DOMAIN,thanos.xiaojukeji.com
 DOMAIN,tracker.didistatic.com
 DOMAIN,union.didi.cn
 DOMAIN,web.map.xiaojukeji.com
@@ -119,6 +137,8 @@ DOMAIN-SUFFIX,zhishidashi.com
 
 # Group: CITIC services
 DOMAIN,apiwealthplaza.cfhc.citic
+DOMAIN,autoload.bank.ecitic.com
+DOMAIN,edata.bank.ecitic.com
 DOMAIN,wap.bank.ecitic.com
 DOMAIN,wealthplaza.tech.citic
 
@@ -158,6 +178,7 @@ DOMAIN,time.edu.cn
 # Group: Air Matters China application endpoints
 DOMAIN,air-matters.com
 DOMAIN,data.air-matters.com
+DOMAIN,heatmap-cn.air-matters.com
 DOMAIN,heatmap.air-matters.app
 
 # Group: ByteDance Volcengine
@@ -165,8 +186,18 @@ DOMAIN,gator.volces.com
 DOMAIN,tab.volces.com
 DOMAIN,vod-license-m.volccdn.com
 
-# Group: Ctrip observed CDN host
+# Group: Ctrip observed service and CDN hosts
+DOMAIN,cdid.c-ctrip.com
+DOMAIN,dimg04.c-ctrip.com
 DOMAIN,dimg10.c-ctrip.com
+DOMAIN,images3.c-ctrip.com
+DOMAIN,m.ctrip.com
+DOMAIN,pages.c-ctrip.com
+DOMAIN,pages.ctrip.com
+DOMAIN,pic.c-ctrip.com
+DOMAIN,s.c-ctrip.com
+DOMAIN,sec-m.ctrip.com
+DOMAIN,webresource.c-ctrip.com
 
 # Group: NetEase Yunxin
 DOMAIN,ap2.qiyukf.com
@@ -190,3 +221,31 @@ DOMAIN,vh.api.okaapps.com
 DOMAIN,vh.config.okaapps.com
 DOMAIN,vh.image.okaapps.com
 DOMAIN,vh.image1.okaapps.com
+
+# Group: Beijing transportation card observed service
+DOMAIN,appprod.bmac.com.cn
+
+# Group: China Unicom observed mall host
+DOMAIN,res.mall.10010.cn
+
+# Group: Huatai Securities observed services
+DOMAIN,c.zhangle.com
+DOMAIN,geetest.htsc.com
+
+# Group: Meishe observed SDK service
+DOMAIN,api.meishesdk.com
+
+# Group: Migu observed music and video services
+DOMAIN,api.miguvideo.com
+DOMAIN,app-sc.miguvideo.com
+DOMAIN,app.log.nf.migu.cn
+DOMAIN,c.musicapp.migu.cn
+DOMAIN,d.musicapp.migu.cn
+DOMAIN,fs-sc.miguvideo.com
+DOMAIN,mgsv.miguvideo.com
+DOMAIN,uem.migu.cn
+
+# Group: Sina and Weibo observed services
+DOMAIN,api.weibo.com
+DOMAIN,sina.cn
+DOMAIN,www.sina.com.cn

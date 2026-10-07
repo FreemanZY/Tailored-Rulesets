@@ -63,6 +63,25 @@ Bank sources: [ICBC domain guidance](https://www.icbc.com.cn/icbc/announceme/363
 
 Pinduoduo's platform and open portal use `pinduoduo.com` and `yangkeduo.com`; its own published documents and media use `pddpic.com`. The latter also contains international-platform promotion documents, so an overseas host may need a higher-priority routing override. Freshippo's current `freshippo.com` is reached both directly and from the Alibaba Group-linked `freshhema.com`; `1688.com` was already in the core set. No comprehensive vendor endpoint inventory was found, and unrelated CDN or unverified brand-like suffixes are not added. Sources: [Pinduoduo platform agreement](https://pfile.pddpic.com/galerie-go/open_sdk/9372cfe1-780a-4b8b-95e1-4405de1cf43c.pdf), [Pinduoduo open platform](https://open.yangkeduo.com/), [Pinduoduo published privacy notice](https://pfile.pddpic.com/galerie-go/mms_file/3a0bdcc8-0b73-4cb4-ae9c-ff34facaed2c.pdf), [Alibaba Group business links](https://www.alibabagroup.com/en-US/about-alibaba-businesses-1747800973536919552), [Freshippo app](https://www.freshippo.com/down/app.html), and [1688 overview](https://www.alibabagroup.com/en-US/about-alibaba-businesses-1941299332078632960).
 
+### Additional reviewed China service domains
+
+The core set also covers the following dedicated service roots. Official sources establish the operator and service relationship; matching each root and all subdomains is a reviewed namespace inference, not a vendor-published wildcard endpoint inventory.
+
+| Operator or service | Core roots | Primary sources |
+| --- | --- | --- |
+| China Unicom | `10010.com` | [Customer agreement](https://uac.10010.com/portal/html/login/module/agreementblank.html) |
+| China Mobile and its service subsidiaries | `10086.cn`, `139.com`, `cmpassport.com`, `cmpay.com` | [Mobile privacy policy](https://wap.gd.10086.cn/ech/h5/app-protocol/safePro.html), [139 cloud privacy](https://pan.139.com/html5/privacy-policy.html), [Authentication agreement](https://wap.cmpassport.com/resources/html/2ndNum/contract2.html), [CMPay agreement](https://www.cmpay.com/info/zfxy/index.html) |
+| Bilibili | `bilibili.com` | [Privacy policy](https://www.bilibili.com/blackboard/activity-dmrdauXLfI.html) |
+| CITIC Bank | `citicbank.com` | [Bank disclosure](https://www.citicbank.com/esgzqsy/bgzl/gzzd/202401/P020250403354659241124.pdf) |
+| DeepSeek | `deepseek.com` | [Privacy policy](https://cdn.deepseek.com/policies/zh-CN/deepseek-privacy-policy.html), [API endpoint](https://api-docs.deepseek.com/api/responses) |
+| Kankanews | `kankanews.com` | [Privacy policy](https://www.kankanews.com/aboutcn/yszc.html) |
+| Laifen | `laifen.net` | [Privacy policy](https://www.laifen.net/privacy) |
+| China Media Group Yunting | `radio.cn` | [Privacy policy](https://ytweb.radio.cn/protocol/02.html) |
+| Xuexi | `xuexi.cn` | [Service agreement](https://im-pages.xuexi.cn/agreement/service-agreement/index.html) |
+| Zhangyue | `zhangyue.com` | [Product agreement](https://s.zhangyue.com/agreement/product) |
+
+Related manual additions remain exact observed hosts. They do not expand shared or mixed-service parents such as `meituan.net`, `xiaojukeji.com`, `mi.com`, `ctrip.com`, `c-ctrip.com`, or `ecitic.com`. Sources establish brand or operator relationships unless they explicitly name the endpoint; this is not a comprehensive official allowlist. Additional sources include [Xiaomi privacy](https://www.mi.com/about/privacy), [Xiaomi insurance endpoint](https://api.miinsurtech.com/insurance/document/phone_accidentIns_id.html?from=mishop&id=5125118066703101952), [Meituan privacy](https://page.meituan.net/html/1630913857085_b153ae/index.html), [Didi service terms](https://es.xiaojukeji.com/falvtiaokuan), [CITIC Bank historical site disclosure](https://www.citicbank.com/esgzqen/bgzl/kcxfzbg/202308/P020230831383257879130.pdf), [Ctrip-hosted insurance privacy](https://webresource.c-ctrip.com/ResH5FlightOnline/R1/xproduct/ins/privacy_policy2.pdf), [Meishe SDK privacy](https://www.meishesdk.com/hm-privacy-policy-core.html), [Huatai agreement](https://m.zhangle.com/page/app_agreement/option.html), [Huatai website](https://www.htsc.com/), [China Unicom mall help](https://res.mall.10010.cn/mall/front/html/help/help_catalog_04.htm?resVer=20130914000130), [Beijing transportation card terms](https://prod-pioneer.bmac.com.cn/hunble/page/termsAndConditions.html), [Migu privacy](https://passport.migu.cn/portal/privacy/protocol?sourceid=204024), [Migu Video agreement](https://passport.aikan.miguvideo.com/portal/privacy/appprotocol?sourceid=204001), [Weibo privacy](https://weibo.com/signup/v5/privacy?param=1714867200021), [Sina Finance privacy](https://finance.sina.cn/app/SFAprivacy.shtml), and [Sina Mail privacy](https://mail.sina.com.cn/privacy_policy.html). Air Matters China sources are linked above. Unverified ownership and international-service candidates do not become new China enterprise rules solely because they matched a China ASN.
+
 ## Automated sources
 
 ### Apple

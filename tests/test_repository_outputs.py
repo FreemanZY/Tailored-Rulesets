@@ -224,7 +224,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (138, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (185, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -389,6 +389,9 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".wavpub.com", ".drbuho.com", ".geetest.com", ".tongdun.net",
                 ".xiaoyuzhoufm.com", ".xyzcdn.net", ".openinstall.com", ".gcores.com",
                 "cn-fp.apitd.net",
+                ".10010.com", ".10086.cn", ".139.com", ".bilibili.com",
+                ".citicbank.com", ".cmpassport.com", ".cmpay.com", ".deepseek.com",
+                ".kankanews.com", ".laifen.net", ".radio.cn", ".xuexi.cn", ".zhangyue.com",
             },
         )
         self.assertEqual(
@@ -402,6 +405,49 @@ class RepositoryOutputTests(unittest.TestCase):
             active_lines(ROOT / "dist" / "china_enterprise_asn_ruleset.txt"),
             ["IP-ASN,24429", "IP-ASN,37963", "IP-ASN,45102", "IP-ASN,131486", "IP-ASN,137753", "IP-ASN,45090", "IP-ASN,132203", "IP-ASN,55967", "IP-ASN,55990", "IP-ASN,131516", "IP-ASN,17428"],
         )
+
+    def test_reviewed_enterprise_scope_preserves_exact_shared_hosts(self):
+        core = active_lines(ROOT / "dist" / "china_enterprise_domainset.txt")
+        manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
+        exact = {entry for entry in core if not entry.startswith(".")}
+        suffixes = {entry[1:] for entry in core if entry.startswith(".")}
+        for rule in manual:
+            kind, value = rule.split(",", 1)
+            if kind == "DOMAIN":
+                exact.add(value)
+            elif kind == "DOMAIN-SUFFIX":
+                suffixes.add(value)
+
+        def covered(host):
+            return host in exact or any(host == s or host.endswith("." + s) for s in suffixes)
+
+        for root in ("10010.com", "10086.cn", "139.com", "bilibili.com", "citicbank.com",
+                     "cmpassport.com", "cmpay.com", "deepseek.com", "kankanews.com",
+                     "laifen.net", "radio.cn", "xuexi.cn", "zhangyue.com"):
+            with self.subTest(root=root):
+                self.assertTrue(covered(root))
+                self.assertTrue(covered("service." + root))
+                self.assertFalse(covered(root + ".example.org"))
+                self.assertFalse(covered("unrelated-" + root))
+        for host in ("api.m.mi.com", "api.miinsurtech.com", "s3.meituan.net",
+                     "m.ctrip.com", "webresource.c-ctrip.com", "as.xiaojukeji.com",
+                     "api.weibo.com", "www.sina.com.cn", "api.meishesdk.com",
+                     "api.miguvideo.com", "uem.migu.cn", "res.mall.10010.cn",
+                     "geetest.htsc.com", "c.zhangle.com", "appprod.bmac.com.cn",
+                     "heatmap-cn.air-matters.com", "autoload.bank.ecitic.com"):
+            with self.subTest(host=host):
+                self.assertIn("DOMAIN," + host, manual)
+                self.assertTrue(covered(host))
+                self.assertFalse(covered("unreviewed." + host))
+        for root in ("mi.com", "miinsurtech.com", "meituan.net", "ctrip.com", "c-ctrip.com",
+                     "xiaojukeji.com", "weibo.com", "sina.com.cn", "migu.cn", "miguvideo.com",
+                     "10010.cn", "htsc.com", "zhangle.com", "bmac.com.cn", "meishesdk.com",
+                     "ecitic.com", "jomoxc.com", "tripcdn.com", "jddebug.com", "cdnyou.com"):
+            with self.subTest(unreviewed_root=root):
+                self.assertFalse(covered(root))
+                self.assertFalse(covered("unreviewed." + root))
+        self.assertEqual(len(core), len(set(core)))
+        self.assertEqual(len(manual), len(set(manual)))
 
     def test_china_carrier_asns_are_selected_operator_networks(self):
         self.assertEqual(
