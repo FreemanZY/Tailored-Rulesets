@@ -1,5 +1,5 @@
 # GENERATED RULE-SET: official Google complex host patterns and IP ranges; do not edit manually.
-# IP syncToken: 1790928433663; semantic SHA-256: e7565af9fa414c76c514f944dc9fe0f29cec167d9ce26e8fb1f244dbb00609ed
+# IP syncToken: 1791360287811; semantic SHA-256: dbbf29bca9f99665b6ccf5bf1f6e6e9dac17035341e20d869239002677adc222
 # accounts.google.[country] is represented as accounts.google.* by explicit repository policy.
 # Policies belong in the consuming Surge profile.
 DOMAIN-WILDCARD,accounts.google.*
@@ -15,7 +15,7 @@ IP-CIDR,8.234.18.0/23,no-resolve
 IP-CIDR,8.236.0.0/17,no-resolve
 IP-CIDR,8.236.128.0/20,no-resolve
 IP-CIDR,8.236.160.0/19,no-resolve
-IP-CIDR,8.237.128.0/18,no-resolve
+IP-CIDR,8.237.128.0/19,no-resolve
 IP-CIDR,34.0.228.0/22,no-resolve
 IP-CIDR,34.0.232.0/21,no-resolve
 IP-CIDR,34.1.64.0/18,no-resolve
@@ -46,7 +46,6 @@ IP-CIDR,34.5.0.0/16,no-resolve
 IP-CIDR,34.13.64.0/22,no-resolve
 IP-CIDR,34.13.80.0/20,no-resolve
 IP-CIDR,34.13.96.0/20,no-resolve
-IP-CIDR,34.14.224.0/19,no-resolve
 IP-CIDR,34.34.192.0/20,no-resolve
 IP-CIDR,34.34.208.0/21,no-resolve
 IP-CIDR,34.34.224.0/19,no-resolve
@@ -156,10 +155,8 @@ IP-CIDR,34.183.48.0/23,no-resolve
 IP-CIDR,34.183.62.0/23,no-resolve
 IP-CIDR,34.183.64.0/23,no-resolve
 IP-CIDR,34.183.126.0/23,no-resolve
-IP-CIDR,34.183.130.0/23,no-resolve
-IP-CIDR,34.183.132.0/22,no-resolve
-IP-CIDR,34.183.136.0/21,no-resolve
-IP-CIDR,34.183.144.0/20,no-resolve
+IP-CIDR,34.183.134.0/23,no-resolve
+IP-CIDR,34.183.140.0/22,no-resolve
 IP-CIDR,34.183.160.0/19,no-resolve
 IP-CIDR,34.183.192.0/18,no-resolve
 IP-CIDR,34.184.10.0/23,no-resolve
@@ -168,11 +165,8 @@ IP-CIDR,34.184.28.0/23,no-resolve
 IP-CIDR,34.184.36.0/22,no-resolve
 IP-CIDR,34.184.60.0/22,no-resolve
 IP-CIDR,34.184.124.0/23,no-resolve
-IP-CIDR,34.184.129.0/24,no-resolve
-IP-CIDR,34.184.130.0/23,no-resolve
-IP-CIDR,34.184.132.0/22,no-resolve
-IP-CIDR,34.184.136.0/21,no-resolve
-IP-CIDR,34.184.144.0/20,no-resolve
+IP-CIDR,34.184.134.0/23,no-resolve
+IP-CIDR,34.184.140.0/22,no-resolve
 IP-CIDR,34.184.160.0/19,no-resolve
 IP-CIDR,34.184.192.0/18,no-resolve
 IP-CIDR,34.185.0.0/18,no-resolve
@@ -266,9 +260,8 @@ IP-CIDR,173.194.0.0/16,no-resolve
 IP-CIDR,177.176.0.0/16,no-resolve
 IP-CIDR,177.178.0.0/15,no-resolve
 IP-CIDR,177.208.0.0/15,no-resolve
-IP-CIDR,179.67.64.0/18,no-resolve
-IP-CIDR,179.69.128.0/17,no-resolve
-IP-CIDR,179.193.128.0/17,no-resolve
+IP-CIDR,179.193.160.0/19,no-resolve
+IP-CIDR,179.193.192.0/18,no-resolve
 IP-CIDR,179.199.0.0/17,no-resolve
 IP-CIDR,186.242.0.0/17,no-resolve
 IP-CIDR,186.245.0.0/16,no-resolve
