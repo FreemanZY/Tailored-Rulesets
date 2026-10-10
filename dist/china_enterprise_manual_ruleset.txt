@@ -56,6 +56,7 @@ URL-REGEX,^http://((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2
 
 # Group: Meituan and Dianping
 DOMAIN,al-log.d.meituan.net
+DOMAIN,api-map.meituan.net
 DOMAIN,bd0.d.meituan.net
 DOMAIN,beauty-hw-flv-live.meituan.net
 DOMAIN,beauty-tx-flv-live.meituan.net
@@ -249,3 +250,16 @@ DOMAIN,uem.migu.cn
 DOMAIN,api.weibo.com
 DOMAIN,sina.cn
 DOMAIN,www.sina.com.cn
+
+# Group: SF Express observed service and resource hosts
+DOMAIN,cxbff.sf-express.com
+DOMAIN,gis-tx.sf-express.com
+DOMAIN,mcs-mimp-assets.sf-express.com
+DOMAIN,mcs-mimp-static.sf-express.com
+DOMAIN,ubs.sf-express.com
+DOMAIN,ucmp-static.sf-express.com
+DOMAIN,ump.sf-express.com
+DOMAIN,www-static.sf-express.com
+
+# Group: Toutiao observed mobile service
+DOMAIN,m.toutiao.com

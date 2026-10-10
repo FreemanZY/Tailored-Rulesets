@@ -268,3 +268,9 @@ cn-fp.apitd.net
 
 # Zhangyue reading services
 .zhangyue.com
+
+# Shanghai public transportation card services
+.sptcc.com
+
+# Vistopia cultural media services
+.vistopia.com.cn

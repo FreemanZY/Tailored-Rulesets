@@ -224,7 +224,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (185, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (195, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -392,6 +392,7 @@ class RepositoryOutputTests(unittest.TestCase):
                 ".10010.com", ".10086.cn", ".139.com", ".bilibili.com",
                 ".citicbank.com", ".cmpassport.com", ".cmpay.com", ".deepseek.com",
                 ".kankanews.com", ".laifen.net", ".radio.cn", ".xuexi.cn", ".zhangyue.com",
+                ".sptcc.com", ".vistopia.com.cn",
             },
         )
         self.assertEqual(
@@ -423,7 +424,8 @@ class RepositoryOutputTests(unittest.TestCase):
 
         for root in ("10010.com", "10086.cn", "139.com", "bilibili.com", "citicbank.com",
                      "cmpassport.com", "cmpay.com", "deepseek.com", "kankanews.com",
-                     "laifen.net", "radio.cn", "xuexi.cn", "zhangyue.com"):
+                     "laifen.net", "radio.cn", "xuexi.cn", "zhangyue.com",
+                     "sptcc.com", "vistopia.com.cn"):
             with self.subTest(root=root):
                 self.assertTrue(covered(root))
                 self.assertTrue(covered("service." + root))
@@ -434,7 +436,11 @@ class RepositoryOutputTests(unittest.TestCase):
                      "api.weibo.com", "www.sina.com.cn", "api.meishesdk.com",
                      "api.miguvideo.com", "uem.migu.cn", "res.mall.10010.cn",
                      "geetest.htsc.com", "c.zhangle.com", "appprod.bmac.com.cn",
-                     "heatmap-cn.air-matters.com", "autoload.bank.ecitic.com"):
+                     "heatmap-cn.air-matters.com", "autoload.bank.ecitic.com",
+                     "api-map.meituan.net", "m.toutiao.com", "cxbff.sf-express.com",
+                     "gis-tx.sf-express.com", "mcs-mimp-assets.sf-express.com",
+                     "mcs-mimp-static.sf-express.com", "ubs.sf-express.com",
+                     "ucmp-static.sf-express.com", "ump.sf-express.com", "www-static.sf-express.com"):
             with self.subTest(host=host):
                 self.assertIn("DOMAIN," + host, manual)
                 self.assertTrue(covered(host))
@@ -442,7 +448,8 @@ class RepositoryOutputTests(unittest.TestCase):
         for root in ("mi.com", "miinsurtech.com", "meituan.net", "ctrip.com", "c-ctrip.com",
                      "xiaojukeji.com", "weibo.com", "sina.com.cn", "migu.cn", "miguvideo.com",
                      "10010.cn", "htsc.com", "zhangle.com", "bmac.com.cn", "meishesdk.com",
-                     "ecitic.com", "jomoxc.com", "tripcdn.com", "jddebug.com", "cdnyou.com"):
+                     "ecitic.com", "jomoxc.com", "tripcdn.com", "jddebug.com", "cdnyou.com",
+                     "sf-express.com", "toutiao.com", "ucmp.sf-express.com"):
             with self.subTest(unreviewed_root=root):
                 self.assertFalse(covered(root))
                 self.assertFalse(covered("unreviewed." + root))
