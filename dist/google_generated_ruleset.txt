@@ -1,5 +1,5 @@
 # GENERATED RULE-SET: official Google complex host patterns and IP ranges; do not edit manually.
-# IP syncToken: 1792289274360; semantic SHA-256: a63a104740fbcc65b16e74bfcbb4ea700dee15e97bff25510bdf96ccd9306b8c
+# IP syncToken: 1792570000721; semantic SHA-256: ae3882e9bc1fcae1f39ddb705de3a28771b6a484b6661280c9e05305191752d7
 # accounts.google.[country] is represented as accounts.google.* by explicit repository policy.
 # Policies belong in the consuming Surge profile.
 DOMAIN-WILDCARD,accounts.google.*
@@ -156,7 +156,7 @@ IP-CIDR,34.183.62.0/23,no-resolve
 IP-CIDR,34.183.64.0/23,no-resolve
 IP-CIDR,34.183.126.0/23,no-resolve
 IP-CIDR,34.183.134.0/23,no-resolve
-IP-CIDR,34.183.140.0/22,no-resolve
+IP-CIDR,34.183.142.0/23,no-resolve
 IP-CIDR,34.183.160.0/19,no-resolve
 IP-CIDR,34.183.192.0/18,no-resolve
 IP-CIDR,34.184.10.0/23,no-resolve
@@ -165,7 +165,6 @@ IP-CIDR,34.184.28.0/23,no-resolve
 IP-CIDR,34.184.36.0/22,no-resolve
 IP-CIDR,34.184.60.0/22,no-resolve
 IP-CIDR,34.184.124.0/23,no-resolve
-IP-CIDR,34.184.134.0/23,no-resolve
 IP-CIDR,34.184.140.0/22,no-resolve
 IP-CIDR,34.184.160.0/19,no-resolve
 IP-CIDR,34.184.192.0/18,no-resolve
@@ -261,9 +260,7 @@ IP-CIDR,177.176.0.0/16,no-resolve
 IP-CIDR,177.178.0.0/15,no-resolve
 IP-CIDR,177.208.0.0/15,no-resolve
 IP-CIDR,179.193.160.0/19,no-resolve
-IP-CIDR,179.193.192.0/18,no-resolve
-IP-CIDR,179.199.0.0/17,no-resolve
-IP-CIDR,186.242.0.0/17,no-resolve
+IP-CIDR,186.242.64.0/18,no-resolve
 IP-CIDR,186.245.0.0/16,no-resolve
 IP-CIDR,187.78.0.0/17,no-resolve
 IP-CIDR,187.79.0.0/17,no-resolve

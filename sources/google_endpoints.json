@@ -151,7 +151,7 @@
     "34.183.64.0/23",
     "34.183.126.0/23",
     "34.183.134.0/23",
-    "34.183.140.0/22",
+    "34.183.142.0/23",
     "34.183.160.0/19",
     "34.183.192.0/18",
     "34.184.10.0/23",
@@ -160,7 +160,6 @@
     "34.184.36.0/22",
     "34.184.60.0/22",
     "34.184.124.0/23",
-    "34.184.134.0/23",
     "34.184.140.0/22",
     "34.184.160.0/19",
     "34.184.192.0/18",
@@ -253,9 +252,7 @@
     "177.178.0.0/15",
     "177.208.0.0/15",
     "179.193.160.0/19",
-    "179.193.192.0/18",
-    "179.199.0.0/17",
-    "186.242.0.0/17",
+    "186.242.64.0/18",
     "186.245.0.0/16",
     "187.78.0.0/17",
     "187.79.0.0/17",
@@ -397,7 +394,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-10-17T19:07:54.360553",
+      "creation_time": "2026-10-21T01:06:40.721779",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -3400,6 +3397,16 @@
           "service": "Google Cloud"
         },
         {
+          "ipv4Prefix": "34.183.140.0/24",
+          "scope": "australia-southeast2",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "34.183.141.0/24",
+          "scope": "us-west2",
+          "service": "Google Cloud"
+        },
+        {
           "ipv4Prefix": "34.183.144.0/20",
           "scope": "us-central1",
           "service": "Google Cloud"
@@ -3757,6 +3764,16 @@
         {
           "ipv4Prefix": "34.184.133.0/24",
           "scope": "asia-south2",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "34.184.134.0/24",
+          "scope": "australia-southeast2",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "34.184.135.0/24",
+          "scope": "us-west2",
           "service": "Google Cloud"
         },
         {
@@ -5540,6 +5557,21 @@
           "service": "Google Cloud"
         },
         {
+          "ipv4Prefix": "179.193.192.0/18",
+          "scope": "us-west1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "179.199.0.0/17",
+          "scope": "us-west1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "186.242.0.0/18",
+          "scope": "us-west1",
+          "service": "Google Cloud"
+        },
+        {
           "ipv4Prefix": "192.158.28.0/22",
           "scope": "europe-west1",
           "service": "Google Cloud"
@@ -6040,11 +6072,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1792289274360",
+      "sync_token": "1792570000721",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-10-17T19:07:54.360553",
+      "creation_time": "2026-10-21T01:06:40.721779",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6482,7 +6514,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1792289274360",
+      "sync_token": "1792570000721",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -6490,7 +6522,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/getting-started/set-up-a-google-workspace-host-name-allowlist",
       "id": "workspace",
-      "last_updated": "2026-10-13",
+      "last_updated": "2026-10-20",
       "records": [
         {
           "host": "*.googleapis.com",
@@ -7479,7 +7511,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/firewall-and-proxy-settings",
       "id": "firewall",
-      "last_updated": "2026-10-13",
+      "last_updated": "2026-10-20",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -8692,7 +8724,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges",
       "id": "ip_ranges",
-      "last_updated": "2026-10-13",
+      "last_updated": "2026-10-20",
       "records": [],
       "title": "Obtain Google IP address ranges",
       "url": "https://knowledge.workspace.google.com/admin/security/obtain-google-ip-address-ranges"
@@ -10022,7 +10054,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/meet/prepare-your-network-for-meet-meetings-and-live-streams",
       "id": "meet",
-      "last_updated": "2026-10-13",
+      "last_updated": "2026-10-20",
       "records": [
         {
           "host": "*.clients6.google.com",
@@ -10385,7 +10417,7 @@
     {
       "canonical_url": "https://knowledge.workspace.google.com/admin/drive/drive-and-sites-firewall-and-proxy-settings",
       "id": "drive",
-      "last_updated": "2026-10-13",
+      "last_updated": "2026-10-20",
       "records": [
         {
           "host": "*.c.docs.google.com",
@@ -10850,5 +10882,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "a63a104740fbcc65b16e74bfcbb4ea700dee15e97bff25510bdf96ccd9306b8c"
+  "semantic_sha256": "ae3882e9bc1fcae1f39ddb705de3a28771b6a484b6661280c9e05305191752d7"
 }
