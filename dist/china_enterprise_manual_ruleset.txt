@@ -7,6 +7,7 @@ DOMAIN,acs-m.freshippo.com
 DOMAIN,acs-mum.alibabachengdun.com
 DOMAIN,alilang-intranet.alibaba-inc.com
 DOMAIN,amdc-sibling.alipay.com.cn
+DOMAIN,er.m.alibtrip.com
 DOMAIN,live-appserver-sh.alivecdn.com
 DOMAIN,mum.alibabachengdun.net
 DOMAIN,ntp.ynuf.aliapp.org
@@ -91,6 +92,7 @@ DOMAIN,s3plus-hlvideo.meituan.net
 DOMAIN,s3plus-shon.meituan.net
 DOMAIN,s3plus.meituan.net
 DOMAIN,s3plus.sankuai.com
+DOMAIN,vfile.meituan.net
 DOMAIN,www.dpfile.com
 
 # Group: Dingdong Maicai delivery hosts
@@ -118,17 +120,31 @@ DOMAIN,xiaomishop.retail.mi.com
 DOMAIN,apm.xiaojukeji.com
 DOMAIN,as.xiaojukeji.com
 DOMAIN,catchdata.xiaojukeji.com
+DOMAIN,ct.xiaojukeji.com
+DOMAIN,guard.sec.xiaojukeji.com
+DOMAIN,gungnir.xiaojukeji.com
+DOMAIN,gwp.xiaojukeji.com
 DOMAIN,img-hxy021.didistatic.com
 DOMAIN,img-ys011.didistatic.com
 DOMAIN,member.xiaojukeji.com
+DOMAIN,msggate.xiaojukeji.com
 DOMAIN,omgup2.xiaojukeji.com
+DOMAIN,poi.map.xiaojukeji.com
 DOMAIN,prod.didi.cn
 DOMAIN,res.xiaojukeji.com
 DOMAIN,s3-hnapuhdd-cdn.didistatic.com
+DOMAIN,safe.xiaojukeji.com
 DOMAIN,security.xiaojukeji.com
+DOMAIN,star.xiaojukeji.com
 DOMAIN,thanos.xiaojukeji.com
+DOMAIN,tile1.xiaojukeji.com
+DOMAIN,tile2.xiaojukeji.com
+DOMAIN,tile3.xiaojukeji.com
+DOMAIN,tile4.xiaojukeji.com
 DOMAIN,tracker.didistatic.com
+DOMAIN,trafficrenderapi.map.xiaojukeji.com
 DOMAIN,union.didi.cn
+DOMAIN,usernotice.xiaojukeji.com
 DOMAIN,web.map.xiaojukeji.com
 
 # Group: Additional Ximalaya domains from the official XMSRC v2.1 scope
@@ -263,3 +279,63 @@ DOMAIN,www-static.sf-express.com
 
 # Group: Toutiao observed mobile service
 DOMAIN,m.toutiao.com
+
+# Group: AI Music School observed service hosts
+DOMAIN,api.aimusics.immusician.com
+DOMAIN,api.iguitars.immusician.com
+DOMAIN,cdn-ai.immusician.com
+DOMAIN,glacier.immusician.com
+DOMAIN,iguitar-new.iguitar.immusician.com
+DOMAIN,iguitar.immusician.com
+DOMAIN,img.iguitar.immusician.com
+
+# Group: Jufubao employee-benefit resource hosts
+DOMAIN,cake-img-v1.jufubao.cn
+DOMAIN,cake-img1-v1.jufubao.cn
+DOMAIN,cake-img2-v1.jufubao.cn
+DOMAIN,cake-img3-v1.jufubao.cn
+DOMAIN,cake-img4-v1.jufubao.cn
+DOMAIN,cake-img5-v1.jufubao.cn
+DOMAIN,img-b.jufubao.cn
+DOMAIN,img.jufubao.cn
+DOMAIN,img1-b.jufubao.cn
+DOMAIN,img1-v1.jufubao.cn
+DOMAIN,img1.jufubao.cn
+DOMAIN,img2-v1.jufubao.cn
+DOMAIN,img2.jufubao.cn
+DOMAIN,img3-v1.jufubao.cn
+DOMAIN,img3.jufubao.cn
+DOMAIN,img4-v1.jufubao.cn
+DOMAIN,img4.jufubao.cn
+DOMAIN,img5-v1.jufubao.cn
+DOMAIN,img5.jufubao.cn
+DOMAIN,website.jufubao.cn
+
+# Group: Xiaohongshu observed service hosts
+DOMAIN,ci.xiaohongshu.com
+DOMAIN,edith.xiaohongshu.com
+DOMAIN,fe.xiaohongshu.com
+DOMAIN,picasso-static.xiaohongshu.com
+DOMAIN,www.xiaohongshu.com
+
+# Group: Qmai observed merchant-service hosts
+DOMAIN,images.qmai.cn
+DOMAIN,miniapp.qmai.cn
+DOMAIN,sockets.qmai.cn
+DOMAIN,webapi.qmai.cn
+
+# Group: China open-source package mirrors
+DOMAIN,mirrors.tuna.tsinghua.edu.cn
+DOMAIN,mirrors.ustc.edu.cn
+DOMAIN,pypi.tuna.tsinghua.edu.cn
+DOMAIN,registry.npmmirror.com
+DOMAIN,repo.huaweicloud.com
+
+# Group: China Mobile New Calling service
+DOMAIN,newcall.5gnewcall.cn
+
+# Group: Qiniu East China upload service
+DOMAIN,upload.qiniup.com
+
+# Group: China Merchants Bank observed resource host
+DOMAIN,wwwcdn.cmbimg.cn

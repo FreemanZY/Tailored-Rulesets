@@ -274,3 +274,12 @@ cn-fp.apitd.net
 
 # Vistopia cultural media services
 .vistopia.com.cn
+
+# ATRenew / Aihuishou recycling services
+.aihuishou.com
+
+# Dangao Shushu employee-benefit and cake services
+.dangaoss.com
+
+# JD instant delivery services operated by Dada
+.imdada.cn
