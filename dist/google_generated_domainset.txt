@@ -1,5 +1,5 @@
 # GENERATED DOMAIN-SET: official Google Workspace, ChromeOS and service endpoints; do not edit manually.
-# Semantic SHA-256: ae3882e9bc1fcae1f39ddb705de3a28771b6a484b6661280c9e05305191752d7
+# Semantic SHA-256: ebc887c1189fe956b3dfe27e3b0c290d515ce24d8d4eb0f561b9c7fcb36b78b4
 # Exact source names stay exact; source *.example.com becomes .example.com.
 .1e100.net
 .c.docs.google.com
