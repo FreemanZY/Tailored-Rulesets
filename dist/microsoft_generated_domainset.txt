@@ -1,5 +1,5 @@
 # GENERATED DOMAIN-SET: Official Microsoft service endpoints; do not edit manually.
-# Source versions: Worldwide=2026081400, China=2026073100, USGovDoD=2026090200, USGovGCCHigh=2026070100, PowerApps=be95bf27496e, Supplemental=aaa3d8174cf4
+# Source versions: Worldwide=2026103000, China=2026073100, USGovDoD=2026090200, USGovGCCHigh=2026070100, PowerApps=be95bf27496e, Supplemental=aaa3d8174cf4
 # Exact source names stay exact; source *.example.com becomes .example.com.
 .aadrm.cn
 .aadrm.com
@@ -92,7 +92,6 @@
 .msftconnecttest.com
 .msftidentity.com
 .msftncsi.com
-.msidentity.com
 .msocdn.com
 .mx.microsoft
 .o365weve.com
@@ -205,7 +204,6 @@ arc-emea.msn.com
 arc.msn.com
 assets.activity.windows.com
 assets.msn.com
-assets.onestore.ms
 attachments-dod.office365-net.us
 attachments.office365-net.cn
 attachments.office365-net.us
@@ -215,7 +213,6 @@ autodiscover-s-dod.office365.us
 autodiscover-s.office365.us
 autologon.microsoftazuread-sso.com
 b-ring.msedge.net
-becws.microsoftonline.com
 blobs.officehome.msocdn.com
 browser.events.data.msn.com
 browser.pipe.aria.microsoft.com
@@ -312,8 +309,6 @@ inference.location.live.net
 informationprotection.hosting.portal.azure.net
 insertmedia.bing.office.net
 ipv6.msftconnecttest.com
-isrg.trustid.ocsp.identrust.com
-join.secure.skypeassets.com
 js.monitor.azure.com
 k-ring.msedge.net
 licensing.mp.microsoft.com
@@ -340,7 +335,6 @@ maps.windows.com
 marketplace.visualstudio.com
 mem.gfx.ms
 microsoftgraph.chinacloudapi.cn
-mlccdnprod.azureedge.net
 mrodevicemgr.officeapps.live.com
 mscrl.microsoft.com
 msdn.microsoft.com
@@ -355,7 +349,6 @@ o15.officeredir.microsoft.com
 ocos-office365-s2s.msedge.net
 ocsp.digicert.com
 ocsp.globalsign.com
-ocsp.msocsp.com
 ocsp2.globalsign.com
 ocspx.digicert.com
 ocsredir.officeapps.live.com
@@ -396,9 +389,7 @@ platform.linkedin.com
 portal.apps.mil
 portal.partner.microsoftonline.cdnsvc.com
 prod-azurecdn-akamai-iris.azureedge.net
-prod.msocdn.com
 protection.office.com
-provisioningapi.microsoftonline.com
 purview.apps.mil
 purview.microsoft.com
 purview.microsoft.us
@@ -444,7 +435,6 @@ storecatalogrevocation.storequality.microsoft.com
 storeedgefd.dsx.mp.microsoft.com
 storesdk.dsx.mp.microsoft.com
 substrate.office.com
-support.microsoft.com
 sway.com
 t-ring-fdv2.msedge.net
 t-ring.msedge.net
