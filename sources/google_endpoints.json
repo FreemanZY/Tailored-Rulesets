@@ -399,7 +399,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-10-31T01:06:22.476032",
+      "creation_time": "2026-11-04T00:08:12.765591",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -6157,11 +6157,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1793433982476",
+      "sync_token": "1793779692765",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-10-31T01:06:22.476032",
+      "creation_time": "2026-11-04T00:08:12.765591",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6608,7 +6608,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1793433982476",
+      "sync_token": "1793779692765",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -8826,7 +8826,7 @@
     {
       "canonical_url": "https://support.google.com/chrome/a/answer/6334001",
       "id": "chrome",
-      "last_updated": "Apr 7, 2026",
+      "last_updated": "Oct 29, 2026",
       "records": [
         {
           "host": "*.1e100.net",
@@ -8834,7 +8834,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -8873,7 +8873,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -8899,7 +8899,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9029,7 +9029,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9042,11 +9042,24 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
           "source": "accounts.youtube.com",
+          "type": "host"
+        },
+        {
+          "host": "aicode.googleapis.com",
+          "optional": false,
+          "path": null,
+          "port": null,
+          "protocol": null,
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "section": [
+            "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
+          ],
+          "source": "aicode.googleapis.com",
           "type": "host"
         },
         {
@@ -9055,7 +9068,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9068,7 +9081,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9120,7 +9133,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9159,7 +9172,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9198,7 +9211,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9211,7 +9224,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9224,7 +9237,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9250,7 +9263,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9276,7 +9289,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9315,7 +9328,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9328,7 +9341,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9380,7 +9393,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9393,7 +9406,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9432,7 +9445,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9471,7 +9484,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9536,7 +9549,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9640,7 +9653,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9653,7 +9666,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9666,7 +9679,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9679,7 +9692,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9731,7 +9744,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9744,7 +9757,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9757,7 +9770,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9770,7 +9783,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9796,7 +9809,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9835,7 +9848,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9848,7 +9861,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -9978,7 +9991,7 @@
           "path": null,
           "port": null,
           "protocol": null,
-          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
+          "raw": "*.1e100.net accounts.gstatic.com accounts.youtube.com aicode.googleapis.com alkalichromeosflexhwis2-pa.googleapis.com alt*.gstatic.com aratea-pa.googleapis.com chromeosquirksserver-pa.googleapis.com chromereporting-pa.googleapis.com clients1.google.com clients2.google.com clients4.google.com clients2.googleusercontent.com cloudsearch.googleapis.com commondatastorage.googleapis.com cros-omahaproxy.appspot.com dl-ssl.google.com enterprise-safebrowsing.googleapis.com firebaseperusertopics-pa.googleapis.com *.googleusercontent.com *.gvt1.com gweb-gettingstartedguide.appspot.com mtalk.google.com oauthaccountmanager.googleapis.com omahaproxy.appspot.com pack.google.com policies.google.com printerconfigurations.googleusercontent.com safebrowsing-cache.google.com safebrowsing.google.com safebrowsing.googleapis.com sb-ssl.google.com scone-pa.clients6.google.com ssl.gstatic.com storage.googleapis.com www.googleapis.com",
           "section": [
             "Hostname allowlist for all ChromeOS and Chrome Enterprise Core devices"
           ],
@@ -10976,5 +10989,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "f15a0356691631e5a9d0c2736aab58609f03e61b72bb244c61c6a5e2831123e5"
+  "semantic_sha256": "ce2e53ba108c812d54ec66b58d4b9b242ffc679d91d1f49d718a7a99e5734cb4"
 }
