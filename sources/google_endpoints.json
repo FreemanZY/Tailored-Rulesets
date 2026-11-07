@@ -151,7 +151,7 @@
     "34.183.64.0/23",
     "34.183.126.0/23",
     "34.183.134.0/23",
-    "34.183.174.0/23",
+    "34.183.175.0/24",
     "34.183.176.0/20",
     "34.183.192.0/18",
     "34.184.10.0/23",
@@ -161,7 +161,6 @@
     "34.184.60.0/22",
     "34.184.124.0/23",
     "34.184.140.0/23",
-    "34.184.171.0/24",
     "34.184.174.0/23",
     "34.184.176.0/20",
     "34.184.192.0/18",
@@ -399,7 +398,7 @@
   ],
   "ip_sources": {
     "cloud": {
-      "creation_time": "2026-11-04T00:08:12.765591",
+      "creation_time": "2026-11-07T00:11:44.610936",
       "prefixes": [
         {
           "ipv4Prefix": "8.34.208.0/23",
@@ -3457,6 +3456,11 @@
           "service": "Google Cloud"
         },
         {
+          "ipv4Prefix": "34.183.174.0/24",
+          "scope": "northamerica-northeast1",
+          "service": "Google Cloud"
+        },
+        {
           "ipv4Prefix": "34.184.0.0/24",
           "scope": "europe-west8",
           "service": "Google Cloud"
@@ -3859,6 +3863,11 @@
         {
           "ipv4Prefix": "34.184.170.0/24",
           "scope": "northamerica-south1",
+          "service": "Google Cloud"
+        },
+        {
+          "ipv4Prefix": "34.184.171.0/24",
+          "scope": "northamerica-northeast1",
           "service": "Google Cloud"
         },
         {
@@ -6157,11 +6166,11 @@
           "service": "Google Cloud"
         }
       ],
-      "sync_token": "1793779692765",
+      "sync_token": "1794039104610",
       "url": "https://www.gstatic.com/ipranges/cloud.json"
     },
     "goog": {
-      "creation_time": "2026-11-04T00:08:12.765591",
+      "creation_time": "2026-11-07T00:11:44.610936",
       "prefixes": [
         {
           "ipv4Prefix": "8.8.4.0/24"
@@ -6608,7 +6617,7 @@
           "ipv6Prefix": "2c0f:fb50::/32"
         }
       ],
-      "sync_token": "1793779692765",
+      "sync_token": "1794039104610",
       "url": "https://www.gstatic.com/ipranges/goog.json"
     }
   },
@@ -10989,5 +10998,5 @@
     }
   ],
   "schema_version": 1,
-  "semantic_sha256": "ce2e53ba108c812d54ec66b58d4b9b242ffc679d91d1f49d718a7a99e5734cb4"
+  "semantic_sha256": "d45bef1e47993862a7906378d16ae08f9f43e50f8d7b49e2577dac419e16a677"
 }
