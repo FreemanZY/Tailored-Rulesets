@@ -1,3 +1,12 @@
-# RULE-SET: Authorized tailnet peers and private names. REJECT until configured.
+# RULE-SET: Authorized tailnet peers and private names.
 # Rules omit the policy field; DNS mappings only use domain entries.
-# Intentionally empty. Add reviewed entries only.
+# Bind this set to the tailscale policy in the consuming profile, placed after
+# the LAN set and before FINAL. Do not bind it to REJECT: an empty or
+# mis-bound set silently drops every tailnet destination.
+
+# Group: Tailscale CGNAT range (node addresses, service VIPs, MagicDNS resolver)
+IP-CIDR,100.64.0.0/10,no-resolve
+
+# Group: Tailscale IPv6 prefix
+# Add IP-CIDR6,fd7a:115c:a1e0::/48,no-resolve only where the profile routes
+# IPv6; leaving it out keeps IPv6 from being captured by this policy.
