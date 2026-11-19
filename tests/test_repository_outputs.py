@@ -224,7 +224,7 @@ class RepositoryOutputTests(unittest.TestCase):
         enterprise_manual = active_lines(ROOT / "dist" / "china_enterprise_manual_ruleset.txt")
         force_direct = active_lines(ROOT / "dist" / "force_direct_ruleset.txt")
         rejected = active_lines(ROOT / "dist" / "reject_ruleset.txt")
-        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (255, 6, 63))
+        self.assertEqual((len(enterprise_manual), len(force_direct), len(rejected)), (264, 6, 63))
         self.assertEqual(len(force_direct), len(set(force_direct)))
         self.assertEqual(len(rejected), len(set(rejected)))
         for domain in {
@@ -446,7 +446,11 @@ class RepositoryOutputTests(unittest.TestCase):
                      "ci.xiaohongshu.com", "www.xiaohongshu.com", "ct.xiaojukeji.com", "tile4.xiaojukeji.com",
                      "er.m.alibtrip.com", "vfile.meituan.net", "newcall.5gnewcall.cn", "wwwcdn.cmbimg.cn",
                      "mirrors.tuna.tsinghua.edu.cn", "pypi.tuna.tsinghua.edu.cn", "mirrors.ustc.edu.cn",
-                     "registry.npmmirror.com", "repo.huaweicloud.com", "upload.qiniup.com"):
+                     "registry.npmmirror.com", "repo.huaweicloud.com", "upload.qiniup.com",
+                     "castatic.fengkongcloud.cn", "fe-video-qc.xhscdn.com",
+                     "icon.solidot.org", "www.solidot.org", "mirror.lzu.edu.cn",
+                     "mirror.nju.edu.cn", "mirrors.bfsu.edu.cn", "mirrors.nju.edu.cn",
+                     "mirrors.sjtug.sjtu.edu.cn"):
             with self.subTest(host=host):
                 self.assertIn("DOMAIN," + host, manual)
                 self.assertTrue(covered(host))
@@ -457,13 +461,18 @@ class RepositoryOutputTests(unittest.TestCase):
                      "ecitic.com", "jomoxc.com", "tripcdn.com", "jddebug.com", "cdnyou.com",
                      "sf-express.com", "toutiao.com", "ucmp.sf-express.com",
                      "immusician.com", "jufubao.cn", "qmai.cn", "xiaohongshu.com", "5gnewcall.cn",
-                     "cmbimg.cn", "npmmirror.com", "huaweicloud.com", "qiniup.com"):
+                     "cmbimg.cn", "npmmirror.com", "huaweicloud.com", "qiniup.com",
+                     "fengkongcloud.cn", "xhscdn.com", "solidot.org", "edu.cn",
+                     "lzu.edu.cn", "nju.edu.cn", "bfsu.edu.cn", "sjtu.edu.cn"):
             with self.subTest(unreviewed_root=root):
                 self.assertFalse(covered(root))
                 self.assertFalse(covered("unreviewed." + root))
         for host in ("account.xiaomi.com", "adtrack.xiaojukeji.com", "ut.xiaojukeji.com",
                      "eos-marketing.es.xiaojukeji.com", "apm-fe.xiaohongshu.com",
-                     "upload-na0.qiniup.com", "unreviewed.fds.api.xiaomi.com"):
+                     "upload-na0.qiniup.com", "unreviewed.fds.api.xiaomi.com",
+                     "captcha1.fengkongcloud.cn", "castatic-xjp.fengkongcloud.cn",
+                     "sns-video-qc.xhscdn.com", "sns-video-v3.xhscdn.com",
+                     "sns-webpic-qc.xhscdn.com", "mirrors.cqu.edu.cn"):
             with self.subTest(unapproved_host=host):
                 self.assertFalse(covered(host))
         self.assertEqual(len(core), len(set(core)))
