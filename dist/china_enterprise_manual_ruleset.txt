@@ -314,6 +314,7 @@ DOMAIN,website.jufubao.cn
 # Group: Xiaohongshu observed service hosts
 DOMAIN,ci.xiaohongshu.com
 DOMAIN,edith.xiaohongshu.com
+DOMAIN,fe-video-qc.xhscdn.com
 DOMAIN,fe.xiaohongshu.com
 DOMAIN,picasso-static.xiaohongshu.com
 DOMAIN,www.xiaohongshu.com
@@ -325,6 +326,11 @@ DOMAIN,sockets.qmai.cn
 DOMAIN,webapi.qmai.cn
 
 # Group: China open-source package mirrors
+DOMAIN,mirror.lzu.edu.cn
+DOMAIN,mirror.nju.edu.cn
+DOMAIN,mirrors.bfsu.edu.cn
+DOMAIN,mirrors.nju.edu.cn
+DOMAIN,mirrors.sjtug.sjtu.edu.cn
 DOMAIN,mirrors.tuna.tsinghua.edu.cn
 DOMAIN,mirrors.ustc.edu.cn
 DOMAIN,pypi.tuna.tsinghua.edu.cn
@@ -339,3 +345,10 @@ DOMAIN,upload.qiniup.com
 
 # Group: China Merchants Bank observed resource host
 DOMAIN,wwwcdn.cmbimg.cn
+
+# Group: Shumei Beijing CAPTCHA static resources
+DOMAIN,castatic.fengkongcloud.cn
+
+# Group: Solidot observed website and resource hosts
+DOMAIN,icon.solidot.org
+DOMAIN,www.solidot.org
